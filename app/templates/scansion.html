@@ -158,6 +158,14 @@ function changeColor(id)
         document.getElementById(id).style.background = "";
         accent = false;
     }
+    $.ajax({
+        url: 'save_annotation',
+        data: JSON.stringify({id: id}),
+        type: 'POST',
+        datatype: 'json',
+        success: (response) => console.log(response),
+        error: (error) => console.log(error)
+    });
 
 }
 
