@@ -88,15 +88,16 @@ def scansion():
     fragments_done = Annotation.query.filter_by(done=1, user_id=user_id).all()
     if len(fragments_done) == 12:
         return render_template('scansion.html')
-    elif (fragments_done) < 12:
+    elif len(fragments_done) < 12:
         with open("app/static/js/test.json") as f:
             data = json.load(f)
             story_ids = [story["story_id"] for story in data["stories"]]
             done = [fragment.story_id for fragment in fragments_done]
             story_ids = [id for id in story_ids if id not in done]
-            story_id = random.sample(story_ids, 1)
-            story = next(story for story in data if story["story_id"] == story_id)
-            return render_template('scansion.html', title=story["title"], lines=story["lines"])
+            story_id = random.sample(story_ids, 1)[0]
+            story = next(story for story in data['stories'] if story["story_id"] == story_id)
+            print(story)
+            return render_template('scansion.html', title=story["title"], lines=story['fragments'][0]["lines"])
     
     # title = data["stories"][0]["title"]
     # lines = data["stories"][0]["fragments"][0]["lines"]
