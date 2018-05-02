@@ -1,0 +1,52 @@
+{
+    "stories": [
+        {
+            "story_id": 1,
+            "title": "Van den vos Reynaerde",
+            "fragments": [
+                {
+                    "fragment_id": 1,
+                    "lines": [
+                        [
+                            [
+                                {"id":1, "text": "Wil"},
+                                {"id":2, "text": "lem"}
+                            ],
+                            [
+                                {"id":3, "text": "die"}
+                            ],
+                            [
+                                {"id":4, "text": "Ma"},
+                                {"id":5, "text": "doc"},
+                                {"id":6, "text": "ke"}
+                            ],
+                            [
+                                {"id":7, "text": "ma"},
+                                {"id":8, "text": "ke"},
+                                {"id":9, "text": "de"}
+                            ]
+                        ],
+                        [
+                            [
+                                {"id":10, "text": "daer"},
+                                {"id":11, "text": "hi"}
+                            ],
+                            [
+                                {"id":12, "text": "dic"},
+                                {"id":13, "text": "ke"}
+                            ],
+                            [
+                                {"id":14, "text": "om"},
+                                {"id":15, "text": "me"}
+                            ],
+                            [
+                                {"id":16, "text": "waec"},
+                                {"id":17, "text": "te"}
+                            ]
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

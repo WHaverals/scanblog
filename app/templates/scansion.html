@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Het ritme van Middelnederlandse verzen</title>
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+
+<body> 
+    <div class="Aligner" id="layout">
+        <header>
+            <h1>{{ title }}</h1>
+        </header>
+    </div>
+    <div>
+    {% for line in lines %}
+        <p>
+        {% for word in line %}
+            {% for syllable in word %}
+            <button class="pure-button" id="{{ syllable.id }}" onclick="changeColor('{{ syllable.id }}')">{{ syllable.text }}</button>
+            {% endfor %}
+            <divider class="divider"></divider>
+        {% endfor %}
+        </p>
+    {% endfor %}
+    </div>
+                
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <p style="font-size:30px;font-family: 'Lato', sans-serif;color:thistle">Bla bla bla test test</p>
+                    <p style="font-size:30px;font-family: 'Lato', sans-serif;color:thistle">Bla bla bla test test</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>    </div>
+            </div>
+                      
+                <right><p align="right" style="font-size:25px;cursor:pointer" onclick="openNav()">&#10067; Help</p></right>  
+    </div>
+<footer>
+    This experiment is maintained and executed by Wouter Haverals<br>
+    For more information send an e-mail to: <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be</a>
+</footer>
+</body>
+</html>
+
+
+<style>
+    body { background-color: rgba(115, 133, 133, 0.475)}
+    
+    header {font-family: 'Lato' sans-serif}
+    
+    button {font-family: 'Lato', sans-serif;}
+    
+    p {font-family: 'Lato', sans-serif;}
+
+    .pure-button { padding: .5em 0.1em;}
+
+    button {
+        background:none;
+        border:none;
+        font-size: 20px;
+        border-radius: 5px;}
+    
+    .divider{
+    width:15px;
+    height:auto;
+    display:inline-block;
+}
+
+    .Aligner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .Aligner-item {
+    max-width: 50%;
+}
+    button:focus {outline:0;}
+    button:hover {
+        background-color: rgb(76, 175, 80);
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      }
+    button:highlight {background: yellow}
+
+    button.selected {
+    background:  rgb(76, 175, 80);}
+
+
+    .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+    .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+    .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 1s;
+}
+
+    .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+    .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+    @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+</style>
+    
+<script>
+
+function changeColor(id)
+{
+    console.log("Hoi daar!");
+    color = document.getElementById(id).style.backgroundColor;
+    accent = false;
+    if (color === "") {
+        document.getElementById(id).style.background = "rgb(76, 175, 80)";
+        accent = true;
+    } else {
+        document.getElementById(id).style.background = "";
+        accent = false;
+    }
+
+}
+
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+    }
+        
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+
+{% endblock %}

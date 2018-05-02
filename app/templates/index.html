@@ -1,0 +1,65 @@
+{% extends "base.html"%}
+
+{% block content %}
+	<h1>Hello, {{ current_user.username }}!</h1>
+	{% for post in posts %}
+	<div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+	{% endfor %}
+{% endblock %}
+
+<div style="text-align: center; vertical-align: middle;">
+	<p>
+		<button class="pure-button" id="myid0" onclick="changeColor('myid0')">Wi</button>
+		<button class="pure-button" id="myid1" onclick="changeColor('myid1')">lem</button>
+		<divider class="divider"></divider>
+		<button class="pure-button" id="myid3" onclick="changeColor('myid3')">die</button>
+		<divider class="divider"></divider>
+		<button class="pure-button" id="myid5" onclick="changeColor('myid5')">Ma</button>
+		<button class="pure-button" id="myid6" onclick="changeColor('myid6')">doc</button>
+		<button class="pure-button" id="myid7" onclick="changeColor('myid7')">ke</button>
+		<divider class="divider"></divider>
+		<button class="pure-button" id="myid9" onclick="changeColor('myid9')">ma</button>
+		<button class="pure-button" id="myid10" onclick="changeColor('myid10')">ke</button>
+		<button class="pure-button" id="myid11" onclick="changeColor('myid11')">de</button>
+	</p>
+	<p>
+		<button class="pure-button" id="myid12" onclick="changeColor('myid12')">daer</button>
+		<divider class="divider"></divider>
+		<button class="pure-button" id="myid14" onclick="changeColor('myid14')">hi</button>
+		<divider class="divider"></divider>
+		<button class="pure-button" id="myid16" onclick="changeColor('myid16')">dic</button>
+		<button class="pure-button" id="myid17" onclick="changeColor('myid17')">ke</button>
+		<divider class="divider"></divider>
+		<button class="pure-button" id="myid19" onclick="changeColor('myid19')">om</button>
+		<button class="pure-button" id="myid20" onclick="changeColor('myid20')">me</button>
+		<divider class="divider"></divider>
+		<button class="pure-button" id="myid22" onclick="changeColor('myid22')">waec</button>
+		<button class="pure-button" id="myid23" onclick="changeColor('myid23')">te</button>
+	<p>
+</div>
+
+<script>
+
+	function changeColor(id)
+	{
+		console.log("Hoi daar!");
+		color = document.getElementById(id).style.backgroundColor;
+		accent = false;
+		if (color === "") {
+			document.getElementById(id).style.background = "rgb(76, 175, 80)";
+			accent = true;
+		} else {
+			document.getElementById(id).style.background = "";
+			accent = false;
+		}
+	
+	}
+	
+	function openNav() {
+		document.getElementById("myNav").style.width = "100%";
+		}
+			
+	function closeNav() {
+		document.getElementById("myNav").style.width = "0%";
+		}
+	</script>
