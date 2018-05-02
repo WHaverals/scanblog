@@ -86,9 +86,9 @@ def register():
 def scansion():
     user_id = int(current_user.id)
     fragments_done = Annotation.query.filter_by(done=1, user_id=user_id).all()
-    if len(fragments_done) == 12:
+    if len(fragments_done) == 2:
         return render_template('scansion.html')
-    elif (fragments_done) < 12:
+    elif (fragments_done) < 2:
         with open("app/static/js/test.json") as f:
             data = json.load(f)
             story_ids = [story["story_id"] for story in data["stories"]]
