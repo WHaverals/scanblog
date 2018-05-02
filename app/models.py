@@ -3,7 +3,7 @@ from app import db, login
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 
-from sqlalchemy.types import TypeDecorator, VARCHAR
+from sqlalchemy.types import VARCHAR
 import json
 
 class JSONEncodedDict(db.TypeDecorator):
@@ -38,10 +38,6 @@ class User(UserMixin, db.Model):
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
 
-@login.user_loader
-def load_user(id):
-    return User.query.get(int(id))
-
 class Annotation(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, index=True)
@@ -49,3 +45,4 @@ class Annotation(db.Model):
     annotation = db.Column(JSONEncodedDict) # FOUT!
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
     done = db.Column(db.Integer, default=0)
+
