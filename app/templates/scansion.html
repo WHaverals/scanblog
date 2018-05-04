@@ -28,6 +28,12 @@
         {% endfor %}
         </p>
     {% endfor %}
+
+    <!-- submit button -->
+    <div>
+        <submit type="submit" class="pure-button" onclick="save_and_submit()">Verstuur en naar volgende verzen</button>
+    </div>
+
     </div>
                 
             <div id="myNav" class="overlay">
@@ -148,8 +154,9 @@
 var annotations = {{ annotations|tojson|safe }};
 var story_id = {{ story_id }};
 function changeColor(id)
+
 {
-    console.log("Hoi daar!");
+    console.log("logging!");
     color = document.getElementById(id).style.backgroundColor;
     accent = false;
     if (color === "") {
@@ -170,6 +177,28 @@ function changeColor(id)
     });
 
 }
+
+// save and submit js function:
+
+function save_and_submit() 
+{
+    console.log("logging!");
+    $.ajax({
+        contentType: 'application/json',
+        url: 'finalize_annotation',
+        data: JSON.stringify({story_id: story_id, annotations: annotations}),
+        type: 'POST',
+        datatype: 'json',
+        success: (response) => {
+            console.log(response);
+            window.location = "scansion" 
+
+        },
+        error: (error) => console.log(error)
+    });    
+}
+
+// overlay function
 
 function openNav() {
     document.getElementById("myNav").style.width = "100%";

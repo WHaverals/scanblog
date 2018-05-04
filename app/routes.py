@@ -68,12 +68,6 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
 
-## UNDER CONSTRUCTION ###
-
-        # if flask.request.method == 'POST':
-        #     story_id.done = 1
-        #     db.session.commit()
-
 
 @app.route('/save_annotation', methods=['POST'])
 @login_required
@@ -92,25 +86,34 @@ def save_annotation():
 def scansion():
     user_id = int(current_user.id)
     fragments_done = Annotation.query.filter_by(done=1, user_id=user_id).all()
-    if len(fragments_done) == 2:
-        return render_template('scansion.html')
-    elif len(fragments_done) < 2:
+    if len(fragments_done) < 100:
         with open("app/static/js/test.json") as f:
             data = json.load(f)
             story_ids = [story["story_id"] for story in data["stories"]]
             done = [fragment.story_id for fragment in fragments_done]
             story_ids = [id for id in story_ids if id not in done]
+            if not story_ids:
+                return render_template('index.html')
             story_id = random.sample(story_ids, 1)[0]
             story = next(story for story in data["stories"] if story["story_id"] == story_id)
             annotations = {syllable["id"]: {'syllable': syllable["text"], 'stressed': False}
                            for line in story["fragments"][0]["lines"] 
                            for word in line for syllable in word}
             return render_template('scansion.html', story_id=story_id, annotations=annotations, title=story["title"], lines=story["fragments"][0]["lines"])
+    else:
+        return redirect(url_for('index'))
 
-#def finalize_annotation():
-    # laatste annotatie opvragen (dmv timestamp)
-    # van die annotatie de done value aanpassen    
-    # title = data["stories"][0]["title"]
-    # lines = data["stories"][0]["fragments"][0]["lines"]
-    #redirect url for scansion --> nieuw verhaal laden
-    # return render_template('scansion.html', title=title, lines=lines)
+
+# Route for finalizing and submitting annotation of verse lines
+@app.route('/finalize_annotation', methods=['GET', 'POST'])
+@login_required
+def finalize_annotation():
+    user_id = int(current_user.id)
+    data = flask.request.json
+    story_id = data['story_id']
+    annotations = data['annotations']
+    annotation = Annotation(
+        user_id=int(current_user.id), story_id=int(story_id), annotation=annotations, done=1)
+    db.session.add(annotation)
+    db.session.commit()
+    return flask.jsonify(status="OK")
