@@ -75,11 +75,12 @@ def register():
         #     db.session.commit()
 
 
-# @app.route('/save_annotation', methods=['GET', 'POST'])
-# def save_annotation():
-#     json = flask.request.json
-#     print(json)
-#     return
+@app.route('/save_annotation', methods=['POST'])
+@login_required
+def save_annotation():
+    json = flask.request.json
+    print(json)
+    return flask.jsonify(status="OK")
 
 @app.route('/scansion', methods=['GET', 'POST'])
 @login_required
