@@ -78,8 +78,13 @@ def register():
 @app.route('/save_annotation', methods=['POST'])
 @login_required
 def save_annotation():
-    json = flask.request.json
-    print(json)
+    data = flask.request.json
+    story_id = data['story_id']
+    annotations = data['annotations']
+    annotation = Annotation(
+        user_id=int(current_user.id), story_id=int(story_id), annotation=annotations)
+    db.session.add(annotation)
+    db.session.commit()
     return flask.jsonify(status="OK")
 
 @app.route('/scansion', methods=['GET', 'POST'])
@@ -89,16 +94,23 @@ def scansion():
     fragments_done = Annotation.query.filter_by(done=1, user_id=user_id).all()
     if len(fragments_done) == 2:
         return render_template('scansion.html')
-    elif (fragments_done) < 2:
+    elif len(fragments_done) < 2:
         with open("app/static/js/test.json") as f:
             data = json.load(f)
             story_ids = [story["story_id"] for story in data["stories"]]
             done = [fragment.story_id for fragment in fragments_done]
             story_ids = [id for id in story_ids if id not in done]
-            story_id = random.sample(story_ids, 1)
-            story = next(story for story in data if story["story_id"] == story_id)
-            return render_template('scansion.html', title=story["title"], lines=story["lines"])
-    
+            story_id = random.sample(story_ids, 1)[0]
+            story = next(story for story in data["stories"] if story["story_id"] == story_id)
+            annotations = {syllable["id"]: {'syllable': syllable["text"], 'stressed': False}
+                           for line in story["fragments"][0]["lines"] 
+                           for word in line for syllable in word}
+            return render_template('scansion.html', story_id=story_id, annotations=annotations, title=story["title"], lines=story["fragments"][0]["lines"])
+
+#def finalize_annotation():
+    # laatste annotatie opvragen (dmv timestamp)
+    # van die annotatie de done value aanpassen    
     # title = data["stories"][0]["title"]
     # lines = data["stories"][0]["fragments"][0]["lines"]
+    #redirect url for scansion --> nieuw verhaal laden
     # return render_template('scansion.html', title=title, lines=lines)

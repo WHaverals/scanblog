@@ -145,7 +145,8 @@
 </style>
     
 <script>
-
+var annotations = {{ annotations|tojson|safe }};
+var story_id = {{ story_id }};
 function changeColor(id)
 {
     console.log("Hoi daar!");
@@ -153,15 +154,15 @@ function changeColor(id)
     accent = false;
     if (color === "") {
         document.getElementById(id).style.background = "rgb(76, 175, 80)";
-        accent = true;
+        annotations[id]["stressed"] = true;
     } else {
         document.getElementById(id).style.background = "";
-        accent = false;
+        annotations[id]["stressed"] = false;
     }
     $.ajax({
         contentType: 'application/json',
         url: 'save_annotation',
-        data: JSON.stringify({id: id}),
+        data: JSON.stringify({story_id: story_id, annotations: annotations}),
         type: 'POST',
         datatype: 'json',
         success: (response) => console.log(response),

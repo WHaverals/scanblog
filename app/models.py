@@ -46,7 +46,7 @@ class Annotation(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, index=True)
     story_id = db.Column(db.Integer)
-    annotation = db.Column(JSONEncodedDict) # FOUT!
+    annotation = db.Column(JSONEncodedDict)
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
     done = db.Column(db.Integer, default=0)
 
