@@ -1,42 +1,58 @@
-{% extends "base.html"%}
-
+{% extends "base.html" %}
 {% block content %}
-	<h1>Hello, {{ current_user.username }}!</h1>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- Responsive to mobile devices -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	</head>
+	<body>
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">De Maat van het Middelnederlands</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a class="nav-link" href="{{ url_for('scansion') }}">Scandeer!<span class="sr-only"></span></a>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="{{ url_for('register') }}"><span class="glyphicon glyphicon-user"></span> Registreer</a></li>
+					<li><a href="{{ url_for('login') }}"><span class="glyphicon glyphicon-log-in"></span> Aanmelden</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="jumbotron jumbotron-fluid text-center">
+				<h1 class="display-4">De Maat van het Middelnederlands</h1>
+				<p class="lead">Scandeer Middelnederlandse verzen! Joepie!</p>
+				<hr class="my-4">
+				<p class="lead">
+				   <a class="btn btn-primary btn-lg" href="{{ url_for('scansion') }}" role="button">Scandeer!</a>
+				</p>
+		</div>
+
+	</body>
+</html>
+
+<!-- 
+	<h1>Hallo, {{ current_user.username }}!</h1>
 	{% for post in posts %}
 	<div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
-	{% endfor %}
+	{% endfor %} -->
 {% endblock %}
-
-<div style="text-align: center; vertical-align: middle;">
-	<p>
-		<button class="pure-button" id="myid0" onclick="changeColor('myid0')">Wi</button>
-		<button class="pure-button" id="myid1" onclick="changeColor('myid1')">lem</button>
-		<divider class="divider"></divider>
-		<button class="pure-button" id="myid3" onclick="changeColor('myid3')">die</button>
-		<divider class="divider"></divider>
-		<button class="pure-button" id="myid5" onclick="changeColor('myid5')">Ma</button>
-		<button class="pure-button" id="myid6" onclick="changeColor('myid6')">doc</button>
-		<button class="pure-button" id="myid7" onclick="changeColor('myid7')">ke</button>
-		<divider class="divider"></divider>
-		<button class="pure-button" id="myid9" onclick="changeColor('myid9')">ma</button>
-		<button class="pure-button" id="myid10" onclick="changeColor('myid10')">ke</button>
-		<button class="pure-button" id="myid11" onclick="changeColor('myid11')">de</button>
-	</p>
-	<p>
-		<button class="pure-button" id="myid12" onclick="changeColor('myid12')">daer</button>
-		<divider class="divider"></divider>
-		<button class="pure-button" id="myid14" onclick="changeColor('myid14')">hi</button>
-		<divider class="divider"></divider>
-		<button class="pure-button" id="myid16" onclick="changeColor('myid16')">dic</button>
-		<button class="pure-button" id="myid17" onclick="changeColor('myid17')">ke</button>
-		<divider class="divider"></divider>
-		<button class="pure-button" id="myid19" onclick="changeColor('myid19')">om</button>
-		<button class="pure-button" id="myid20" onclick="changeColor('myid20')">me</button>
-		<divider class="divider"></divider>
-		<button class="pure-button" id="myid22" onclick="changeColor('myid22')">waec</button>
-		<button class="pure-button" id="myid23" onclick="changeColor('myid23')">te</button>
-	<p>
-</div>
 
 <script>
 
