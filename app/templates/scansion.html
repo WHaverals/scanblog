@@ -23,7 +23,7 @@
     </head>
 
 <body> 
-    <div class="Aligner" id="layout">
+    <div class=class="container-fluid" id="layout">
         <header>
             <h1>{{ title }}</h1>
         </header>
@@ -33,7 +33,7 @@
         <p>
         {% for word in line %}
             {% for syllable in word %}
-            <button class="pure-button" id="{{ syllable.id }}" onclick="changeColor('{{ syllable.id }}')">{{ syllable.text }}</button>
+            <button type="button" class="btn btn-default" id="{{ syllable.id }}" onclick="changeColor('{{ syllable.id }}')">{{ syllable.text }}</button>
             {% endfor %}
             <divider class="divider"></divider>
         {% endfor %}
@@ -47,8 +47,7 @@
 
     <!-- overlay containing information about the task -->
 
-    </div>
-                
+    </div>     
             <div id="myNav" class="overlay">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <div class="overlay-content">
@@ -59,10 +58,10 @@
                       
                 <right><p align="right" style="font-size:25px;cursor:pointer" onclick="openNav()">&#10067; Help</p></right>  
     </div>
-<footer>
-    This experiment is maintained and executed by Wouter Haverals<br>
-    For more information send an e-mail to: <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be</a>
-</footer>
+    <div class="text-center col-lg-6 offset-lg-3">
+            <h4>Footer </h4>
+            <p>This experiment is maintained and executed by Wouter Haverals &middot; For more information send an e-mail to: <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be &middot;</a></p>
+    </div>
 </body>
 </html>
 

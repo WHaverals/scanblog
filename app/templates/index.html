@@ -17,6 +17,11 @@
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+		<!-- Medieval-like font -->
+		<link rel="stylesheet" href="../static/css/stylesheet.css" type="text/css" charset="utf-8" />
+	
+<style> h1.medievalfont { font-family: 'orotundheavy'} </style>
+
 	</head>
 	<body>
 		<nav class="navbar navbar-inverse">
@@ -29,6 +34,7 @@
 						<a class="nav-link" href="{{ url_for('scansion') }}">Scandeer!<span class="sr-only"></span></a>
 					</li>
 				</ul>
+				<p class="navbar-text">Welkom, {{ current_user.username }}!</p>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="{{ url_for('register') }}"><span class="glyphicon glyphicon-user"></span> Registreer</a></li>
 					<li><a href="{{ url_for('login') }}"><span class="glyphicon glyphicon-log-in"></span> Aanmelden</a></li>
@@ -36,14 +42,19 @@
 			</div>
 		</nav>
 		<div class="jumbotron jumbotron-fluid text-center">
-				<h1 class="display-4">De Maat van het Middelnederlands</h1>
+				<h1 class="display-4">De Maat van het<br><h1 style="color:firebrick" class="medievalfont">Middelnederlands</h1>
 				<p class="lead">Scandeer Middelnederlandse verzen! Joepie!</p>
 				<hr class="my-4">
 				<p class="lead">
 				   <a class="btn btn-primary btn-lg" href="{{ url_for('scansion') }}" role="button">Scandeer!</a>
 				</p>
+			</div>
+			<div class="row">
+		<div class="text-center">
+			<h4>Meer informatie</h4>
+			<p>Dit experiment wordt uitgevoerd door Wouter Haverals<br> Voor meer informatie, stuur een e-mail naar: <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be</a></p>
 		</div>
-
+		</div>
 	</body>
 </html>
 
