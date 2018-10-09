@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<html lang="nl">
-	<head>
+<html lang="nl"><head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -17,17 +16,12 @@
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-		<!-- Medieval-like font -->
-		<link rel="stylesheet" href="../static/css/stylesheet.css" type="text/css" charset="utf-8" />
-	
-<style> h1.medievalfont { font-family: 'orotundheavy'} </style>
-
 	</head>
-	<body>
-		<nav class="navbar navbar-inverse">
+	<body style="font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif'">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#">De Maat van het Middelnederlands</a>
+					<a class="navbar-brand" href="#">De maat van het Middelnederlands</a>
 				</div>
 				<ul class="nav navbar-nav">
 					<li class="active">
@@ -42,45 +36,25 @@
 			</div>
 		</nav>
 		<div class="jumbotron jumbotron-fluid text-center">
-				<h1 class="display-4">De Maat van het<br><h1 style="color:firebrick" class="medievalfont">Middelnederlands</h1>
-				<p class="lead">Scandeer Middelnederlandse verzen! Joepie!</p>
+				<h1 class="display-4" style="font-family: 'Palatino'">De maat van het<br><h1 style="color:firebrick" class="medievalfont">Middelnederlands</h1>
 				<hr class="my-4">
+				<p>Hier komt de informatie over de taak, de verschillende stappen die men zal ondernemen.</p>
 				<p class="lead">
 				   <a class="btn btn-primary btn-lg" href="{{ url_for('scansion') }}" role="button">Scandeer!</a>
 				</p>
 			</div>
-			<div class="row">
+		<div class="row">
 		<div class="text-center">
-			<h4>Meer informatie</h4>
+			<h5>Meer informatie</h5>
 			<p>Dit experiment wordt uitgevoerd door Wouter Haverals<br> Voor meer informatie, stuur een e-mail naar: <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be</a></p>
 		</div>
 		</div>
 	</body>
 </html>
 
-<!-- 
-	<h1>Hallo, {{ current_user.username }}!</h1>
-	{% for post in posts %}
-	<div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
-	{% endfor %} -->
 {% endblock %}
 
 <script>
-
-	function changeColor(id)
-	{
-		console.log("Hoi daar!");
-		color = document.getElementById(id).style.backgroundColor;
-		accent = false;
-		if (color === "") {
-			document.getElementById(id).style.background = "rgb(76, 175, 80)";
-			accent = true;
-		} else {
-			document.getElementById(id).style.background = "";
-			accent = false;
-		}
-	
-	}
 	
 	function openNav() {
 		document.getElementById("myNav").style.width = "100%";

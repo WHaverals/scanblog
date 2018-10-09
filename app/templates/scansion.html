@@ -20,15 +20,21 @@
 
         <!-- Responsive to mobile devices -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Medieval-like font -->
+		<link rel="stylesheet" href="../static/css/stylesheet.css" type="text/css" charset="utf-8" />
+	
+        <style> h1.medievalfont { font-family: 'orotundheavy'} </style>
+
     </head>
 
-<body> 
-    <div class=class="container-fluid" id="layout">
+<body style="font-family: 'Palatino'"> 
+    <div class="container-fluid" id="layout">
         <header>
-            <h1>{{ title }}</h1>
+            <h1 class="medievalfont text-center" style="color:firebrick">{{ title }}</h1>
         </header>
     </div>
-    <div>
+    <div class="jumbotron jumbotron-fluid text-center">
     {% for line in lines %}
         <p>
         {% for word in line %}
@@ -39,45 +45,48 @@
         {% endfor %}
         </p>
     {% endfor %}
+    </div>
 
     <!-- submit button -->
-    <div>
-        <submit type="submit" class="pure-button" onclick="save_and_submit()">Verstuur en naar volgende verzen</button>
+    <div class="jumbotron jumbotron-fluid text-right">
+		<p class="lead">
+        	<button type="button" class="btn btn-primary btn-lg" onclick="save_and_submit()">Verstuur en naar volgende verzen</button>
+		</p>
     </div>
 
     <!-- overlay containing information about the task -->
 
     </div>     
-            <div id="myNav" class="overlay">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <div class="overlay-content">
-                    <p style="font-size:30px;font-family: 'Lato', sans-serif;color:thistle">Bla bla bla test test</p>
-                    <p style="font-size:30px;font-family: 'Lato', sans-serif;color:thistle">Bla bla bla test test</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>    </div>
-            </div>
-                      
-                <right><p align="right" style="font-size:25px;cursor:pointer" onclick="openNav()">&#10067; Help</p></right>  
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <p style="font-size:30px;font-family: 'Palatino', sans-serif;color:thistle">Bla bla bla test test</p>
+                <p style="font-size:30px;font-family: 'Palatino', sans-serif;color:thistle">Bla bla bla test test</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>    </div>
+        </div>
+        <div>
+            <right><p align="right" style="font-size:25px;cursor:pointer" onclick="openNav()">&#10067; Help</p></right>  
     </div>
-    <div class="text-center col-lg-6 offset-lg-3">
-            <h4>Footer </h4>
-            <p>This experiment is maintained and executed by Wouter Haverals &middot; For more information send an e-mail to: <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be &middot;</a></p>
+    <div class="row">
+        <div class="text-center">
+            <h5>Meer informatie</h5>
+            <p>Dit experiment wordt uitgevoerd door Wouter Haverals<br> Voor meer informatie, stuur een e-mail naar: <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be</a></p>
+        </div>
     </div>
 </body>
 </html>
 
-
 <style>
-    body { background-color: rgba(115, 133, 133, 0.475)}
+
     
-    header {font-family: 'Lato' sans-serif}
-    
-    button {font-family: 'Lato', sans-serif;}
-    
-    p {font-family: 'Lato', sans-serif;}
+    header {font-family: 'Palatino' sans-serif}
+        
+    p {font-family: 'Palatino', sans-serif;}
 
     .pure-button { padding: .5em 0.1em;}
 
     button {
+        font-family: 'Palatino', sans-serif;
         background:none;
         border:none;
         font-size: 20px;
