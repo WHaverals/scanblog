@@ -30,6 +30,11 @@ def index():
     return render_template('index.html', title='Home', posts=posts)
 
 
+@app.route('/task_description')
+@login_required
+def task_description():
+    return render_template('task_description.html')
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if current_user.is_authenticated:
@@ -81,12 +86,14 @@ def save_annotation():
     db.session.commit()
     return flask.jsonify(status="OK")
 
+
+
 @app.route('/scansion', methods=['GET', 'POST'])
 @login_required
 def scansion():
     user_id = int(current_user.id)
     fragments_done = Annotation.query.filter_by(done=1, user_id=user_id).all()
-    if len(fragments_done) < 100:
+    if len(fragments_done) < 3000:
         with open("app/static/js/test.json") as f:
             data = json.load(f)
             story_ids = [story["story_id"] for story in data["stories"]]
