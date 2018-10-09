@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Title -->
+    <title>De Maat van het Middelnederlands</title>
+    <!-- Google Fonts css-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900%7CRubik:300,400,500,700,900" rel="stylesheet">
+    <!-- Bootstrap css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- Font Awesome icon css-->
+    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="css/flaticon.css" rel="stylesheet" media="screen">
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- Animated css -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup CSS -->
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <!-- Slick nav css -->
+    <link rel="stylesheet" href="css/slicknav.css">
+    <!-- Main custom css -->
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+    <link href="css/pages.css" rel="stylesheet" media="screen">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-spy="scroll" data-target="#navigation" data-offset="71"> 
+    <!-- Preloader starts -->
+    <div class="preloader">
+        <div class="diamond"></div>
+        <div class="diamond"></div>
+    </div>
+    <!-- Preloader Ends -->
+
+    <!-- Header Section Starts-->
+    <header class="header-layout-5">
+        <nav class="navbar navbar-expand-md navbar-light fixed-top" id="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"><img src="images/logomaatbold.png" alt="" /></a>
+                </div>
+                <p class="navbar-text">Welkom, {{ current_user.username }}!</p>
+            </div>          
+        </nav>
+    </header>
+    <!-- Header Section ends -->
+
+    <!-- Blog Page starts -->
+    <div class="page-blog">
+        <div class="container">
+            <div class="row">
+                 <div class="col-md-8 offset-md-2">
+    {% for line in lines %}
+        <p>
+        {% for word in line %}
+            {% for syllable in word %}
+            <button type="button" class="btn btn-default" id="{{ syllable.id }}" onclick="changeColor('{{ syllable.id }}')">{{ syllable.text }}</button>
+            {% endfor %}
+            <divider class="divider"></divider>
+        {% endfor %}
+        </p>
+    {% endfor %}
+    </div>
+
+    <!-- submit button -->
+    <div class="jumbotron jumbotron-fluid text-right">
+		<p class="lead">
+        	<button type="button" class="btn btn-primary btn-lg" onclick="save_and_submit()">Verstuur en naar volgende verzen</button>
+		</p>
+    </div>
+
+    <!-- overlay containing information about the task -->
+
+    </div>     
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <p style="font-size:30px;font-family: 'Palatino', sans-serif;color:thistle">Bla bla bla test test</p>
+                <p style="font-size:30px;font-family: 'Palatino', sans-serif;color:thistle">Bla bla bla test test</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>    </div>
+        </div>
+        <div>
+            <right><p align="right" style="font-size:25px;cursor:pointer" onclick="openNav()">&#10067; Help</p></right>  
+    </div>
+    <div class="row">
+        <div class="text-center">
+            <h5>Meer informatie</h5>
+            <p>Dit experiment wordt uitgevoerd door Wouter Haverals<br> Voor meer informatie, stuur een e-mail naar: <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be</a></p>
+        </div>
+    </div>
+
+    <!-- Jquery Library File -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap form validator -->
+    <script src="js/validator.min.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.js"></script>
+    <!-- Swiper Carousel js file -->
+    <script src="js/swiper.min.js"></script>
+    <!-- Counterup js file -->
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Magnific Popup core JS file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Slick Nav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+</body>
+</html>
+
+<style>
+
+    
+    .pure-button { padding: .5em 0.1em;}
+
+    button {
+        font-family: 'Palatino', sans-serif;
+        background:none;
+        border:none;
+        font-size: 20px;
+        border-radius: 5px;}
+    
+    .divider{
+    width:15px;
+    height:auto;
+    display:inline-block;
+}
+
+    .Aligner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .Aligner-item {
+    max-width: 50%;
+}
+    button:focus {outline:0;}
+    button:hover {
+        background-color: rgb(76, 175, 80);
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      }
+    button:highlight {background: yellow}
+
+    button.selected {
+    background:  rgb(76, 175, 80);}
+
+
+    .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+    .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+    .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 1s;
+}
+
+    .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+    .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+    @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+</style>
+    
+<script>
+var annotations = {{ annotations|tojson|safe }};
+var story_id = {{ story_id }};
+function changeColor(id)
+
+{
+    console.log("logging!");
+    color = document.getElementById(id).style.backgroundColor;
+    accent = false;
+    if (color === "") {
+        document.getElementById(id).style.background = "rgb(76, 175, 80)";
+        annotations[id]["stressed"] = true;
+    } else {
+        document.getElementById(id).style.background = "";
+        annotations[id]["stressed"] = false;
+    }
+    $.ajax({
+        contentType: 'application/json',
+        url: 'save_annotation',
+        data: JSON.stringify({story_id: story_id, annotations: annotations}),
+        type: 'POST',
+        datatype: 'json',
+        success: (response) => console.log(response),
+        error: (error) => console.log(error)
+    });
+
+}
+
+// save and submit js function:
+
+function save_and_submit() 
+{
+    console.log("logging!");
+    $.ajax({
+        contentType: 'application/json',
+        url: 'finalize_annotation',
+        data: JSON.stringify({story_id: story_id, annotations: annotations}),
+        type: 'POST',
+        datatype: 'json',
+        success: (response) => {
+            console.log(response);
+            window.location = "scansion" 
+
+        },
+        error: (error) => console.log(error)
+    });    
+}
+
+// overlay function
+
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+    }
+        
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+    }
+</script>
+
+{% endblock %}

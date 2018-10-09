@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Page Title -->
+	<title>De Maat van het Middelnederlands</title>
+	<!-- Google Fonts css-->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900%7CRubik:300,400,500,700,900" rel="stylesheet">
+	<!-- Medieval-like font -->
+	<link rel="stylesheet" href="../static/css/stylesheet.css" type="text/css" charset="utf-8" />
+	<!-- Bootstrap css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- Font Awesome icon css-->
+	<link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" href="../static/css/stylesheet.css" type="text/css" charset="utf-8" />
+	<style> h1.medievalfont { font-family: 'orotundheavy'} </style>
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Main custom css -->
+	<link href="css/custom.css" rel="stylesheet" media="screen">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body data-spy="scroll" data-target="#navigation" data-offset="71">
+
+	<!-- Preloader starts -->
+	<div class="preloader">
+		<div class="loader">
+			<div class="diamond"></div>
+			<div class="diamond"></div>
+		</div>
+	</div>
+	<!-- Preloader Ends -->
+	
+	<!-- Header Section Starts-->
+	<header class="header-layout-6">
+		<nav class="navbar navbar-toggleable-md navbar-light" id="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<h1 href="#">De maat van het <br><h1 style="color:firebrick">Middelnederlands</h1></h1>
+				</div>
+				<p class="navbar-text">Welkom, {{ current_user.username }}!</p>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="{{ url_for('login') }}">Log in</a></li>
+					<li><a href="{{ url_for('register') }}">Registreer</a></li>
+				</ul>
+			</div>			
+		</div>
+		</nav>
+	</header>
+	<!-- Header Section ends -->
+	
+	<!-- Banner Section Starts -->
+	<section class="banner-layout-10" id="home">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<!-- Header content start -->
+					<div class="header-content wow fadeInUp">
+					  <h2>Bepaal het ritme van<br>
+						<div class="fadeIn">
+      					<span>Van den Vos Reynaerde</span>
+      					<span>Karel ende Elegast</span>
+      					<span>Beatrijs</span>
+      					<span>Walewein</span>
+						<span>Floris ende Blancefloer</span></br>
+						</h2>
+    					</p>
+						<div>
+					  <p>Via dit online-project willen we zicht krijgen op hoe men vandaag Middelnederlandse dichtwerken voordraagt. Daarom vragen we u, hedendaagse stembanden van deze teksten, de ritmische voorkeuren toe te passen.</p></div>
+					  <div class="app-download">
+						 
+							<a href="#" class="btn-download" href="{{ url_for('scansion') }}"><i class="fa fa-hand-o-right"></i>Aan de slag!</a>
+						</div>
+					</div>
+					<!-- Header content end -->
+				</div>
+				
+				<div class="col-lg-5">
+					<!-- Header image start -->
+					<div class="header-img">
+						<img src="images/voordracht_kleinerer.png" alt="" />
+					</div>
+					<!-- Header image end -->
+				</div>
+			</div>
+		</div>	
+	</section>
+	<!-- Banner Section Ends -->
+	
+	<!-- Footer Section starts -->
+	<footer class="footer-layout-10">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12 col-md-11">
+					<!-- Footer Copyright start -->
+					<div class="copyright">
+						<p class="col-xl-11">Dit experiment maakt deel uit van het docotraatsonderzoek van Wouter Haverals en wordt gefinancierd door het Fonds voor Wetenschappelijk Onderzoek.<br> Voor meer informatie over het project, kan u een bericht sturen naar <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be</a></p>
+					</div>
+					<!-- Footer Copyright end -->
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer Section ends -->
+	
+	<!-- Jquery Library File -->
+	<script src="js/jquery-1.12.4.min.js"></script>
+	<!-- Bootstrap js file -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- SmoothScroll -->
+	<script src="js/SmoothScroll.js"></script>
+    <!-- Main Custom js file -->
+	<script src="js/function.js"></script>
+</body>
+</html>
