@@ -1,0 +1,5 @@
+Lantsloot vander Haghedochte
+[['ay'], ['he', 're'], ['sprac'], ['die'], ['co', 'nin', 'ghin', 'ne']]
+[['segt'], ['mj'], ['dur'], ['die'], ['gods'], ['min', 'ne']]
+[['of'], ['hi'], ['es'], ['in'], ['sie', 're'], ['vi', 'an', 'de'], ['lant']]
+[['of'], ['wie', 'ne'], ['he', 'uet'], ['in'], ['die'], ['hant']]

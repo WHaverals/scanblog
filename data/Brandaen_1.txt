@@ -1,0 +1,12 @@
+De Reis van Sente Brandane
+[['met'], ['hem'], ['nam'], ['hi'], ['twee'], ['ca', 'pel', 'la', 'ne']]
+[['van'], ['den'], ['ee', 'nen'], ['quam'], ['hem'], ['zint'], ['a', 'ne']]
+[['dat'], ['hi', 'ne'], ['om'], ['ee', 'nen'], ['roof'], ['ver', 'loos']]
+[['dies'], ['wart'], ['hem'], ['god'], ['so'], ['vrien', 'de', 'loos']]
+[['so'], ['dat', 'ten'], ['hem'], ['nam'], ['die'], ['vi', 'ant']]
+[['om', 'me'], ['eens'], ['brey', 'dels'], ['ghe', 'want']]
+[['dien'], ['hi'], ['nam'], ['son', 'der'], ['or', 'lof']]
+[['om', 'me'], ['dat'], ['die'], ['du', 've', 'le'], ['dien'], ['roof']]
+[['vant'], ['in'], ['si', 'ne'], ['ghe', 'wout']]
+[['ay'], ['hoe'], ['zee', 're'], ['hi'], ['dat'], ['ont', 'gout']]
+[['dat'], ['hijt'], ['ye'], ['ghe', 'doch', 'te']]

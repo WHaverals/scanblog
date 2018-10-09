@@ -1,0 +1,10 @@
+De Slag bij Woeringen
+[['doo', 'det'], ['den'], ['rid', 'de', 're'], ['ter'], ['vaert']]
+[['van'], ['we', 'se', 'ma', 'le'], ['her'], ['ge', 'raert']]
+[['ver', 'weer', 'de'], ['hem'], ['doe'], ['van', 'der'], ['doot']]
+[['maer'], ['hi'], ['stont'], ['in'], ['groo', 'ter'], ['noot']]
+[['want'], ['si', 'ne'], ['ba', 'ni', 're'], ['en'], ['volg', 'de'], ['hem'], ['niet']]
+[['noch'], ['nie', 'man'], ['dien'], ['hi', 're'], ['bi'], ['liet']]
+[['noch'], ['nie', 'man'], ['van'], ['al', 'den'], ['lan', 'de']]
+[['dus'], ['stont'], ['hi'], ['on', 'der'], ['die'], ['vi', 'an', 'de']]
+[['al', 'soe'], ['see', 're'], ['te'], ['ver', 'no', 'ye']]

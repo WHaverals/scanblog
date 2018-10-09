@@ -1,0 +1,7 @@
+Ons Heren Passie
+[['o'], ['mensch'], ['o'], ['e', 'del'], ['cre', 'a', 'tuer']]
+[['die'], ['bist'], ['ghe', 'maect'], ['na'], ['gods'], ['fi', 'guer']]
+[['sich'], ['an'], ['hoe'], ['heeft'], ['di'], ['god'], ['ghe', 'mint']]
+[['want'], ['hi'], ['sijn'], ['een', 'ghe', 'bo', 'ren'], ['kint']]
+[['woud'], ['lie', 'ver'], ['voer'], ['di'], ['la', 'ten'], ['ster', 'ven']]
+[['dan'], ['di'], ['van'], ['si', 'nen'], ['rijc'], ['on', 'ter', 'ven']]

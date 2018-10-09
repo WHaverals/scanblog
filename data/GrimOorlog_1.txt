@@ -1,0 +1,9 @@
+De Grimbergse Oorlog
+[['hier'], ['met'], ['na', 'men'], ['wy'], ['or', 'lof']]
+[['en', 'de'], ['ruym', 'den'], ['saen'], ['dat'], ['hof']]
+[['ic'], ['en', 'de'], ['mijn'], ['broe', 'der'], ['ge', 'raert']]
+[['en', 'de'], ['ons'], ['ge', 'sel', 'scap'], ['ter'], ['vaert']]
+[['qua', 'men'], ['te'], ['grim', 'ber', 'gen'], ['we', 'der']]
+[['en', 'de'], ['ver', 'tel', 'den'], ['ho', 'ge'], ['en'], ['ne', 'der']]
+[['mi', 'nen'], ['va', 'der'], ['al', 'le'], ['die'], ['woer', 'de']]
+[['die'], ['ic'], ['den'], ['key', 'ser'], ['seg', 'gen'], ['hoer', 'de']]

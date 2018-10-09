@@ -1,0 +1,12 @@
+Het Leven van Sinte Lutgart
+[['dit'], ['was'], ['ge', 'spro', 'ken'], ['in'], ['la', 'tijn']]
+[['met'], ['war', 'den'], ['die'], ['ge', 'scre', 'uen'], ['sijn']]
+[['jnt'], ['boec'], ['van'], ['sa', 'lo', 'moens'], ['wijs', 'hei', 'den']]
+[['daer'], ['staen'], ['die'], ['wart'], ['die'], ['wi'], ['nv'], ['sei', 'den']]
+[['be', 'scre', 'uen'], ['al', 'se'], ['ons'], ['die'], ['di', 'ui', 'ne']]
+[['or', 'kon', 'den'], ['mar'], ['lut', 'gart'], ['die'], ['fi', 'ne']]
+[['al'], ['was'], ['si'], ['daer'], ['dat'], ['go', 'des'], ['wart']]
+[['toe'], ['was'], ['ge', 'spro', 'ken'], ['op', 'pen', 'bart']]
+[['en'], ['waest'], ['noch', 'tan'], ['nit'], ['ha', 're'], ['al', 'lee', 'ne']]
+[['het'], ['hoer', 'de'], ['noch'], ['der'], ['vro', 'wen'], ['ee', 'ne']]
+[['die'], ['sat'], ['vor'], ['ha', 're'], ['al', 'daer'], ['si'], ['lach']]

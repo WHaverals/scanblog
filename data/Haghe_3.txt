@@ -1,0 +1,7 @@
+Lantsloot vander Haghedochte
+[['die'], ['co', 'ninc'], ['hor', 'de'], ['des'], ['mor', 'ghens'], ['vroe']]
+[['mis', 'se'], ['en', 'de'], ['me', 'nech'], ['man'], ['dar'], ['toe']]
+[['doe'], ['voe', 'ren'], ['si'], ['ter'], ['iacht'], ['waert']]
+[['van'], ['de', 'sen'], ['la', 'tic'], ['staen'], ['die'], ['vaert']]
+[['hoe'], ['si'], ['van'], ['der'], ['borch'], ['scie', 'den']]
+[['die'], ['co', 'ninc'], ['ar', 'tur'], ['en', 'de'], ['si', 'ne'], ['lie', 'den']]

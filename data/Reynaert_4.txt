@@ -1,0 +1,12 @@
+Van den vos Reyanerde
+[['o'], ['wy'], ['wat'], ['heb', 'bic'], ['al'], ['ver', 'lo', 'ren']]
+[['sprac'], ['can', 'tic', 'leer'], ['die'], ['daer'], ['stont']]
+[['die'], ['co', 'ninc'], ['sprac'], ['hout'], ['hu', 'wen'], ['mont']]
+[['hee', 're'], ['can', 'tic', 'leer'], ['nu'], ['laet'], ['mi'], ['spre', 'ken']]
+[['laet'], ['mi'], ['ant', 'woer', 'den'], ['si', 'nen'], ['tre', 'ken']]
+[['ay'], ['hee', 're'], ['dief'], ['rey', 'naert']]
+[['dat'], ['ghi'], ['mi'], ['lief'], ['hebt'], ['en', 'de'], ['waert']]
+[['dat'], ['heb', 'di'], ['son', 'der'], ['hu', 'we'], ['pi', 'ne']]
+[['mi', 'ne'], ['bo', 'den'], ['la', 'ten'], ['an', 'schi', 'ne']]
+[['a', 'rem'], ['man'], ['ty', 'beert'], ['hee', 're'], ['bru', 'ne']]
+[['die'], ['noch'], ['bloe', 'dich'], ['es'], ['zijn'], ['cru', 'ne']]

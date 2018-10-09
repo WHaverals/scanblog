@@ -1,0 +1,7 @@
+Van den vos Reyanerde
+[['doe'], ['sprac'], ['die'], ['co', 'ninc'], ['hee', 're'], ['ty', 'beert']]
+[['gaet'], ['wech'], ['eer'], ['ghi'], ['we', 'der'], ['keert']]
+[['be', 'siet'], ['dat'], ['rey', 'naert'], ['met'], ['hu'], ['co', 'me']]
+[['de', 'se'], ['hee', 'ren'], ['seg', 'ghen'], ['so', 'me']]
+[['al'], ['es'], ['rey', 'naert'], ['an', 'dren'], ['die', 'ren'], ['fel']]
+[['hi'], ['ghe', 'loe', 'vet'], ['hu'], ['so'], ['wel']]

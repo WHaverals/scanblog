@@ -1,0 +1,6 @@
+De Reis van Sente Brandane
+[['daer'], ['was'], ['hem'], ['si', 'ne'], ['ver', 'we'], ['van'], ['ee', 're']]
+[['ver', 'wan', 'del', 'de'], ['al', 'so'], ['see', 're']]
+[['dat'], ['si', 'ne'], ['cu', 'me'], ['ver', 'kan', 'den']]
+[['pec'], ['had', 'den'], ['hem'], ['die'], ['hel', 'sche'], ['vi', 'an', 'den']]
+[['ghe', 'wre', 'ven'], ['an'], ['lijf'], ['en', 'de'], ['an'], ['baert']]

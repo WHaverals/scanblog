@@ -1,0 +1,9 @@
+Het Leven van Sinte Lutgart
+[['mar'], ['got'], ['hi'], ['mo', 'tes'], ['heb', 'ben'], ['danc']]
+[['siin'], ['or', 'con', 'de'], ['was'], ['daer'], ['te'], ['cranc']]
+[['dis'], ['war', 'dic'], ['hem'], ['tin'], ['sel', 'ven'], ['ston', 'den']]
+[['met'], ['gods'], ['von', 'nes', 'se'], ['al', 'daer'], ['ont', 'fon', 'den']]
+[['dos'], ['ben', 'ic'], ['co', 'men'], ['ma', 'get'], ['scho', 'ne']]
+[['daer', 'bo', 'ven'], ['to', 'ten'], ['ho', 'gen'], ['tro', 'ne']]
+[['daer'], ['ic'], ['sal'], ['res', 'ten'], ['e', 'we', 'li', 'ke']]
+[['met'], ['go', 'de'], ['van'], ['den'], ['he', 'mel', 'ri', 'ke']]

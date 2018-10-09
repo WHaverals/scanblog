@@ -1,0 +1,11 @@
+Van den vos Reyanerde
+[['wil', 'lem'], ['die'], ['ve', 'le'], ['bou', 'ke'], ['maec', 'te']]
+[['daer'], ['hi'], ['dic', 'ken'], ['om', 'me'], ['waec', 'te']]
+[['hem'], ['ver', 'noy', 'de'], ['so'], ['haer', 'de']]
+[['dat'], ['die'], ['a', 'von', 'tu', 're'], ['van'], ['rey', 'naer', 'de']]
+[['in'], ['diet', 'sche'], ['on', 'ghe', 'ma', 'ket'], ['ble', 'ven']]
+[['die'], ['wil', 'lem'], ['niet'], ['he', 'vet'], ['vul', 'scre', 'ven']]
+[['dat'], ['hi'], ['die'], ['vij', 'te'], ['van'], ['rey', 'naer', 'de'], ['souc', 'ken']]
+[['en', 'de'], ['hi', 'se'], ['na'], ['den'], ['wal', 'schen'], ['bouc', 'ken']]
+[['in'], ['diet', 'sche'], ['dus'], ['he', 'vet'], ['be', 'gon', 'nen']]
+[['god'], ['moe', 'te'], ['ons'], ['zie', 're'], ['hul', 'pen'], ['jon', 'nen']]

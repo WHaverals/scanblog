@@ -1,0 +1,11 @@
+Brabantsche Yeetsen, Eerste Boek
+[['en', 'de'], ['clo', 'do', 've', 'us'], ['groot'], ['ghe', 'slach', 'te']]
+[['ghinc'], ['te'], ['nieu', 'te'], ['dus'], ['met'], ['mach', 'te']]
+[['bi'], ['den'], ['paus'], ['en', 'de'], ['bi'], ['den'], ['he', 'ren']]
+[['die'], ['pip', 'pi', 'ne'], ['wil', 'den'], ['e', 'ren']]
+[['en', 'de'], ['van'], ['bra', 'bant'], ['die'], ['her', 'to', 'ghen']]
+[['ble', 'ven'], ['co', 'nin', 'ghen'], ['seer'], ['ver', 'mo', 'ghen']]
+[['to', 'te'], ['aen'], ['dien'], ['dat'], ['sijt'], ['ver', 'lo', 'ren']]
+[['mids'], ['val', 'schen'], ['ra', 'de'], ['al', 'se'], ['ghijt'], ['selt'], ['ho', 'ren']]
+[['hier'], ['nae', 'maels'], ['daer'], ['ict'], ['al']]
+[['int'], ['an', 'der'], ['boeck'], ['ver', 'trec', 'ken'], ['sal']]

@@ -1,0 +1,7 @@
+Lantsloot vander Haghedochte
+[['si'], ['voe', 'ren'], ['ter'], ['her', 'ber', 'gen'], ['bei', 'de']]
+[['die'], ['wit', 'te'], ['in'], ['san', 'ders'], ['ghe', 'lei', 'de']]
+[['en', 'tie'], ['scilt', 'kna', 'pen'], ['en', 'tie'], ['ionc', 'frou', 'we']]
+[['dien'], ['nacht'], ['wa', 'ren'], ['si'], ['son', 'der'], ['rou', 'we']]
+[['met'], ['bli', 'sce', 'pen'], ['en', 'de'], ['met'], ['spe', 'le']]
+[['al', 'le'], ['te'], ['sa', 'me', 'ne'], ['in'], ['die'], ['ze', 'le']]

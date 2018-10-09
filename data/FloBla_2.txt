@@ -1,0 +1,9 @@
+Floris ende Blancefloer
+[['flo', 'ris'], ['en'], ['wouds'], ['hem'], ['niet'], ['on', 'der'], ['win', 'den']]
+[['als'], ['hijs'], ['an'], ['hem'], ['niet'], ['con', 'de'], ['vin', 'den']]
+[['doen'], ['en'], ['wil', 'de'], ['hijs'], ['hem'], ['nem', 'mer'], ['ver', 'ghen']]
+[['en', 'de'], ['lei', 'de', 'ne'], ['met'], ['hem'], ['ter'], ['her', 'ber', 'ghen']]
+[['en', 'de'], ['bat'], ['hem'], ['dat'], ['hi'], ['met'], ['hem'], ['at']]
+[['hi'], ['moo', 'de', 'ne'], ['en', 'de'], ['eer', 'den'], ['om'], ['den'], ['scat']]
+[['die'], ['hi'], ['hem'], ['had', 'de'], ['ghe', 'ghe', 'ven'], ['te'], ['vo', 'ren']]
+[['en', 'de'], ['met'], ['ghe', 'rech', 'ten'], ['spe', 'le'], ['ver', 'lo', 'ren']]

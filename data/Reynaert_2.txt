@@ -1,0 +1,10 @@
+Van den vos Reyanerde
+[['doe'], ['in'], ['sco', 'ninx'], ['hof'], ['was'], ['ver', 'no', 'men']]
+[['dat'], ['rey', 'naert'], ['wa', 're'], ['te'], ['ho', 've'], ['co', 'men']]
+[['met'], ['grim', 'beer', 'de'], ['den'], ['das']]
+[['ic'], ['wa', 'ne'], ['daer'], ['nie', 'me', 'ne'], ['ne'], ['was']]
+[['so'], ['a', 'rem'], ['no'], ['van'], ['so'], ['cranc', 'ken'], ['ma', 'ghen']]
+[['hi', 'ne'], ['ghe', 'reed', 'de'], ['hem'], ['up'], ['een'], ['cla', 'ghen']]
+[['dit'], ['was'], ['al'], ['je', 'ghen'], ['rey', 'naer', 'de']]
+[['noch', 'tan'], ['de', 'di'], ['als'], ['die'], ['on', 'ver', 'vaer', 'de']]
+[['hoe'], ['so'], ['hem'], ['te'], ['moe', 'de'], ['was']]

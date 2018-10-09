@@ -1,0 +1,7 @@
+Beatrijs
+[['ic'], ['ben'], ['die'], ['al', 'toes'], ['ghe', 'na', 'de'], ['hoept']]
+[['al'], ['eest'], ['dat'], ['mi'], ['anxt'], ['noept']]
+[['en', 'de'], ['mi'], ['bringt'], ['in'], ['gro', 'ten'], ['va', 're']]
+[['en'], ['was'], ['nye'], ['soe'], ['gro', 'ten'], ['son', 'da', 're']]
+[['sint'], ['dat'], ['ghi'], ['op'], ['ert', 'ri', 'ke'], ['quaemt']]
+[['en', 'de'], ['men', 'sche', 'li', 'ke'], ['vor', 'me'], ['naemt']]

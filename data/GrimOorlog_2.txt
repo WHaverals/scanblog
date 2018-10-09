@@ -1,0 +1,10 @@
+De Grimbergse Oorlog
+[['de'], ['he', 're'], ['van'], ['bre', 'da'], ['riep'], ['bre', 'da']]
+[['en', 'de'], ['sijn'], ['so', 'nen'], ['oec'], ['daer', 'na']]
+[['rie', 'pen'], ['sijn'], ['teyc', 'ken'], ['son', 'der'], ['ber', 'ghen']]
+[['en', 'de'], ['her'], ['ar', 'nout'], ['riep'], ['grim', 'ber', 'gen']]
+[['en', 'de'], ['her'], ['wou', 'ter'], ['bert', 'hout']]
+[['riep'], ['me', 'che', 'len'], ['met'], ['ge', 'wout']]
+[['selc'], ['riep'], ['as', 'sche'], ['selc'], ['riep'], ['bey', 'ghem']]
+[['en', 'de'], ['elc'], ['sijn'], ['tey', 'ken'], ['dat'], ['hem']]
+[['toe', 'hoir', 'de'], ['in'], ['al', 'len'], ['rech', 'te']]

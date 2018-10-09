@@ -1,0 +1,5 @@
+Karel ende Elegast
+[['doen'], ['ant', 'woer', 'de'], ['die'], ['co', 'ninc']]
+[['ghi'], ['vra', 'get'], ['mi'], ['so'], ['me', 'nich'], ['dinc']]
+[['en'], ['wis', 'tu'], ['hoe'], ['be', 'rech', 'ten']]
+[['ic'], ['heb'], ['lie', 'ver'], ['dat'], ['wi'], ['vech', 'ten']]

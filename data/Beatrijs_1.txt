@@ -1,0 +1,7 @@
+Beatrijs
+[['si'], ['sei', 'de'], ['ma', 'ri', 'a'], ['die'], ['go', 'de'], ['so', 'ghe', 'de']]
+[['fon', 'tey', 'ne'], ['bo', 'ven'], ['al', 'le'], ['wi', 'ven']]
+[['laet'], ['mi'], ['in', 'der'], ['noet'], ['niet'], ['bli', 'ven']]
+[['vrou', 'we'], ['ic'], ['ne', 'me'], ['u'], ['tor', 'con', 'den']]
+[['dat'], ['mi'], ['rou', 'wen'], ['mi', 'ne'], ['son', 'den']]
+[['en', 'de'], ['sijn'], ['mi'], ['her', 'de'], ['leet']]

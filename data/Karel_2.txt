@@ -1,0 +1,8 @@
+Karel ende Elegast
+[['die'], ['co', 'ninc'], ['namt'], ['tcou', 'ter'], ['in'], ['die'], ['hant']]
+[['dat'], ['hi'], ['aen'], ['die'], ['ploech'], ['vant']]
+[['hi'], ['pens', 'de'], ['in'], ['si', 'nen'], ['moet']]
+[['dit'], ['is'], ['den'], ['am', 'bocht'], ['goet']]
+[['die'], ['gra', 'ven'], ['wil'], ['in'], ['bor', 'ghen']]
+[['hi'], ['moe', 'ter'], ['toe'], ['be', 'sor', 'ghen']]
+[['sulc', 'ke'], ['dinc'], ['als'], ['hem'], ['be', 'dor', 'ste']]

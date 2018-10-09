@@ -1,0 +1,5 @@
+Brabantsche Yeesten, Zevende Boek
+[['hier'], ['na'], ['soe'], ['troc', 'ken'], ['des'], ['sijt'], ['vroe', 'der']]
+[['die'], ['her', 'to', 'ghe'], ['en', 'de'], ['met'], ['hem'], ['sijn'], ['broe', 'der']]
+[['van'], ['ny', 'veers'], ['die'], ['hee', 're'], ['va', 'li', 'ant']]
+[['met'], ['rid', 'de', 'ren'], ['met'], ['cna', 'pen'], ['uut'], ['bra', 'bant']]

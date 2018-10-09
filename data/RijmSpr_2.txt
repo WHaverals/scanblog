@@ -1,0 +1,11 @@
+Rijmspreuken
+[['soe'], ['wye'], ['can'], ['hou', 'den'], ['en', 'de'], ['ghe', 'ven']]
+[['te'], ['recht'], ['mach'], ['hi'], ['mit'], ['e', 'ren'], ['le', 'ven']]
+[['soe'], ['wye'], ['schoen', 'heit'], ['in'], ['sijn'], ['ze', 'den'], ['can']]
+[['ghe', 'doen'], ['dat'], ['is'], ['een'], ['wi', 'se'], ['man']]
+[['nye', 'mant'], ['en'], ['sel'], ['sijn'], ['volc', 'ke'], ['laen']]
+[['son', 'der'], ['vroech', 'de'], ['wil'], ['hi'], ['ee', 're'], ['haen']]
+[['het'], ['hoort'], ['me', 'nich'], ['lo', 'ghe', 'naer']]
+[['dic', 'wijl'], ['har', 'de'], ['ley', 'den'], ['maer']]
+[['be', 'gra', 'ven'], ['schat'], ['ver', 'bor', 'ghen'], ['min']]
+[['daer'], ['of'], ['en'], ['haet'], ['nye', 'mant'], ['ghe', 'win']]

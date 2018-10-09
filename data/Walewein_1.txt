@@ -1,0 +1,9 @@
+Walewein
+[['doe'], ['nam'], ['hi'], ['or', 'lof'], ['die'], ['wi', 'gant']]
+[['an'], ['co', 'ninc'], ['en', 'de'], ['an'], ['co', 'nin', 'ghin', 'ne']]
+[['en', 'de'], ['an'], ['al', 'le'], ['die', 're'], ['wa', 'ren'], ['in', 'ne']]
+[['met', 'ten'], ['co', 'ninc'], ['in', 'die'], ['za', 'le']]
+[['si'], ['ant', 'wor', 'den'], ['al', 'te', 'ma', 'le']]
+[['vaert'], ['god'], ['on', 'se'], ['al', 're'], ['he', 're']]
+[['ver', 'de'], ['jou'], ['van'], ['lach', 'tre'], ['en', 'de'], ['van'], ['ze', 're']]
+[['en', 'de'], ['la', 'te'], ['jou'], ['dinc'], ['ten'], ['be', 's', 'ten'], ['co', 'men']]

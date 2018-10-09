@@ -1,0 +1,7 @@
+De Limburgse Aiol
+[['nu'], ['hecht'], ['die'], ['ors'], ['dar'], ['bet'], ['dien'], ['to', 'me']]
+[['se', 'taf'], ['die'], ['vrou', 'we'], ['bi'], ['dien'], ['bo', 'me']]
+[['want'], ['vor'], ['dat'], ['ras', 'ten'], ['nut', 'te'], ['we', 're']]
+[['si'], ['is'], ['ver', 'mo', 'det'], ['har', 'de'], ['se', 're']]
+[['ic'], ['lo', 'pe'], ['vo', 're'], ['sun', 'der'], ['bei', 'den']]
+[['die'], ['her', 'ber', 'ge'], ['sal'], ['ic'], ['ge', 'rei', 'den']]
