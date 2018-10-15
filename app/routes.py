@@ -17,17 +17,7 @@ from sqlalchemy.types import TypeDecorator, VARCHAR
 @app.route('/index')
 @login_required
 def index():
-    posts = [
-        {
-            'author': {'username': 'John'},
-            'body': 'Beautiful day in Portland!'
-        },
-        {
-            'author': {'username': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
-        }
-    ]
-    return render_template('index.html', title='Home', posts=posts)
+    return render_template('index_2.html', title='Home')
 
 
 @app.route('/task_description')
