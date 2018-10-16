@@ -1,3 +1,4 @@
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,21 +11,21 @@
 	<!-- Google Fonts css-->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900%7CRubik:300,400,500,700,900" rel="stylesheet">
 	<!-- Bootstrap css -->
-	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="../static/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<!-- Font Awesome icon css-->
-	<link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
-	<link href="css/flaticon.css" rel="stylesheet" media="screen">
+	<link href="../static/css/font-awesome.min.css" rel="stylesheet" media="screen">
+	<link href="../static/css/flaticon.css" rel="stylesheet" media="screen">
 	<!-- Swiper's CSS -->
-	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="../static/css/swiper.min.css">
 	<!-- Animated css -->
-	<link href="css/animate.css" rel="stylesheet">
+	<link href="../static/css/animate.css" rel="stylesheet">
 	<!-- Magnific Popup CSS -->
-	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="../static/css/magnific-popup.css" rel="stylesheet">
 	<!-- Slick nav css -->
-	<link rel="stylesheet" href="css/slicknav.css">
+	<link rel="stylesheet" href="../static/css/slicknav.css">
 	<!-- Main custom css -->
-	<link href="css/custom.css" rel="stylesheet" media="screen">
-	<link href="css/pages.css" rel="stylesheet" media="screen">
+	<link href="../static/css/custom.css" rel="stylesheet" media="screen">
+	<link href="../static/css/pages.css" rel="stylesheet" media="screen">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -34,28 +35,18 @@
 </head>
 <body data-spy="scroll" data-target="#navigation" data-offset="71">
 	
-	<!-- Preloader starts -->
-	<div class="preloader">
-		<div class="loader">
-			<div class="diamond"></div>
-			<div class="diamond"></div>
-			<div class="diamond"></div>
-		</div>
-	</div>
-	<!-- Preloader Ends -->
+<!-- Header Section Starts-->
 	
-	<!-- Header Section Starts-->
-	
-	<header class="header-layout-5">
+<header class="header-layout-5">
 		<nav class="navbar navbar-expand-md navbar-light fixed-top" id="navigation">
 			<div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#"><img src="images/logomaatbold.png" alt="" /></a>
+					<a class="navbar-brand" href="#"><img src="../static/images/logomaatbold.png" alt="" /></a>
 				</div>
 				<p class="navbar-text">Welkom, {{ current_user.username }}!</p>
 			</div>			
 		</nav>
-	</header>
+</header>
 	
 	<!-- Header Section ends -->
 	
@@ -63,15 +54,13 @@
 	<!-- Blog Page starts -->
 	<div class="page-blog">
 		<div class="container">
-			<div class="row">
+<div class="row">
 			  <div class="col-md-8 offset-md-2">
-					<div class="page-single-header">
-					  <h2>Het onderzoek</h2>
-				  </div>
-					
-				<p class="text-justify">In de middeleeuwen werden verhalen zoals dat van de sluwe vos Reynaert of de lotgevallen van de ridders Walewein en Ferguut luidop voorgedragen voor een luisterend publiek. In die context is het ritme van een dichtwerk essentieel om de tekst tot leven te brengen.
-						<p class="text-justify">Helaas weten we vandaag maar bitter weinig over de werking van het ritme in een middeleeuwse tekst. Er lopen simpelweg geen middeleeuwers meer rond aan wie je kan vragen om even een stukje uit de <em>Reynaert</em> voor te lezen.</p>
-						<p class="text-justify">Waar we wél zicht op kunnen krijgen, is de eigen, hedendaagse voordrachtspraktijk. Dit is precies waar deze website om draait. In dit project wordt er namelijk gepeild naar de ritmische voorkeuren van hedendaagse voordragers van middeleeuwse dichtwerken. Wanneer u zo meteen aan het experiment begint, zullen er enkele versregels uit een Middelnederlands dichtwerk op uw scherm verschijnen. Door vervolgens de vijf onderstaande eenvoudige stappen in het achterhoofd te houden, brengt u het experiment tot een goed einde en draagt u bij aan de kennis van Middelnederlands versritme.</p>
+			    
+				  <p class="text-justify">In de middeleeuwen werden verhalen zoals dat van de sluwe vos Reynaert of de lotgevallen van de ridders Walewein en Ferguut veelal luidop voorgedragen voor een luisterend publiek. In die context is het ritme van een dichtwerk essentieel om de tekst tot leven te brengen. </p>
+				  
+				  <p class="text-justify">Aan de hand van een korte bevraging wordt er gepeild naar de ritmische voorkeuren van hedendaagse voordragers van middeleeuwse dichtwerken. Wanneer u zo meteen aan het experiment begint, zullen er enkele versregels uit een Middelnederlands dichtwerk op uw scherm verschijnen. Door vervolgens de vijf onderstaande eenvoudige stappen in het achterhoofd te houden, brengt u het experiment tot een goed einde en draagt u bij aan de kennis van Middelnederlands versritme.</p>
+				  
 				</div>
 				
 				<div class="col-md-10 offset-md-1">
@@ -121,7 +110,7 @@ de verzen luidop uit. Draag ze voor op een manier die natuurlijk aanvoelt.</p>
 				  </div>
 					<!-- service single box end -->
 			  </div>
-			  <div class="col-lg-8 col-xl-7 col-md-7 wow fadeInUp"><p class="text-justify"><taskword><strong>Selecteer</strong></taskword> de woorden of lettergrepen die u in uw voordracht heeft beklemtoond. Doe dit voor alle versregels op het scherm. Als u een foutje maakte, kan u het betreffende woord(deel) ook weer deselecteren door er opnieuw op te klikken.</p></div>
+			  <div class="col-lg-7 col-xl-7 col-md-7 wow fadeInUp"><p class="text-justify"><taskword><strong>Selecteer</strong></taskword> de woorden of lettergrepen die u in uw voordracht heeft beklemtoond. Doe dit voor alle versregels op het scherm. Als u een foutje maakte, kan u het betreffende woord(deel) ook weer deselecteren door er opnieuw op te klikken.</p></div>
 			
 			<div class="col-lg-3 col-xl-2 offset-xl-1 col-md-3">
 				<!-- service single box start -->
@@ -130,7 +119,7 @@ de verzen luidop uit. Draag ze voor op een manier die natuurlijk aanvoelt.</p>
 				</div>
 					<!-- service single box end -->
 			</div>
-			  <div class="col-lg-8 col-xl-7 col-md-7 wow fadeInUp"><p class="text-justify"><taskword><strong>Verstuur</strong></taskword> uw antwoord. Kijk nog even na of u alle versregels een ritme heeft gesuggereerd. Eenmaal u op 'verzenden' klikt, worden uw keuzes opgeslagen en kan u geen wijzigingen meer aanbrengen. De website stuurt u tevens automatisch door naar de volgende versregels.</p></div>
+			  <div class="col-lg-7 col-xl-7 col-md-7 wow fadeInUp"><p class="text-justify"><taskword><strong>Verstuur</strong></taskword> uw antwoord. Kijk nog even na of u alle versregels een ritme heeft gesuggereerd. Eenmaal u op 'verzenden' klikt, worden uw keuzes opgeslagen en kan u geen wijzigingen meer aanbrengen. De website stuurt u tevens automatisch door naar de volgende versregels.</p></div>
 			<br></br>
 		  	</div>
 			</div>
@@ -141,57 +130,58 @@ de verzen luidop uit. Draag ze voor op een manier die natuurlijk aanvoelt.</p>
 	<!-- Download Apps section starts -->
 	<section class="download-app-layout-5" id="download">
 		<div class="container">
-			<div class="row">
-				
-				<div class="col-md-8 col-xl-12">
-					<div class="download-entry">						
-						<div class="app-download">
-							<a href="#" class="btn-download" href="{{ url_for('scansion') }}"><i class="fa fa-hand-o-right"></i>Naar de opdracht!</a>
-						</div>
-						<script  src="js/index.js"></script>
-					</div>
+			<div class="row">	
+				<div class="col-md-8 col-xl-12">						
+					<p class="lead">
+						<a class="btn-download" href="{{ url_for('scansion') }}" role="button"><i class="fa fa-hand-o-right"></i>Aan de slag!</a>
+					</p>
 				</div>
 			</div>
 		</div>
 	</section>
+	</div>
+</div>
+
 	<!-- Download Apps section ends -->
 	
 	<!-- Footer Section starts -->
-	<footer class="footer-layout-10">
+	<footer class="footer-layout-3">
 		<div class="container">
 			<div class="row">
-				<div class="col-xl-12 col-md-11">
+	
 					<!-- Footer Copyright start -->
 					<div class="copyright">
-						<p class="col-xl-12">Dit experiment maakt deel uit van het docotraatsonderzoek van Wouter Haverals en wordt gefinancierd door het Fonds voor Wetenschappelijk Onderzoek.<br> Voor meer informatie over het project, kan u een bericht sturen naar <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be</a></p>
+					  <p class="text-left col-md-12 col-lg-12 col-xl-12">Dit experiment maakt deel uit van het docotraatsonderzoek van Wouter Haverals en wordt gefinancierd door het Fonds voor Wetenschappelijk Onderzoek. Voor meer informatie over het project, kan u een bericht sturen naar <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be</a></p>
+					  <div class="col-lg-2 col-md-3 col-xl-2 offset-lg-0 col-sm-4 col-4 offset-xl-0"> <img src="../static/images/uafwo.png" alt="" /></div>
 					</div>
 					<!-- Footer Copyright end -->
-				</div>
+
 			</div>
 		</div>
 	</footer>
+	</body>
+</html>
 	<!-- Footer Section ends -->
 	
 	<!-- Jquery Library File -->
-	<script src="js/jquery-1.12.4.min.js"></script>
+	<script src="../static/js/jquery-1.12.4.min.js"></script>
 	<!-- Bootstrap js file -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="../static/js/bootstrap.min.js"></script>
 	<!-- Bootstrap form validator -->
-	<script src="js/validator.min.js"></script>
+	<script src="../static/js/validator.min.js"></script>
 	<!-- Wow js file -->
-	<script src="js/wow.js"></script>
+	<script src="../static/js/wow.js"></script>
 	<!-- Swiper Carousel js file -->
-	<script src="js/swiper.min.js"></script>
+	<script src="../static/js/swiper.min.js"></script>
 	<!-- Counterup js file -->
-	<script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
+	<script src="../static/js/waypoints.min.js"></script>
+    <script src="../static/js/jquery.counterup.min.js"></script>
 	<!-- Magnific Popup core JS file -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="../static/js/jquery.magnific-popup.min.js"></script>
 	<!-- Slick Nav js file -->
-	<script src="js/jquery.slicknav.js"></script>
+	<script src="../static/js/jquery.slicknav.js"></script>
 	<!-- SmoothScroll -->
-	<script src="js/SmoothScroll.js"></script>
+	<script src="../static/js/SmoothScroll.js"></script>
     <!-- Main Custom js file -->
-	<script src="js/function.js"></script>
-</body>
-</html>
+	<script src="../static/js/function.js"></script>
+{% endblock %}
