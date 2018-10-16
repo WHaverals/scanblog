@@ -1,7 +1,7 @@
 {
     "stories": [
         {
-            "story_id": 780,
+            "story_id": 6080,
             "title": "Van den vos Reynaerde",
             "fragments": [
                 {
@@ -46,18 +46,7 @@
                                 {"id":16, "text": "waec"},
                                 {"id":17, "text": "te"}
                             ]
-                        ]
-                    ]
-                } 
-            ]
-        },
-        {
-            "story_id": 781,
-            "title": "Van den vos Reynaerde",
-            "fragments": [
-                {
-                    "fragment_id": 2,
-                    "lines": [
+                        ],
                         [
                             [
                                 {"id":18, "text": "hem"}
@@ -96,18 +85,7 @@
                                 {"id":33, "text": "naer"},
                                 {"id":34, "text": "de"} 
                             ]  
-                        ]
-                    ]
-                } 
-            ]
-        },
-        {
-            "story_id": 782,
-            "title": "Van den vos Reynaerde",
-            "fragments": [
-                {
-                    "fragment_id": 3,
-                    "lines": [
+                        ],
                         [
                             [
                                 {"id":35, "text": "in"}
@@ -147,18 +125,7 @@
                                 {"id":51, "text": "scre"},
                                 {"id":52, "text": "ven"}
                             ]
-                        ]
-                    ]
-                } 
-            ]
-        },
-        {
-            "story_id": 783,
-            "title": "Van den vos Reynaerde",
-            "fragments": [
-                {
-                    "fragment_id": 4,
-                    "lines": [
+                        ],
                         [
                             [
                                 {"id":53, "text": "dat"}
@@ -215,7 +182,7 @@
             ]
         },
         {
-            "story_id": 784,
+            "story_id": 6084,
             "title": "Van den vos Reynaerde",
             "fragments": [
                 {
@@ -271,7 +238,7 @@
             ]
         },
         {
-            "story_id": 785,
+            "story_id": 6085,
             "title": "Het Leven van Sinte Lutgart",
             "fragments": [
                 {
@@ -328,7 +295,7 @@
             ]
         },
         {
-            "story_id": 786,
+            "story_id": 6086,
             "title": "Het Leven van Sinte Lutgart",
             "fragments": [
                 {
@@ -383,7 +350,7 @@
             ]
         },
         {
-            "story_id": 787,
+            "story_id": 6087,
             "title": "Het Leven van Sinte Lutgart",
             "fragments": [
                 {
@@ -438,7 +405,7 @@
             ]
         },
         {
-            "story_id": 788,
+            "story_id": 6088,
             "title": "Het Leven van Sinte Lutgart",
             "fragments": [
                 {
@@ -499,7 +466,7 @@
             ]
         },
         {
-            "story_id": 789,
+            "story_id": 6089,
             "title": "Natuurkunde van het Geheelal",
             "fragments": [
                 {
