@@ -1,0 +1,1586 @@
+/* ----------------------------------------------------------------------------------------
+* Author        : Awaiken
+* Template Name : Appiest - App Multiconcept Landing Page
+* File          : Main CSS file
+* Version       : 1.0
+* ---------------------------------------------------------------------------------------- */
+/* INDEX
+----------------------------------------------------------------------------------------
+01. General css
+02. Navigation area css
+03. Banner area css
+04. About us area css
+05. Main Feature area css
+06. Features area css
+07. Showcase area css
+08. FAQs area css
+09. Pricing area css
+10. Team Member area css
+11. Testimonials area css
+12. Download Apps area css
+13. Footer area css
+14. Media Screens
+-------------------------------------------------------------------------------------- */
+
+/************************************/
+/***** 	   01. General css		 ****/
+/************************************/
+
+body{
+	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+	color: #6b6e73;
+}
+
+body.on-side{
+	margin-left: 0;
+}
+
+h1{
+	margin-top:0;
+	font-weight: 700;
+	color:black;
+}
+
+h2
+h3,
+h4,
+h5,
+h6{
+	margin-top:0;
+	font-weight: 700;
+}
+
+img{
+	max-width: 100%;
+	max-height: 100%;
+}
+
+taskword {
+	font-size: 16px;
+	background: #b22222;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  }
+
+a:hover{
+	text-decoration: none;
+	outline: 0;
+}
+
+a:focus{
+	text-decoration: none;
+	outline: 0;
+}
+
+::-moz-selection{
+	background: #f56972;
+	color: #fff;
+}
+
+::selection{
+	background: #f56972;
+	color: #fff;
+}
+
+.preloader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(to right,#c0392b,#df796e);
+    background: -webkit-linear-gradient(to right,#f56972,#ba79c6);
+    background: -moz-linear-gradient(to right,#f56972,#ba79c6);
+    background: -o-linear-gradient(to right,#f56972,#ba79c6);
+	z-index: 9999;
+	text-align: center;
+}
+
+.loader{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 30px;
+	height: 120px;
+	display: flex;
+	flex-flow: column nowrap;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.preloader .diamond{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+    background: #fff;
+    -webkit-transform: translateY(0) rotate(45deg) scale(0);
+    transform: translateY(0) rotate(45deg) scale(0);
+    -webkit-animation: diamonds 1500ms linear infinite;
+    animation: diamonds 1500ms linear infinite;
+}
+
+.preloader .diamond:nth-child(1) {
+    -webkit-animation-delay: -1000ms;
+    animation-delay: -1000ms;
+}
+
+.preloader .diamond:nth-child(2) {
+    -webkit-animation-delay: -2000ms;
+    animation-delay: -2000ms;
+}
+
+.preloader .diamond:nth-child(3) {
+    -webkit-animation-delay: -3000ms;
+    animation-delay: -3000ms;
+}
+
+.preloader .diamond:nth-child(4) {
+    -webkit-animation-delay: -4000ms;
+    animation-delay: -4000ms;
+}
+
+@-webkit-keyframes diamonds {
+    50% {
+        -webkit-transform: translateY(-50px) rotate(45deg) scale(1);
+        transform: translateY(-50px) rotate(45deg) scale(1);
+    }
+    100% {
+        -webkit-transform: translateY(-100px) rotate(45deg) scale(0);
+        transform: translateY(-100px) rotate(45deg) scale(0);
+    }
+}
+
+@keyframes diamonds {
+    50% {
+        -webkit-transform: translateY(-50px) rotate(45deg) scale(1);
+        transform: translateY(-50px) rotate(45deg) scale(1);
+    }
+    100% {
+        -webkit-transform: translateY(-100px) rotate(45deg) scale(0);
+        transform: translateY(-100px) rotate(45deg) scale(0);
+    }
+}
+
+.row.no-gutters{
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.mt-30{
+	margin-top: 30px;
+}
+
+/************************************/
+/***** 02. Navigation area css  *****/
+/************************************/
+
+.header-layout-5 .navbar{
+	padding: 0;
+	background: linear-gradient(to right,#f6f7fb,#f6f7fb);
+    background: -webkit-linear-gradient(to right,#00bade,#4a77f4);
+    background: -moz-linear-gradient(to right,#00bade,#4a77f4);
+    background: -o-linear-gradient(to right,#00bade,#4a77f4);
+	transition: all 0.3s;
+	border-bottom: 1px solid #c1c8e3;
+}
+
+.header-layout-5 .navbar .container {
+    position: relative;
+}
+
+.header-layout-5 .navbar-brand img{
+	height: 64px;
+	transition: all 0.3s;
+}
+
+.header-layout-5 .navbar-light .navbar-nav .nav-link{
+	color: #fff;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 8px 10px;
+}
+
+.header-layout-5 .navbar-light .navbar-nav .nav-item{
+	position: relative;
+	padding: 32px 0;
+	transition: all 0.3s;
+}
+
+.header-layout-5 .navbar-light .navbar-nav .nav-item ul{
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 200px;
+	padding: 6px 0;
+	margin: 0;
+	background: linear-gradient(to bottom,#f6f7fb,#f6f7fb);
+	background: -webkit-linear-gradient(to bottom,#00bade,#4a77f4);
+	background: -moz-linear-gradient(to bottom,#00bade,#4a77f4);
+	background: -o-linear-gradient(to bottom,#00bade,#4a77f4);
+}
+
+.header-layout-5 .navbar-light .navbar-nav .nav-item ul li{
+	display: block;
+	width: 100%;
+}
+
+.header-layout-5 .navbar-light .navbar-nav .nav-item ul li a{
+	display: block;
+	color: #fff;
+	font-size: 14px;
+	padding: 6px 16px;
+	transition: all 0.3s;
+}
+
+.header-layout-5 .navbar-light .navbar-nav .nav-item ul li a:hover{
+	background: rgba(255,255,255,0.2);
+	color: #fff;
+}
+
+.header-layout-5 .navbar-light .navbar-nav .nav-item:hover ul{
+	display: block;
+}
+
+.header-layout-5 .sticky-header.navbar-light .navbar-nav .nav-item{
+	padding: 17px 0;
+}
+
+.header-layout-5 .navbar-light .navbar-nav .nav-link.download-link{
+	background: #fff;
+	color: #3e4555;
+	padding: 8px 20px;
+	vertical-align: middle;
+	border-radius: 20px;
+	margin-left: 10px;
+	transition: all 0.3s;
+}
+
+.header-layout-5 .navbar-light .navbar-nav .nav-link.download-link:hover{
+	background: #fff;
+	color: #3e4555;
+}
+
+.header-layout-5 .navbar-light .navbar-nav .nav-link:hover{
+	color: #000;
+}
+
+.header-layout-5 .navbar-light .navbar-nav .nav-link:focus{
+	color: #fff;
+}
+
+.header-layout-5 .navbar-light .navbar-nav .active.nav-link:focus{
+	color: #000;
+}
+
+.header-layout-5 .navbar-light .navbar-nav .nav-item .active.nav-link{
+	color: #000;
+}
+
+.header-layout-5 .sticky-header{
+	padding: 0;
+	background: linear-gradient(to right,#f6f7fb,#f6f7fb);
+	background: -webkit-linear-gradient(to right,#00bade,#4a77f4);
+	background: -moz-linear-gradient(to right,#00bade,#4a77f4);
+	background: -o-linear-gradient(to right,#00bade,#4a77f4);
+}
+
+.header-layout-5 .sticky-header .navbar-brand img{
+	height: 44px;
+}
+
+.header-layout-5 .navbar-toggle{
+	display: none;
+	position: absolute;
+	right: 15px;
+	top: 20px;
+	transition: all 0.3s;
+}
+
+.header-layout-5 .sticky-header .navbar-toggle{
+	top: 10px;
+}
+
+#responsive-menu{
+	display: none;
+	width: 100%;
+}
+
+.header-layout-5 .slicknav_menu{
+	padding: 0;
+	background: none;
+}
+
+.header-layout-5 .slicknav_btn{
+	padding: 8px;
+	border: 1px solid #fff;
+	border-radius: 0;
+	margin: 0;
+	background: none;
+}
+
+.header-layout-5 .slicknav_icon-bar{
+	box-shadow: none;
+	height: 1px;
+	margin-top: 1px;
+	margin-bottom: 5px;
+	background: #fff;
+}
+
+.header-layout-5 .slicknav_nav{
+	padding: 10px 0;
+}
+
+.header-layout-5 .slicknav_nav a{
+	color: #fff;
+	margin: 0;
+	padding: 6px 2px;
+}
+
+.header-layout-5 .slicknav_nav a.active{
+	color: #000;
+}
+
+.header-layout-5 .slicknav_nav a:hover{
+	background: none;
+	color: #000;
+}
+
+.header-layout-6 .navbar{
+	padding: 20px 0;
+	transition: all 0.3s;
+}
+
+.header-layout-6 .navbar-brand img{
+	height: 69px;
+	transition: all 0.3s;
+}
+
+/************************************/
+/*****   03. Banner area css    *****/
+/************************************/
+
+.banner-layout-5{
+	position: relative;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	background: linear-gradient(to right,#f6f7fb,#f6f7fb);
+	background: -webkit-linear-gradient(to right,#f6f7fb);
+	background: -moz-linear-gradient(to right,#f6f7fb);
+	background: -o-linear-gradient(to right,#f6f7fb);
+	padding: 100px 0 0;
+	margin-bottom: 140px;
+}
+
+.banner-layout-5 .row{
+	position: relative;
+	z-index: 1;
+}
+
+.banner-layout-5 .header-banner{
+	background: url(../images/header-bg.jpg) no-repeat top center;
+	background-size: cover;
+	padding: 80px 0;
+	border-radius: 10px;
+	margin-bottom: -140px;
+	position: relative;
+	overflow: hidden;
+}
+
+.banner-layout-5 .header-content{
+	padding: 0 80px;
+	margin-top: 50px;
+}
+
+.banner-layout-5 .header-content h2{
+	color: #fff;
+	font-size: 44px;
+	font-weight: 500;
+	font-family: 'Rubik', sans-serif;
+	margin-bottom: 0.5em;
+	line-height: 1.2em;
+}
+
+.banner-layout-5 .header-content p{
+	font-size: 14px;
+	color: #fff;
+	line-height: 1.7em;
+	margin-bottom: 1.7em;
+}
+
+.banner-layout-5 .header-image{
+	text-align: center;
+}
+
+.banner-layout-10{
+	position: relative;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	padding: 14px 0 0;
+}
+
+.banner-layout-10 .row{
+	position: relative;
+	z-index: 1;
+}
+
+.banner-layout-10 .header-content{
+	margin-top: 60px;
+}
+
+.banner-layout-10 .header-content h2{
+	font-family: 'Rubik', sans-serif;
+	font-size: 40px;
+	font-weight: 500;
+	margin-bottom: 0.5em;
+	color: #3e4555;
+}
+
+.banner-layout-10 .header-content p{
+	font-size: 14px;
+	color: #8d97ad;
+	line-height: 1.7em;
+	margin-bottom: 1.7em;
+}
+
+.banner-layout-10 .header-img{
+	text-align: center;
+	bottom: 0;
+}
+
+.banner-layout-10 .btn-download{
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to right,#b22222, #c14e4e);
+    background: -webkit-linear-gradient(to right,#b22222, #c14e4e);
+    background: -moz-linear-gradient(to right,#b22222, #c14e4e);
+    background: -o-linear-gradient(to right,#b22222, #c14e4e);
+    color: #fff;
+    padding: 11px 20px 11px 56px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-top: 5px;
+    text-align: left;
+    border-radius: 40px;
+    box-shadow: 0px 9px 50.22px 3.78px rgba(0, 0, 0, 0.11);
+}
+
+.banner-layout-10 .btn-download i{
+    font-size: 28px;
+    position: absolute;
+    top: 10px;
+    left: 16px;
+}
+
+.banner-layout-10 .btn-download span{
+    font-size: 10px;
+    display: block;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+}
+
+.banner-layout-10 .btn-download:hover{
+	background: #fff;
+	color: #3e4555;
+}
+
+/**************************************/
+/*****   04. About us area css    *****/
+/**************************************/
+
+.section-title{
+	margin-bottom: 60px;
+}
+
+.section-title span{
+	display: inline-block;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 500;
+	text-transform: uppercase;
+	border-radius: 14px;
+	padding: 2px 12px;
+	background: linear-gradient(to right,#f6f7fb,#f6f7fb);
+	background: -webkit-linear-gradient(to right,#f6f7fb);
+	background: -moz-linear-gradient(to right,#f6f7fb);
+	background: -o-linear-gradient(to right,#f6f7fb);
+	margin-bottom: 10px;
+}
+
+.section-title h2{
+	font-size: 30px;
+	color: #3e4555;
+}
+
+.aboutus-layout-5{
+	padding: 100px 0;
+}
+
+.aboutus-layout-5 .about-content p{
+	font-size: 14px;
+	color: #8d97ad;
+	line-height: 1.7em;
+	margin-bottom: 1.7em;
+}
+
+.aboutus-layout-5 .about-counter{
+	background: #eaeff3;	
+	padding: 0 10px;
+	position: relative;
+	right: -100px;
+	z-index: 10;
+	margin-top: 40px;
+}
+
+.aboutus-layout-5 .about-counter-single{
+	text-align: center;
+	padding: 20px 0;
+}
+
+.pricing-layout-1 .pricing-header .icon-box{
+		font-size: 60px;
+	}
+
+.service-layout-1 .service-single .icon-box{
+	display: inline-block;
+	text-align:center;
+	font-size: 80px;
+	line-height: 1.1em;
+	margin-left: 20px;
+	margin-bottom: 35px;
+	background: linear-gradient(to right, #b22222, #D99191);
+	background: -webkit-linear-gradient(to right, #b22222, #D99191);
+	background: -moz-linear-gradient(to right, #b22222, #D99191);
+	background: -o-linear-gradient(to right, #b22222, #D99191);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.pricing-layout-1 .pricing-header .icon-box{
+	color: #fff;
+	font-size: 80px;
+	line-height: 1em;
+	margin-bottom: 20px;
+}
+
+	.pricing-layout-1 .pricing-header .icon-box{
+		font-size: 60px;
+	}
+
+.aboutus-layout-5 .about-counter-single h3{
+	color: #637790;
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 4px;
+}
+
+.aboutus-layout-5 .about-counter-single p{
+	font-size: 12px;
+	color: #8d97ad;
+	margin: 0;
+}
+
+/******************************************/
+/*****   05. Main Feature area css    *****/
+/******************************************/
+
+.main-features-layout-5{
+	padding: 0 0 50px;
+}
+
+.main-features-layout-5 .main-feature-header{
+	background: url(../images/main-feature-bg.jpg) no-repeat top center;
+	background-size: cover;
+	padding: 100px 0 80px;
+}
+
+.main-features-layout-5 .main-feature-title h2{
+	color: #fff;
+	font-size: 40px;
+	line-height: 1.5em;
+	margin: 0;
+}
+
+.main-features-layout-5 .main-feature-image{
+	text-align: center;
+	margin-top: -64%;
+}
+
+.main-features-layout-5 .main-feature-entry{
+	padding-top: 40px;
+}
+
+.main-features-layout-5 .main-feature-entry p{
+	font-size: 14px;
+	color: #8d97ad;
+	line-height: 1.7em;
+}
+
+.main-features-layout-5 .btn-download,
+.download-app-layout-5 .btn-download{
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to right,#b22222, #c14e4e);
+	background: -webkit-linear-gradient(to right,#b22222, #c14e4e);
+	background: -moz-linear-gradient(to right,#b22222, #c14e4e);
+	background: -o-linear-gradient(to right,#b22222, #c14e4e);
+    color: #fff;
+    padding: 6px 20px 6px 52px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-top: 20px;
+    text-align: left;
+    border-radius: 40px;
+	box-shadow: 0px 0px 45.9px 5.1px rgba(0, 0, 0, 0.1);
+}
+
+.main-features-layout-5 .btn-download i,
+.download-app-layout-5 .btn-download i{
+    font-size: 28px;
+    position: absolute;
+    top: 10px;
+    left: 16px;
+}
+
+.main-features-layout-5 .btn-download span,
+.download-app-layout-5 .btn-download span{
+    font-size: 10px;
+    display: block;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+}
+
+.main-features-layout-5 .btn-download:hover,
+.download-app-layout-5 .btn-download:hover{
+	background: #b22222;
+	color: #fff;
+}
+
+/**************************************/
+/*****   06. Features area css    *****/
+/**************************************/
+
+.features-layout-5{
+	padding: 50px 0 100px;
+}
+
+.feature-single{
+	text-align: center;
+}
+
+.feature-single .icon-box{
+	font-size: 90px;
+	background: linear-gradient(to right,#b22222, #c14e4e);
+	background: -webkit-linear-gradient(to right,#00bade,#4a77f4);
+	background: -moz-linear-gradient(to right,#00bade,#4a77f4);
+	background: -o-linear-gradient(to right,#00bade,#4a77f4);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.feature-single h3{
+	font-size: 20px;
+	font-weight: 500;
+	color: #637790;
+	margin: 16px 0 24px;
+}
+
+.feature-single p{
+	font-size: 14px;
+	color: #8d97ad;
+	line-height: 1.7em;
+}
+
+.feature-single .btn-readmore{
+	font-size: 12px;
+	color: #3785eb;
+	text-transform: uppercase;
+	position: relative;
+	padding-bottom: 2px;
+}
+
+.feature-single .btn-readmore:after{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 1px;
+	background: #3785eb;
+}
+
+/**************************************/
+/*****   07. Showcase area css    *****/
+/**************************************/
+
+.showcase-layout-5{
+	padding: 100px 0;
+	background: #f5f7fa;
+}
+
+.showcase-layout-5 .showcase-image{
+	text-align: center;
+}
+
+.showcase-layout-5 .showcase-entry p{
+	font-size: 14px;
+	color: #8d97ad;
+	line-height: 1.7em;
+	margin-bottom: 1.7em;
+}
+
+.showcase-slide{
+	position: relative;
+	cursor: pointer;
+}
+
+.showcase-slide figure img{
+	border-radius: 8px;
+}
+
+.showcase-slide .showcase-overlay{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(66,190,182,0.0);
+	border-radius: 8px;
+	transition: all 0.3s;
+}
+
+.showcase-slide .showcase-overlay span{
+	display: inline-block;
+	background: #3e4555;
+	font-size: 10px;
+	color: #ffffff;
+	text-transform: uppercase;
+	padding: 0px 10px;
+	border-radius: 10px;
+	position: absolute;
+	top: 4px;
+	left: 4px;
+}
+
+.showcase-slide:hover .showcase-overlay{
+	background: rgba(66,190,182,0.7);
+}
+
+/**************************************/
+/*****     08. FAQs area css      *****/
+/**************************************/
+
+.faqs-layout-5{
+	padding: 100px 0 50px;
+}
+
+.faqs-layout-5 .reach-us-info h3{
+	font-size: 20px;
+	color: #3e4555;
+	margin-bottom: 30px;
+}
+
+.faqs-layout-5 .reach-us-info p{
+	color: #8d97ad;
+	padding-left: 30px;
+	position: relative;
+}
+
+.faqs-layout-5 .reach-us-info p i{
+	font-size: 20px;
+	font-weight: normal;
+	display: block;
+	position: absolute;
+	width: 26px;
+	text-align: center;
+	left: 0;
+	top: 0;
+}
+
+.faqs-layout-5 .faq-accordion .card{
+	border: none;
+	border-bottom: 1px solid #e9eff3;
+}
+
+.faqs-layout-5 .faq-accordion .card-header{
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+.faqs-layout-5 .faq-accordion .card-header a{
+	display: block;
+	text-align: left;
+	padding: 20px 0 20px 34px;
+	color: #637790;
+	font-size: 18px;
+	font-weight: 500;
+	position: relative;
+	cursor: pointer;
+}
+
+.faqs-layout-5 .faq-accordion .card-header a:before{
+	content: '\f059';
+	font-family: FontAwesome;
+	font-size: 24px;
+	color: #637790;
+	position: absolute;
+	left: 0;
+	top: 16px;
+}
+
+.faqs-layout-5 .faq-accordion .card-header a:hover{
+	color: #637790;
+}
+
+.faqs-layout-5 .faq-accordion .card-body{
+	margin-left: 34px
+}
+
+.faqs-layout-5 .faq-accordion .card-body p{
+	font-size: 14px;
+	color: #8d97ad;
+	line-height: 1.7em;
+	margin-bottom: 1.7em;
+}
+
+.faqs-layout-5 .faq-accordion .card.active .card-header a{
+	color: #3e4555;
+}
+
+.faqs-layout-5 .faq-accordion .card.active .card-header a:before{
+	color: #3e4555;
+}
+
+/*****************************************/
+/*****     09. Pricing area css      *****/
+/*****************************************/
+
+.pricing-layout-5{
+	padding: 50px 0;
+}
+
+.pricing-layout-5 .pricing-entry p{
+	font-size: 14px;
+	color: #8d97ad;
+	line-height: 1.7em;
+	margin-bottom: 1.7em;
+}
+
+.pricing-layout-5 .pricing-entry ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.pricing-layout-5 .pricing-entry ul li{
+	font-size: 14px;
+	color: #8d97ad;
+	position: relative;
+	padding: 4px 0;
+}
+
+.pricing-layout-5 .pricing-entry ul li:before{
+	content: '\f058';
+	font-family: FontAwesome;
+	color: #368aee;
+	margin-right: 10px;
+}
+
+.pricing-layout-5 .pricing-single{
+	background: linear-gradient(to right,#00bade,#4a77f4);
+	background: -webkit-linear-gradient(to right,#00bade,#4a77f4);
+	background: -moz-linear-gradient(to right,#00bade,#4a77f4);
+	background: -o-linear-gradient(to right,#00bade,#4a77f4);
+	border-radius: 10px;
+	padding: 30px;
+}
+
+.pricing-layout-5 .pricing-header .icon-box{
+	color: #fff;
+	font-size: 50px;
+	line-height: 1em;
+	margin-bottom: 20px;
+}
+
+.pricing-layout-5 .pricing-header p{
+	font-size: 14px;
+	color: #fff;
+}
+
+.pricing-layout-5 .pricing-body{
+	background: #3e4555;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.pricing-layout-5 .pricing-body ul{
+	padding: 0;
+	margin: 0 0 20px 0;
+	list-style: none;
+}
+
+.pricing-layout-5 .pricing-body ul li{
+	font-size: 14px;
+	color: #fff;
+	position: relative;
+	padding: 2px 0;
+}
+
+.pricing-layout-5 .pricing-body ul li:before{
+	content: '\f058';
+	font-family: FontAwesome;
+	color: #fff;
+	font-size: 14px;
+	margin-right: 10px;
+}
+
+.pricing-layout-5 .btn-price{
+	display: block;
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+	text-align: center;
+	border: 1px solid #fff;
+	border-radius: 4px;
+	padding: 10px 0;
+	margin-bottom: 10px;
+	transition: all 0.3s;
+}
+
+.pricing-layout-5 .btn-price:hover{
+	background: #fff;
+	color: #3e4555;
+}
+
+.pricing-layout-5 .btn-trial{
+	display: block;
+	font-size: 16px;
+	font-weight: 500;
+	color: #fff;
+	text-align: center;
+	border-radius: 4px;
+	padding: 12px 0;
+	transition: all 0.3s;
+	background: linear-gradient(to right,#00bade,#4a77f4);
+	background: -webkit-linear-gradient(to right,#00bade,#4a77f4);
+	background: -moz-linear-gradient(to right,#00bade,#4a77f4);
+	background: -o-linear-gradient(to right,#00bade,#4a77f4);
+}
+
+.pricing-layout-5 .btn-trial:hover{
+	color: #fff;
+}
+
+.pricing-layout-5 .pricing-footer{
+	text-align: center;
+	padding-top: 20px;
+}
+
+.pricing-layout-5 .pricing-footer a{
+	display: inline-block;
+	color: #fff;
+	font-size: 12px;
+}
+
+.pricing-layout-5 .pricing-footer a:after{
+	content: '|';
+	padding-left: 10px;
+	padding-right: 6px;
+}
+
+.pricing-layout-5 .pricing-footer a:last-child:after{
+	display: none;
+}
+
+/************************************/
+/*****   04. Footer area css    *****/
+/************************************/
+
+footer.footer-layout-10{
+	background: #fff;
+	padding: 36px 0;
+}
+
+.copyright p{
+	font-size: 12px;
+	color: #797979;
+	margin: 0;
+}
+
+.footer-menu ul{
+	text-align: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer-menu ul li{
+	display: inline-block;
+}
+
+.footer-menu ul li:after{
+	content: '|';
+	font-size: 14px;
+	margin: 0 4px 0 8px;
+}
+
+.footer-menu ul li:last-child:after{
+	display: none;
+}
+
+.footer-menu ul li a{
+	font-size: 14px;
+	color: #797979;
+}
+
+.footer-menu ul li a:hover{
+	color: #f56972;
+}
+
+.footer-social{
+	text-align: right;
+}
+
+.footer-social a{
+	font-size: 14px;
+	color: #3e4555;
+	margin-left: 10px;
+}
+
+.footer-social a:hover{
+	color: #f56972;
+}
+
+/************************************/
+/*****    05. Media Screens     *****/
+/************************************/
+
+@media only screen and (max-width: 991px){
+	.banner-layout-10 .header-content{
+		margin-top: 0;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	
+	.banner-layout-10 .btn-download{
+		margin: 8px;
+	}
+	
+	.navbar-brand{
+		display: block;
+		text-align: center;
+		margin: 0;
+	}
+}
+
+/* Mobile Layout */
+@media only screen and (max-width: 767px){
+	.banner-layout-10 .header-content h2{
+		font-size: 26px;
+	}
+	
+	.copyright{
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	
+	.footer-menu{
+		margin-bottom: 10px;
+	}
+	
+	.footer-social{
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 575px){
+	.header-layout-10 .container{
+		width: 100%;
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+	
+	.banner-layout-10 .header-content h2{
+		font-size: 22px;
+	}
+
+	/*********************************************/
+/*****     12. Download Apps area css    *****/
+/*********************************************/
+
+.download-app-layout-5{
+	padding: 80px 0;
+	background: #f5f7fa;
+	margin: 40px 0;
+}
+
+.download-app-layout-5 .download-image{
+	text-align: center;
+	margin: -160px 0;
+}
+
+.download-app-layout-5 .download-entry h2{
+	font-size: 34px;
+	color: #3e4555;
+	margin-bottom: 14px;
+}
+
+.download-app-layout-5 .download-entry p{
+	font-size: 14px;
+	color: #8d97ad;
+	line-height: 1.7em;
+	margin-bottom: 1.7em;
+}
+
+.download-app-layout-5 .btn-download{
+	margin-top: 20px;
+}
+
+.download-app-layout-5 .download-entry h4{
+	margin-top: 30px;
+	font-size: 14px;
+	color: #8d97ad;
+	font-weight: 400;
+}
+
+.download-app-layout-5 .download-entry h4 a{
+	font-size: 18px;
+	font-weight: 600;
+	color: #3e4555;
+	text-decoration: underline;
+}
+
+/**************************************/
+/*****     13. Footer area css    *****/
+/**************************************/
+
+.footer-layout-10{
+	background: #fff;
+	padding-bottom: 2px 0;
+}
+
+.footer-menu{
+	margin-top: 30px;
+}
+
+.footer-menu ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.footer-menu ul li{
+	display: inline-block;
+}
+
+.footer-menu ul li a{
+	color: #8d97ad;
+	transition: all 0.3s;
+}
+
+.footer-menu ul li a:hover{
+	color: #00bade;
+}
+
+.footer-menu ul li a:after{
+	content: '|';
+	color: #8d97ad;
+	padding-left: 10px;
+	padding-right: 6px;
+}
+
+.footer-menu ul li:last-child a:after{
+	display: none;
+}
+
+.footer-social{
+	margin-top: 20px;
+}
+
+.footer-social a{
+	display: inline-block;
+	color: #8d97ad;
+	margin: 0 10px;
+	transition: all 0.3s;
+}
+
+.footer-social a:hover{
+	color: #00bade;
+}
+
+.footer-social a i{
+	margin-right: 6px;
+}
+
+.footer-copyright{
+	margin-top: 30px;
+}
+
+.footer-copyright p{
+	font-size: 14px;
+	color: #8d97ad;
+	line-height: 1.7em;
+	margin: 0;
+}
+
+.footer-copyright p a{
+	color: #8d97ad;
+	text-decoration: underline;
+	transition: all 0.3s;
+}
+
+.footer-copyright p a:hover{
+	color: #00bade;
+}
+
+/************************************/
+/*****    14. Media Screens     *****/
+/************************************/
+
+@media only screen and (max-width: 1200px){
+	.banner-layout-5 .header-content{
+		padding: 0 40px;
+	}
+}
+
+@media only screen and (max-width: 991px){
+	.header-layout-5 .navbar-nav{
+		display: none;
+	}
+	
+	.header-layout-5 .navbar{
+		padding: 10px 0;
+		overflow: auto;
+		max-height: 100%;
+		align-items: flex-start;
+	}
+	
+	.header-layout-5 .navbar .container{
+		flex-wrap: wrap;
+	}
+	
+	.header-layout-5 .navbar-toggle,
+	#responsive-menu{
+		display: block;
+	}
+	
+	.section-title{
+		margin-bottom: 40px;
+	}
+	
+	.section-title h2{
+		font-size: 22px;
+	}
+	
+	.aboutus-layout-5 .about-counter{
+		right: 0;
+	}
+	
+	.banner-layout-5 .header-banner{
+		padding: 60px 20px;
+	}
+	
+	.banner-layout-5 .header-banner:before{
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0,0,0,0.2);
+	}
+	
+	.banner-layout-5 .header-content{
+		margin-top: 0;
+	}
+	
+	.aboutus-layout-5{
+		padding: 60px 0;
+	}
+	
+	.about-image{
+		margin-top: 30px;
+		text-align: center;
+	}
+	
+	.main-features-layout-5 .main-feature-image{
+		margin-top: 40px;
+	}
+	
+	.main-features-layout-5 .main-feature-header{
+		padding: 60px 0;
+	}
+	
+	.main-features-layout-5 .main-feature-title h2{
+		font-size: 26px;
+	}
+	
+	.main-features-layout-5{
+		padding: 0 0 30px;
+	}
+	
+	.features-layout-5{
+		padding: 30px 0 60px;
+	}
+	
+	.feature-single h3{
+		font-size: 18px;
+	}
+	
+	.showcase-layout-5{
+		padding: 60px 0;
+	}
+	
+	.faqs-layout-5{
+		padding: 60px 0 30px;
+	}
+	
+	.pricing-layout-5{
+		padding: 30px 0;
+	}
+	
+	.team-member-layout-5{
+		padding: 30px 0 0;
+	}
+	
+	.pricing-single{
+		margin-top: 30px;
+	}
+	
+	.testimonial-layout-5{
+		padding: 60px 0;
+	}
+	
+	.download-app-layout-5{
+		padding: 60px 0;
+		margin-bottom: 0;
+	}
+	
+	.footer-layout-5{
+		padding: 60px 0;
+	}
+}
+
+/* Mobile Layout */
+@media only screen and (max-width: 767px){
+	.banner-layout-5 .header-content h2{
+		font-size: 26px;
+	}
+	
+	.banner-layout-5 .header-banner{
+		padding: 40px 20px;
+	}
+	
+	.banner-layout-5 .header-content{
+		padding: 0;
+	}
+	
+	.main-features-layout-5 .main-feature-title h2{
+		font-size: 24px;
+	}
+
+	.main-features-layout-5 .main-feature-title h2 br{
+		display: none;
+	}
+	
+	.main-features-layout-5 .app-download{
+		text-align: center;
+	}
+	
+	.feature-single .icon-box{
+		font-size: 60px;
+		line-height: 1em;
+		margin-left: 5px;
+	}
+	
+	.features-layout-5{
+		padding: 30px 0;
+	}
+	
+	.feature-single{
+		margin-bottom: 30px;
+	}
+	
+	.team-member-layout-5 .team-overlay .team-overlay-info h3{
+		font-size: 14px;
+	}
+	
+	.team-member-layout-5 .team-overlay .team-overlay-info p{
+		font-size: 12px;
+	}
+	
+	.testimonial-layout-5 .testimonial-slider-wrapper{
+		padding: 0;
+	}
+	
+	.testimonial-layout-5 .testimonial-slide p{
+		font-size: 16px;
+	}
+	
+	.testimonial-layout-5 .testimonial-pagination{
+		text-align: center;
+		margin-top: 30px;
+	}
+	
+	.testimonial-layout-5 .testimonial-prev,
+	.testimonial-layout-5 .testimonial-next{
+		position: relative;
+		display: inline-block;
+		font-size: 30px;
+		margin: 0 5px;
+	}
+	
+	.download-app-layout-5 .download-image{
+		margin-bottom: 30px;
+	}
+	
+	.download-app-layout-5 .download-entry h2{
+		font-size: 26px;
+	}
+	
+	.showcase-layout-5 .showcase-image{
+		display: none;
+	}
+	
+	.mfp-figure:after{
+		box-shadow: none;
+		background: none;
+	}
+}
+
+@media only screen and (max-width: 575px){
+	.header-layout-5 .container{
+		width: 100%;
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+	
+	.faqs-layout-5 .faq-accordion .card-header a{
+		font-size: 16px;
+		line-height: 1.5em;
+		padding: 16px 0 16px 34px; 
+	}
+	
+	.download-app-layout-5 .btn-download{
+		margin-bottom: 30px;
+	}
+	
+	.footer-copyright p br{
+		display: none;
+	}
+}
+
+/* Small Mobile Layout */
+@media only screen and (max-width: 480px) {
+	.footer-menu ul li a,
+	.footer-social a{
+		font-size: 14px;
+	}
+
+/* OLD SCANSION.HTML CSS*/
+
+.pure-button { padding: .5em 0.1em;}
+
+    button {
+        font-family: 'Palatino', sans-serif;
+        background:none;
+        border:none;
+        font-size: 20px;
+        border-radius: 5px;}
+    
+    .divider{
+    width:15px;
+    height:auto;
+    display:inline-block;
+}
+
+    .Aligner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .Aligner-item {
+    max-width: 50%;
+}
+    button:focus {outline:0;}
+    button:hover {
+        background-color: rgb(76, 175, 80);
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+      }
+    button:highlight {background: yellow}
+
+    button.selected {
+    background:  rgb(76, 175, 80);}
+
+
+    .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+    .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+    .overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 1s;
+}
+
+    .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+    .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+    @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
