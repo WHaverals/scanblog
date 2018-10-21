@@ -1,7 +1,7 @@
 {
     "stories": [
         {
-            "story_id": 6080,
+            "story_id": 7080,
             "title": "Van den vos Reynaerde",
             "fragments": [
                 {
@@ -182,7 +182,7 @@
             ]
         },
         {
-            "story_id": 6084,
+            "story_id": 7084,
             "title": "Van den vos Reynaerde",
             "fragments": [
                 {
@@ -238,7 +238,7 @@
             ]
         },
         {
-            "story_id": 6085,
+            "story_id": 7085,
             "title": "Het Leven van Sinte Lutgart",
             "fragments": [
                 {
@@ -295,7 +295,7 @@
             ]
         },
         {
-            "story_id": 6086,
+            "story_id": 7086,
             "title": "Het Leven van Sinte Lutgart",
             "fragments": [
                 {
@@ -350,7 +350,7 @@
             ]
         },
         {
-            "story_id": 6087,
+            "story_id": 7087,
             "title": "Het Leven van Sinte Lutgart",
             "fragments": [
                 {
@@ -405,7 +405,7 @@
             ]
         },
         {
-            "story_id": 6088,
+            "story_id": 7088,
             "title": "Het Leven van Sinte Lutgart",
             "fragments": [
                 {
@@ -466,7 +466,7 @@
             ]
         },
         {
-            "story_id": 6089,
+            "story_id": 7089,
             "title": "Natuurkunde van het Geheelal",
             "fragments": [
                 {
@@ -557,6 +557,62 @@
                             [
                                 {"id":197, "text": "scie"},
                                 {"id":198, "text": "re"}
+                            ]
+                        ]
+                    ]
+                } 
+            ]
+        },
+        {
+            "story_id": 7209,
+            "title": "Karel ende Elegast",
+            "fragments": [
+                {
+                    "fragment_id": 10,
+                    "lines": [
+                        [
+                            [
+                                {"id":199, "text": "Frae"},
+                                {"id":200, "text": "ye"}
+                            ],
+                            [
+                                {"id":201, "text": "his"},
+                                {"id":202, "text": "to"},
+                                {"id":203, "text": "rie"}
+                            ],
+                            [
+                                {"id":204, "text": "en"},
+                                {"id":205, "text": "de"}
+                            ],
+                            [
+                                {"id":206, "text": "al"}
+                            ],  
+                            [   
+                                {"id":207, "text": "waer"}
+                            ]
+                        ],
+                        [
+                            [
+                                {"id":208, "text": "Mach"}
+                            ],
+                            [
+                                {"id":209, "text": "ic"}
+                            ],
+                            [
+                                {"id":210, "text": "u"}
+                            ],
+                            [
+                                {"id":211, "text": "tel"},
+                                {"id":212, "text": "len"}
+                            ],
+                            [
+                                {"id":213, "text": "hoort"}
+                            ],
+                            [
+                                {"id":214, "text": "er"}
+                            ],
+                            [
+                                {"id":215, "text": "naer"}
                             ]
                         ]
                     ]

@@ -283,7 +283,7 @@
 
 .page-header{
 	background: #dce3e9;
-    padding: 30px 0 10px;
+    padding: 40px 0 20px;
 	text-align: center;
 	position: relative;
 	top: 0;
@@ -839,9 +839,10 @@ div.c {
 /******************************************/
 
 .page-blog{
-	margin-top: 120px;
+	position: relative;
+	margin-top: 130px;
 	text-align:center;
-	margin-bottom: 90px;
+	margin-bottom: 100px;
 }
 
 .blog-post-box{
