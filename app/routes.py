@@ -15,9 +15,8 @@ from sqlalchemy.types import TypeDecorator, VARCHAR
 
 @app.route('/')
 @app.route('/index')
-@login_required
 def index():
-    return render_template('index_2.html', title='Home')
+    return render_template('index.html', title='Home')
 
 
 @app.route('/task_description')
