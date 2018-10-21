@@ -1,38 +1,96 @@
 {% extends "base.html" %}
 {% import 'bootstrap/wtf.html' as wtf %}
-
 {% block content %}
-    <h1>Registreer</h1>
-    <form action="" method="post">
-        {{ form.hidden_tag() }}
-        <p>
-            {{ form.username.label }}<br>
-            {{ form.username(size=32) }}<br>
-            {% for error in form.username.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.email.label }}<br>
-            {{ form.email(size=64) }}<br>
-            {% for error in form.email.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.password.label }}<br>
-            {{ form.password(size=32) }}<br>
-            {% for error in form.password.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>
-            {{ form.password2.label }}<br>
-            {{ form.password2(size=32) }}<br>
-            {% for error in form.password2.errors %}
-            <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </p>
-        <p>{{ form.submit() }}</p>
-    </form>
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Page Title -->
+	<title>De Maat van het Middelnederlands</title>
+	<!-- Google Fonts css-->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900%7CRubik:300,400,500,700,900" rel="stylesheet">
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" media="screen">
+	<!-- Font Awesome icon css-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" media="screen">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/flaticon.css') }}" media="screen">
+	<!-- Swiper's CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swiper.min.css') }}">
+	<!-- Animated css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.css') }}">
+	<!-- Magnific Popup CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+	<!-- Slick nav css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slicknav.css') }}">
+	<!-- Main custom css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}" media="screen">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/pages.css') }}" media="screen">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+	<body data-spy="scroll" data-target="#navigation" data-offset="71">
+	
+<!-- Header Section Starts-->
+	<header class="header-layout-6">
+		<nav class="navbar navbar-toggleable-md navbar-light" id="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<h1 href="#">De maat van het <br><h1 style="color:firebrick">Middelnederlands</h1></h1>
+				</div>
+				<p class="navbar-text">Welkom!</p>
+			</div>			
+		</nav>
+	</header>
+	<!-- Header Section ends -->
+	<section class="banner-layout-10" id="home">
+		<div class="login">
+			<h1 class="login-title">Registreer</h1>
+			    <form action="" method="post">
+        		{{ form.hidden_tag() }}
+        		<p>
+            	{{ form.username.label }}<br>
+            	{{ form.username(size=21) }}<br>
+            	{% for error in form.username.errors %}
+            	<span style="color: red;">[{{ error }}]</span>
+            	{% endfor %}
+        		</p>
+        		<p>
+            	{{ form.email.label }}<br>
+            	{{ form.email(size=21) }}<br>
+            	{% for error in form.email.errors %}
+            	<span style="color: red;">[{{ error }}]</span>
+            	{% endfor %}
+        		</p>
+        		<p>
+            	{{ form.password.label }}<br>
+            	{{ form.password(size=21) }}<br>
+            	{% for error in form.password.errors %}
+            	<span style="color: red;">[{{ error }}]</span>
+            	{% endfor %}
+        		</p>
+        		<p>
+            	{{ form.password2.label }}<br>
+            	{{ form.password2(size=21) }}<br>
+            	{% for error in form.password2.errors %}
+            	<span style="color: red;">[{{ error }}]</span>
+            	{% endfor %}
+        		</p>
+				<p>
+            	{{ form.language.label }}<br>
+            	{{ form.language(size=2) }}
+        		</p>
+				<p>
+            	{{ form.middledutch.label }}<br>
+            	{{ form.middledutch(size=2) }}
+        		</p>
+        		<p style="text-align: center">{{ form.submit() }}</p>
+    		</form>
 {% endblock %}

@@ -1,25 +1,96 @@
 {% extends "base.html" %}
-
 {% block content %}
-	<h1> Sign In</h1>
-	<form action= "" method="post">
-		{{ form.hidden_tag() }}
-		<p>
-			{{ form.username.label }}<br>
-			{{ form.username(size=32) }}
-			{% for error in form.username.errors %}
-			<span style="color: red;">[{{ error }}]</span>
-			{% endfor %}
-		</p>
-		<p>
-			{{ form.password.label }}<br>
-			{{ form.password(size=32) }}
-			{% for error in form.username.errors %}
-			<span style="color: red;">[{{ error }}]</span>
-			{% endfor %}
-		</p>
-		<p>{{ form.remember_me() }} {{ form.remember_me.label}}</p>
-		<p>{{ form.submit() }}</p>
-	</form>
-	<p>New User? <a href="{{ url_for('register') }}">Click to Register!</a></p>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Page Title -->
+	<title>De Maat van het Middelnederlands</title>
+	<!-- Google Fonts css-->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900%7CRubik:300,400,500,700,900" rel="stylesheet">
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" media="screen">
+	<!-- Font Awesome icon css-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" media="screen">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/flaticon.css') }}" media="screen">
+	<!-- Swiper's CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swiper.min.css') }}">
+	<!-- Animated css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.css') }}">
+	<!-- Magnific Popup CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+	<!-- Slick nav css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slicknav.css') }}">
+	<!-- Main custom css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}" media="screen">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/pages.css') }}" media="screen">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+	<body data-spy="scroll" data-target="#navigation" data-offset="71">
+
+	<!-- Header Section Starts-->
+	<header class="header-layout-6">
+		<nav class="navbar navbar-toggleable-md navbar-light" id="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<h1 href="#">De maat van het <br><h1 style="color:firebrick">Middelnederlands</h1></h1>
+				</div>
+				<p class="navbar-text">Welkom!</p>
+			</div>			
+		</nav>
+	</header>
+	<!-- Header Section ends -->
+	
+	<!-- Banner Section Starts -->
+	<section class="banner-layout-10" id="home">
+		<div class="login">
+					<h1 class="login-title">Aanmelden</h1>
+						<form action= "" method="post">
+						{{ form.hidden_tag() }}
+						<p>
+							{{ form.username.label }}
+							{{ form.username(size=21) }}
+							{% for error in form.username.errors %}
+							<span style="color: red;">[{{ error }}]</span>
+							{% endfor %}
+						</p>
+						<p>
+							{{ form.password.label }}<br>
+							{{ form.password(size=21) }}
+							{% for error in form.username.errors %}
+							<span style="color: red;">[{{ error }}]</span>
+							{% endfor %}
+						</p>
+							<p>{{ form.remember_me() }} {{ form.remember_me.label}}</p>
+							<p>{{ form.submit() }}</p>
+						</form>
+						<p>Nieuwe gebruiker? <a href="{{ url_for('register') }}">Klik hier om je te registreren!</a></p>
+		</div>
+	</section>
+</body>
+</html>
 {% endblock %}
+
+
+
+<script type="text/javascript" href="../static/js/bootstrap.js"></script>
+<script type="text/javascript" href="../static/js/bootstrap.min.js"></script>
+<script type="text/javascript" href="../static/js/function.js"></script>
+<script type="text/javascript" href="../static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" href="../static/js/jquery.counterup.min.js"></script>
+<script type="text/javascript" href="../static/js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" href="../static/js/jquery.slicknav.js"></script>
+<script type="text/javascript" href="../static/js/responsive-tabs.js"></script>
+<script type="text/javascript" href="../static/js/SmoothScroll.js"></script>
+<script type="text/javascript" href="../static/js/swiper.min.js"></script>
+<script type="text/javascript" href="../static/js/validator.min.js"></script>
+<script type="text/javascript" href="../static/js/waypoints.min.js"></script>
+<script type="text/javascript" href="../static/js/wow.js"></script>

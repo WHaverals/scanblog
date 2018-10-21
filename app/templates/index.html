@@ -1,66 +1,126 @@
-{% extends "base.html" %}
 {% block content %}
-<html lang="nl"><head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Page Title -->
+	<title>De Maat van het Middelnederlands</title>
+	<!-- Google Fonts css-->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900%7CRubik:300,400,500,700,900" rel="stylesheet">
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" media="screen">
+	<!-- Font Awesome icon css-->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" media="screen">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/flaticon.css') }}" media="screen">
+	<!-- Swiper's CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swiper.min.css') }}" media="screen">
+	<!-- Animated css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.css') }}" media="screen">
+	<!-- Magnific Popup CSS -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/magnific-popup.css') }}" media="screen">
+	<!-- Slick nav css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slicknav.css') }}" media="screen">
+	<!-- Main custom css -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}" media="screen">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/pages.css') }}" media="screen">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body data-spy="scroll" data-target="#navigation" data-offset="71">
 
-		<!-- Responsive to mobile devices -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-		<!-- jQuery library -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		
-		<!-- Latest compiled JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-	</head>
-	<body style="font-family: Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif'">
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container-fluid">
+	<!-- Preloader starts -->
+	<!-- Preloader Ends -->
+	
+	<!-- Header Section Starts-->
+	<header class="header-layout-6">
+		<nav class="navbar navbar-toggleable-md navbar-light" id="navigation">
+			<div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#">De maat van het Middelnederlands</a>
+					<h1 href="#">De maat van het <br><h1 style="color:firebrick">Middelnederlands</h1></h1>
 				</div>
-				<ul class="nav navbar-nav">
-					<li class="active">
-						<a class="nav-link" href="{{ url_for('scansion') }}">Scandeer!<span class="sr-only"></span></a>
-					</li>
-				</ul>
-				<p class="navbar-text">Welkom, {{ current_user.username }}!</p>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="{{ url_for('register') }}"><span class="glyphicon glyphicon-user"></span> Registreer</a></li>
-					<li><a href="{{ url_for('login') }}"><span class="glyphicon glyphicon-log-in"></span> Aanmelden</a></li>
+					<li><a href="{{ url_for('login') }}">Log in</a></li>
+					<li><a href="{{ url_for('register') }}">Registreer</a></li>
 				</ul>
-			</div>
+			</div>			
 		</nav>
-		<div class="jumbotron jumbotron-fluid text-center">
-				<h1 class="display-4" style="font-family: 'Palatino'">De maat van het<br><h1 style="color:firebrick" class="medievalfont">Middelnederlands</h1>
-				<hr class="my-4">
-				<p>Hier komt de informatie over de taak, de verschillende stappen die men zal ondernemen.</p>
+	</header>
+	<!-- Header Section ends -->
+	
+	<!-- Banner Section Starts -->
+	<section class="banner-layout-10" id="home">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7">
+					<!-- Header content start -->
+					<div class="header-content wow fadeInUp">
+					  <h2 class="text-left">Bepaal het ritme van<br>
+						<div class="fadeIn">
+      						<span>Van den Vos Reynaerde</span>
+      						<span>Karel ende Elegast</span>
+      						<span>Beatrijs</span>
+      						<span>Walewein</span>
+							<span>Floris ende Blancefloer</span></br>
+						</div>
+						</h2>
+						<div>
+					  <p class="text-left">Via dit online-project willen we zicht krijgen op hoe men vandaag Middelnederlandse dichtwerken voordraagt. Daarom vragen we u, hedendaagse stembanden van deze teksten, de ritmische voorkeuren toe te passen.</p></div>
+					</div>
 				<p class="lead">
-				   <a class="btn btn-primary btn-lg" href="{{ url_for('scansion') }}" role="button">Scandeer!</a>
+				   <a class="btn-download" href="{{ url_for('task_description') }}" role="button"><i class="fa fa-hand-o-right"></i>Aan de slag!</a>
 				</p>
+					<!-- Header content end -->
+				</div>
+				
+				<div class="col-lg-5">
+					<!-- Header image start -->
+					<div class="header-img">
+						<img src="../static/images/voordracht_kleinerer.png" alt="" />
+					</div>
+					<!-- Header image end -->
+				</div>
 			</div>
-		<div class="row">
-		<div class="text-center">
-			<h5>Meer informatie</h5>
-			<p>Dit experiment wordt uitgevoerd door Wouter Haverals<br> Voor meer informatie, stuur een e-mail naar: <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be</a></p>
+	</section>
+	<!-- Banner Section Ends -->
+	
+	<!-- Footer Section starts -->
+	<footer class="footer-layout-3">
+		<div class="container">
+			<div class="row">
+	
+					<!-- Footer Copyright start -->
+					<div class="copyright">
+					  <p class="text-left col-md-12 col-lg-12 col-xl-12">Dit experiment maakt deel uit van het docotraatsonderzoek van Wouter Haverals en wordt gefinancierd door het Fonds voor Wetenschappelijk Onderzoek. Voor meer informatie over het project, kan u een bericht sturen naar <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be</a></p>
+					  <div class="col-lg-2 col-md-3 col-xl-2 offset-lg-0 col-sm-4 col-4 offset-xl-0"> <img src="../static/images/uafwo.png" alt="" /></div>
+					</div>
+					<!-- Footer Copyright end -->
+			</div>
 		</div>
-		</div>
-	</body>
+	</footer>
+	</div>
+	<!-- Footer Section ends -->
+</body>
 </html>
-
 {% endblock %}
 
-<script>
-	
-	function openNav() {
-		document.getElementById("myNav").style.width = "100%";
-		}
-			
-	function closeNav() {
-		document.getElementById("myNav").style.width = "0%";
-		}
-	</script>
+
+<script type="text/javascript" href="../static/js/bootstrap.js"></script>
+<script type="text/javascript" href="../static/js/bootstrap.min.js"></script>
+<script type="text/javascript" href="../static/js/function.js"></script>
+<script type="text/javascript" href="../static/js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" href="../static/js/jquery.counterup.min.js"></script>
+<script type="text/javascript" href="../static/js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" href="../static/js/jquery.slicknav.js"></script>
+<script type="text/javascript" href="../static/js/responsive-tabs.js"></script>
+<script type="text/javascript" href="../static/js/SmoothScroll.js"></script>
+<script type="text/javascript" href="../static/js/swiper.min.js"></script>
+<script type="text/javascript" href="../static/js/validator.min.js"></script>
+<script type="text/javascript" href="../static/js/waypoints.min.js"></script>
+<script type="text/javascript" href="../static/js/wow.js"></script>

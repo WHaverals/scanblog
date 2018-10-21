@@ -1,7 +1,7 @@
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
+	<head>
 	<!-- Meta -->
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,21 +11,21 @@
 	<!-- Google Fonts css-->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900%7CRubik:300,400,500,700,900" rel="stylesheet">
 	<!-- Bootstrap css -->
-	<link href="../static/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" media="screen">
 	<!-- Font Awesome icon css-->
-	<link href="../static/css/font-awesome.min.css" rel="stylesheet" media="screen">
-	<link href="../static/css/flaticon.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" media="screen">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/flaticon.css') }}" media="screen">
 	<!-- Swiper's CSS -->
-	<link rel="stylesheet" href="../static/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/swiper.min.css') }}" media="screen">
 	<!-- Animated css -->
-	<link href="../static/css/animate.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.css') }}" media="screen">
 	<!-- Magnific Popup CSS -->
-	<link href="../static/css/magnific-popup.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/magnific-popup.css') }}" media="screen">
 	<!-- Slick nav css -->
-	<link rel="stylesheet" href="../static/css/slicknav.css">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/slicknav.css') }}" media="screen">
 	<!-- Main custom css -->
-	<link href="../static/css/custom.css" rel="stylesheet" media="screen">
-	<link href="../static/css/pages.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/custom.css') }}" media="screen">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/pages.css') }}" media="screen">
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -36,7 +36,6 @@
 <body data-spy="scroll" data-target="#navigation" data-offset="71">
 	
 <!-- Header Section Starts-->
-	
 <header class="header-layout-5">
 		<nav class="navbar navbar-expand-md navbar-light fixed-top" id="navigation">
 			<div class="container">
@@ -47,14 +46,13 @@
 			</div>			
 		</nav>
 </header>
-	
-	<!-- Header Section ends -->
+<!-- Header Section ends -->
 	
 	
 	<!-- Blog Page starts -->
 	<div class="page-blog">
 		<div class="container">
-<div class="row">
+			<div class="row">
 			  <div class="col-md-8 offset-md-2">
 			    
 				  <p class="text-justify">In de middeleeuwen werden verhalen zoals dat van de sluwe vos Reynaert of de lotgevallen van de ridders Walewein en Ferguut veelal luidop voorgedragen voor een luisterend publiek. In die context is het ritme van een dichtwerk essentieel om de tekst tot leven te brengen. </p>
@@ -65,7 +63,7 @@
 				
 				<div class="col-md-10 offset-md-1">
 					<hr></hr>
-					<p class="msg msg-danger">Vijf stappen om het ritme te bepalen</p>
+					<p style="margin-bottom: 40px" class="msg msg-danger">Vijf stappen om het ritme te bepalen</p>
 				</div>
 			
 				<div class="service-layout-1">
@@ -80,7 +78,7 @@
 					<!-- service single box end -->
 			  </div>
 			  <div class="col-lg-7 col-xl-7 col-md-7 wow fadeInUp">
-			    <p class="text-justify" ><taskword><strong>Lees</strong></taskword> de gepresenteerde versregels eerst even rustig door. Omdat ze geplukt zijn uit Middelnederlandse teksten is het mogelijk dat u soms de betekenis van een woord niet zal kennen. Dit vormt echter geen probleem. Als spreker van het Nederlands, mag u op uw intuïtie afgaan voor de uitspraak van deze onbekende woorden.</p>
+			    <p class="text-justify" ><taskword><strong>Lees</strong></taskword> de gepresenteerde versregels eerst even rustig door. Omdat ze geplukt zijn uit Middelnederlandse teksten is het mogelijk dat u soms de betekenis van een woord niet zal kennen. Dit vormt echter geen probleem. Als spreker van het Nederlands, mag u op uw intuïtie afgaan voor de uitspraak van deze onbekende woorden.</p><img src="../static/images/verses_show.gif" alt="" />
 			  </div>
 
 			  <div class="col-lg-3 col-xl-2 offset-xl-1 col-md-3">
@@ -91,7 +89,7 @@
 					<!-- service single box end -->
 			  </div>
 			  <div class="col-lg-7 col-xl-7 col-md-7 wow fadeInUp">
-				  <p class="text-justify" ><taskword><strong>Spreek</strong></taskword>
+				  <p style="margin-top:20px" class="text-justify" ><taskword><strong>Spreek</strong></taskword>
 de verzen luidop uit. Draag ze voor op een manier die natuurlijk aanvoelt.</p>
 			  </div>
 				<div class="col-lg-3 col-xl-2 offset-xl-1 col-md-3">
@@ -100,8 +98,13 @@ de verzen luidop uit. Draag ze voor op een manier die natuurlijk aanvoelt.</p>
 					  <div class="icon-box"><em class="flaticon-listen"></em></div>
 				  </div>
 					<!-- service single box end -->
-			  </div>
-			  <div class="col-lg-7 col-xl-7 col-md-7 wow fadeInUp"><p class="text-justify"><taskword><strong>Luister</strong></taskword> naar de woorden of delen van woorden die u benadrukt in uw voordracht. Deze informatie is van belang voor dit project. We willen immers weten waar u de klemtonen legt.</p></div>
+				</div>
+				
+				<div class="col-lg-7 col-xl-7 col-md-7 wow fadeInUp"><p class="text-justify"><taskword><strong>Luister</strong></taskword> naar uw eigen voordracht. Welke woorden of lettergrepen benadrukt u van nature? Deze informatie is van belang voor dit project. We willen immers weten waar u de klemtonen legt.</p>
+				  <audio controls style="margin-bottom:25px">
+					  <source src="../static/audio/fraeye.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+				  </audio><br>
+				</div>
 				
 				<div class="col-lg-3 col-xl-2 offset-xl-1 col-md-3">
 					<!-- service single box start -->
@@ -110,7 +113,7 @@ de verzen luidop uit. Draag ze voor op een manier die natuurlijk aanvoelt.</p>
 				  </div>
 					<!-- service single box end -->
 			  </div>
-			  <div class="col-lg-7 col-xl-7 col-md-7 wow fadeInUp"><p class="text-justify"><taskword><strong>Selecteer</strong></taskword> de woorden of lettergrepen die u in uw voordracht heeft beklemtoond. Doe dit voor alle versregels op het scherm. Als u een foutje maakte, kan u het betreffende woord(deel) ook weer deselecteren door er opnieuw op te klikken.</p></div>
+			  <div class="col-lg-7 col-xl-7 col-md-7 wow fadeInUp"><p class="text-justify"><taskword><strong>Selecteer</strong></taskword> de woorden of lettergrepen die u in uw voordracht heeft beklemtoond. Doe dit voor alle versregels op het scherm. Als u een foutje maakte, kan u het betreffende woord(deel) ook weer deselecteren door er opnieuw op te klikken.</p><img src="../static/images/gif_scansie.gif" alt="" /></div>
 			
 			<div class="col-lg-3 col-xl-2 offset-xl-1 col-md-3">
 				<!-- service single box start -->
