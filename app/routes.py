@@ -83,7 +83,8 @@ def scansion():
     user_id = int(current_user.id)
     fragments_done = Annotation.query.filter_by(done=1, user_id=user_id).all()
     if len(fragments_done) < 3000:
-        with open("app/static/js/test.json") as f:
+         with app.open_resource('static/js/test.json') as f:
+#        with open("app/static/js/test.json") as f:
             data = json.load(f)
             story_ids = [story["story_id"] for story in data["stories"]]
             done = [fragment.story_id for fragment in fragments_done]

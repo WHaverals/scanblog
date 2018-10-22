@@ -28,6 +28,7 @@ class User(UserMixin, db.Model):
     password_hash = db.Column(db.String(128))
     about_me = db.Column(db.String(140))
     last_seen = db.Column(db.DateTime, default=datetime.utcnow)
+    
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
@@ -49,4 +50,35 @@ class Annotation(db.Model):
     annotation = db.Column(JSONEncodedDict)
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
     done = db.Column(db.Integer, default=0)
+
+class Story(db.Model):
+	__tablename__ = 'story'
+	id = db.Column(db.Integer, primary_key=True)
+	title = db.Column(db.String(20), unique=True)
+	description = db.Column(db.String(200))
+	syllables = db.relationship('Syllable')
+	
+
+class Syllable(db.Model):
+	__tablename__ = 'syllable'
+	id = db.Column(db.Integer, primary_key=True)
+	story_id = db.Column(db.Integer, db.ForeignKey(Story.id), 
+	nullable=False, index=True)
+	frag_nbr = db.Column(db.SmallInteger, nullable=False)
+	line_nbr = db.Column(db.SmallInteger, nullable=False)
+	word_nbr = db.Column(db.SmallInteger, nullable=False)
+	syll_nbr = db.Column(db.SmallInteger, nullable=False)
+	syllable = db.Column(db.String(30), nullable=False)
+
+
+class Annotation_new(db.Model):
+	__tablename__ = 'annotation_new'
+	id = db.Column(db.Integer, primary_key=True)
+	user_id = db.Column(db.Integer, db.ForeignKey(User.id), index=True)
+	syllable_id = db.Column(db.Integer, db.ForeignKey(Syllable.id), 
+	nullable=False)
+	stressed = db.Column(db.Boolean, default=False)
+	timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+	fragment_done = db.Column(db.Boolean, default=False)
+
 
