@@ -3,7 +3,7 @@ from wtforms import StringField, PasswordField, BooleanField, SubmitField, \
     TextAreaField, SelectField, RadioField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, \
     Length
-from app.models import User, JSONEncodedDict, Annotation
+from app.models import User, Annotation
 
 
 class LoginForm(FlaskForm):
