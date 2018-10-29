@@ -1135,7 +1135,7 @@ h1.login-title {
 }
 
 .footer-layout-3{
-	position:fixed;
+	position:relative;
 	left:0;
 	width:100%;
 	bottom:0px;
