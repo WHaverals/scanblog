@@ -234,15 +234,15 @@
 }
 
 .forget-password:hover{
-	color: #00bade;
+	color: #fb7661;
 }
 
 .myaccount-form .btn-submit{
 	display: inline-block;
-	color: #00bade;
+	color: #fb7661;
 	font-size: 16px;
 	padding: 4px 20px;
-	border: 1px solid #00bade;
+	border: 1px solid #fb7661;
 	border-radius: 2px;
 	background: none;
 	margin-right: 10px;
@@ -250,10 +250,9 @@
 }
 
 .myaccount-form .btn-submit:hover{
-	background: linear-gradient(to right,#00bade,#4a77f4);
-	background: -webkit-linear-gradient(to right,#00bade,#4a77f4);
-	background: -moz-linear-gradient(to right,#00bade,#4a77f4);
-	background: -o-linear-gradient(to right,#00bade,#4a77f4);
+	background: linear-gradient(to right,#fea660,#fb7661);
+    background: -webkit-linear-gradient(to right,#fea660,#fb7661);
+    background: -moz-linear-gradient(to right,#fea660,#fb7661);
 	color: #fff;
 	border: none;
 	padding: 5px 21px;
@@ -283,45 +282,21 @@
 
 .page-header{
 	position: relative;
-	background: #dce3e9;
-    padding: 18px 0 80px;
-	text-align: center;
+    background: #f5f7fa;
+    padding-top: 100px;
+	text-align: left;
 }
 
 .page-header-title h1{
 	font-size: 30px;
-	color: #fff;
+	color: #3e4555;
 }
 
 .page-header-title p{
 	font-size: 14px;
-	color: #fff;
-}
-
-.page-privacy-policy{
-	padding: 100px 0;
-}
-
-.privacy-list ul{
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-
-.privacy-list ul li{
-	padding: 8px 0;
-}
-
-.privacy-list ul li a{
-	font-size: 14px;
-	font-weight: 500;
 	color: #8d97ad;
-	transition: all 0.3s;
 }
 
-.privacy-list ul li a:hover{
-	color: #3e4555;
-}
 
 .privacy-content h3{
 	font-size: 21px;
@@ -383,10 +358,9 @@
 	color: #fff;
 	padding: 8px 30px;
 	border-radius: 30px;
-	background: linear-gradient(to right,#00bade,#4a77f4);
-    background: -webkit-linear-gradient(to right,#00bade,#4a77f4);
-    background: -moz-linear-gradient(to right,#00bade,#4a77f4);
-    background: -o-linear-gradient(to right,#00bade,#4a77f4);
+	background: linear-gradient(to right,#fea660,#fb7661);
+    background: -webkit-linear-gradient(to right,#fea660,#fb7661);
+    background: -moz-linear-gradient(to right,#fea660,#fb7661);
 }
 
 .btn-404 i{
@@ -396,7 +370,7 @@
 .btn-404:focus,
 .btn-404:hover{
 	color: #fff;
-	background: #00bade;
+	background: #fb7661;
 }
 
 /********************************************/
@@ -444,10 +418,9 @@
 }
 
 .knowledge-accordion .card.active .card-header a{
-	background: linear-gradient(to right,#00bade,#4a77f4);
-    background: -webkit-linear-gradient(to right,#00bade,#4a77f4);
-    background: -moz-linear-gradient(to right,#00bade,#4a77f4);
-    background: -o-linear-gradient(to right,#00bade,#4a77f4);
+	background: linear-gradient(to right,#fea660,#fb7661);
+    background: -webkit-linear-gradient(to right,#fea660,#fb7661);
+    background: -moz-linear-gradient(to right,#fea660,#fb7661);
 	color: #fff;
 }
 
@@ -472,7 +445,7 @@
 }
 
 .knowledge-accordion .card-body ul li a:hover{
-	color: #00bade;
+	color: #fb7661;
 }
 
 .knowledge-contact{
@@ -495,7 +468,7 @@
 }
 
 .knowledge-contact h4 a{
-	color: #00bade;
+	color: #fb7661;
 }
 
 .knowledge-contact h4 i{
@@ -503,10 +476,9 @@
 	vertical-align: middle;
 	margin-right: 4px;
 	margin-right: 4px;
-	background: linear-gradient(to right,#00bade,#4a77f4);
-    background: -webkit-linear-gradient(to right,#00bade,#4a77f4);
-    background: -moz-linear-gradient(to right,#00bade,#4a77f4);
-    background: -o-linear-gradient(to right,#00bade,#4a77f4);
+	background: linear-gradient(to right,#fea660,#fb7661);
+    background: -webkit-linear-gradient(to right,#fea660,#fb7661);
+    background: -moz-linear-gradient(to right,#fea660,#fb7661);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -523,10 +495,9 @@
 }
 
 .knowledge-faq-box h3{
-	background: linear-gradient(to right,#00bade,#4a77f4);
-    background: -webkit-linear-gradient(to right,#00bade,#4a77f4);
-    background: -moz-linear-gradient(to right,#00bade,#4a77f4);
-    background: -o-linear-gradient(to right,#00bade,#4a77f4);
+	background: linear-gradient(to right,#fea660,#fb7661);
+    background: -webkit-linear-gradient(to right,#fea660,#fb7661);
+    background: -moz-linear-gradient(to right,#fea660,#fb7661);
 	padding: 12px 20px;
 	font-size: 20px;
 	font-weight: 500;
@@ -542,7 +513,7 @@
 }
 
 .knowledge-entry{
-	border: 1px solid #00bade;
+	border: 1px solid #fb7661;
 	border-top: none;
 	border-radius: 0 0 3px 3px;
 	padding: 20px;
@@ -571,7 +542,7 @@
 }
 
 .knowledge-entry ul li:after{
-	content: '\f104';
+	content: '\f106';
 	font-family: Flaticon;
 	position: absolute;
 	right: 0;
@@ -621,10 +592,9 @@
 	border: none;
 	border-radius: 30px;
 	height: 50px;
-	background: linear-gradient(to right,#00bade,#4a77f4);
-    background: -webkit-linear-gradient(to right,#00bade,#4a77f4);
-    background: -moz-linear-gradient(to right,#00bade,#4a77f4);
-    background: -o-linear-gradient(to right,#00bade,#4a77f4);
+	background: linear-gradient(to right,#fea660,#fb7661);
+    background: -webkit-linear-gradient(to right,#fea660,#fb7661);
+    background: -moz-linear-gradient(to right,#fea660,#fb7661);
 	cursor: pointer;
 	outline: 0;
 }
@@ -633,7 +603,7 @@
 .knowledge-search .btn-search:hover{
 	box-shadow: none;
 	outline: 0;
-	background: #00bade;
+	background: #fb7661;
 }
 
 .knowledge-single-header{
@@ -832,7 +802,8 @@
 /******************************************/
 
 .page-blog{
-	padding: 100px ;
+	position: relative;
+	padding: 1px;
 }
 
 .blog-post-box{
@@ -869,26 +840,25 @@
 	line-height: 1.4em;
 }
 
-.blog-post-box .btn-readmore{
+.btn-readmore{
 	position: absolute;
 	bottom: 30px;
 	left: 30px;
 }
 
-.blog-post-box .btn-readmore a{
+.btn-readmore a{
 	display: inline-block;
 	color: #fff;
 	font-weight: 500;
 	padding: 8px 20px;
-	background: linear-gradient(to right,#00bade,#4a77f4);
-    background: -webkit-linear-gradient(to right,#00bade,#4a77f4);
-    background: -moz-linear-gradient(to right,#00bade,#4a77f4);
-    background: -o-linear-gradient(to right,#00bade,#4a77f4);
+	background: linear-gradient(to right,#fea660,#fb7661);
+    background: -webkit-linear-gradient(to right,#fea660,#fb7661);
+    background: -moz-linear-gradient(to right,#fea660,#fb7661);
 	border-radius: 20px;
 }
 
 .btn-readmore a:hover{
-	background: #00bade;
+	background: #fb7661;
 }
 
 .page-single-header{
@@ -928,7 +898,7 @@
 }
 
 .page-single-header ul li a:hover{
-	color: #00bade;
+	color: #fb7661;
 }
 
 .page-single-header{
@@ -1091,10 +1061,9 @@ p.msg{
 .contact-single .icon-box i{
     font-size: 40px;
     cursor: pointer;
-    background: linear-gradient(to right,#00bade,#4a77f4);
-    background: -webkit-linear-gradient(to right,#00bade,#4a77f4);
-    background: -moz-linear-gradient(to right,#00bade,#4a77f4);
-    background: -o-linear-gradient(to right,#00bade,#4a77f4);
+    background: linear-gradient(to right,#fea660,#fb7661);
+    background: -webkit-linear-gradient(to right,#fea660,#fb7661);
+    background: -moz-linear-gradient(to right,#fea660,#fb7661);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -1117,10 +1086,9 @@ p.msg{
 }
 
 .contact-form .btn-contact{
-	background: linear-gradient(to right,#00bade,#4a77f4);
-    background: -webkit-linear-gradient(to right,#00bade,#4a77f4);
-    background: -moz-linear-gradient(to right,#00bade,#4a77f4);
-    background: -o-linear-gradient(to right,#00bade,#4a77f4);
+	background: linear-gradient(to right,#fea660,#fb7661);
+    background: -webkit-linear-gradient(to right,#fea660,#fb7661);
+    background: -moz-linear-gradient(to right,#fea660,#fb7661);
     color: #fff;
     padding: 10px 40px;
 	font-weight: 600;
@@ -1135,7 +1103,7 @@ p.msg{
 
 .contact-form .btn-contact:focus,
 .contact-form .btn-contact:hover{
-	background: #00bade;
+	background: #fb7661;
 	box-shadow: none;
 	outline: 0;
 }
@@ -1170,6 +1138,7 @@ p.msg{
 /******************************************/
 
 @media only screen and (max-width: 1200px){
+	
 	.popup-page{
 		padding: 30px;
 	}
@@ -1187,13 +1156,13 @@ p.msg{
 }
 
 /* Mobile Layout */
-@media only screen and (max-width: 767px){
+@media only screen and (max-width : 710px ){
 	.myaccount-image-note{
 		display: none;
 	}
 	
 	.page-header{
-		padding: 140px 0 60px;
+		padding: 130px 0 40px;
 	}
 	
 	.page-header-title h1{
@@ -1207,7 +1176,7 @@ p.msg{
 	.page-privacy-policy,
 	.page-knowledge-base,
 	.page-blog{
-		padding: 60px 0;
+		padding: 20px 0;
 	}
 	
 	.box-404 h2{

@@ -451,15 +451,6 @@ h1.login-title {
 	z-index: 1;
 }
 
-.banner-layout-5 .header-banner{
-	background: url(../images/header-bg.jpg) no-repeat top center;
-	background-size: cover;
-	padding: 80px 0;
-	border-radius: 10px;
-	margin-bottom: -140px;
-	position: relative;
-	overflow: hidden;
-}
 
 .banner-layout-5 .header-content{
 	padding: 0 80px;
@@ -660,13 +651,12 @@ h1.login-title {
 /******************************************/
 
 .main-features-layout-5{
-	padding: 0 0 50px;
+	padding: 0 0 0 5px;
 	margin: auto;
 }
 
 .main-features-layout-5 .main-feature-header{
-	background-size: cover;
-	padding: 100px 0 80px;
+	padding: 0px 0 10px;
 }
 
 .main-features-layout-5 .main-feature-title h2{
@@ -678,7 +668,7 @@ h1.login-title {
 
 .main-features-layout-5 .main-feature-image{
 	text-align: center;
-	margin-top: -64%;
+	margin-left:-250px;
 }
 
 .main-features-layout-5 .main-feature-entry{
@@ -687,7 +677,7 @@ h1.login-title {
 
 .main-features-layout-5 .main-feature-entry p{
 	font-size: 14px;
-	color: #8d97ad;
+	color: #545a66;
 	line-height: 1.7em;
 }
 
@@ -744,7 +734,7 @@ h1.login-title {
 }
 
 .feature-single .icon-box{
-	font-size: 90px;
+	font-size: 140px;
 	background: linear-gradient(to right,#b22222, #c14e4e);
 	background: -webkit-linear-gradient(to right,#00bade,#4a77f4);
 	background: -moz-linear-gradient(to right,#00bade,#4a77f4);
@@ -1170,7 +1160,7 @@ h1.login-title {
 }
 
 /* Mobile Layout */
-@media only screen and (max-width: 767px){
+@media only screen and (max-width : 710px ){
 	.banner-layout-10 .header-content h2{
 		font-size: 26px;
 	}
@@ -1437,6 +1427,13 @@ h3 > t:focus:before {
 /*****    14. Media Screens     *****/
 /************************************/
 
+
+@media only screen and (max-width: 647px){
+	.main-feature-image {
+	display: none;
+	}
+}
+
 @media only screen and (max-width: 575px){
 	.banner-layout-10 .header-img img{
 	display: none;
@@ -1446,6 +1443,11 @@ h3 > t:focus:before {
 @media only screen and (max-width: 1200px){
 	.banner-layout-5 .header-content{
 		padding: 0 40px;
+	}
+	
+	.main-features-layout-5 .main-feature-image{
+	margin-top: 40px;
+	height: 70%
 	}
 }
 
@@ -1516,7 +1518,9 @@ h3 > t:focus:before {
 	}
 	
 	.main-features-layout-5 .main-feature-image{
-		margin-top: 40px;
+		margin-top: -40px;
+		height: 90%
+		
 	}
 	
 	.main-features-layout-5 .main-feature-header{
@@ -1528,7 +1532,7 @@ h3 > t:focus:before {
 	}
 	
 	.main-features-layout-5{
-		padding: 0 0 30px;
+		padding: 0 0 10px;
 	}
 	
 	.features-layout-5{
@@ -1559,7 +1563,7 @@ h3 > t:focus:before {
 }
 
 /* Mobile Layout */
-@media only screen and (max-width: 767px){
+@media only screen and (max-width : 710px ){
 	.banner-layout-5 .header-content h2{
 		font-size: 26px;
 	}
