@@ -479,7 +479,7 @@ h1.login-title {
 
 .banner-layout-10{
 	position: relative;
-	bottom: 0px;
+	bottom: 0;
 	left: 0;
 	width: 100%;
 	padding: 30px 0 0;
@@ -487,15 +487,16 @@ h1.login-title {
 
 .banner-layout-10 .row{
 	position: relative;
+	bottom: 0;
 }
 
 .banner-layout-10 .header-content{
-	margin-top: 80px;
+	margin-top: 90px;
 }
 
 .banner-layout-10 .header-content h2{
 	font-family: 'Rubik', sans-serif;
-	font-size: 40px;
+	font-size: 50px;
 	font-weight: 500;
 	margin-bottom: 0.5em;
 	color: #3e4555;
@@ -521,8 +522,8 @@ h1.login-title {
     background: -moz-linear-gradient(to right,#b22222, #c14e4e);
     background: -o-linear-gradient(to right,#b22222, #c14e4e);
     color: #fff;
-    padding: 11px 20px 11px 56px;
-    font-size: 14px;
+    padding: 20px 40px 17px 60px;
+    font-size: 17px;
     font-weight: 600;
     margin-right: 10px;
     margin-top: 5px;
@@ -532,10 +533,10 @@ h1.login-title {
 }
 
 .banner-layout-10 .btn-download i{
-    font-size: 28px;
+    font-size: 30px;
     position: absolute;
-    top: 10px;
-    left: 16px;
+    top: 17px;
+    left: 20px;
 }
 
 .banner-layout-10 .btn-download span{
@@ -651,7 +652,7 @@ h1.login-title {
 /******************************************/
 
 .main-features-layout-5{
-	padding: 0 0 0 5px;
+	padding: 20px 0 30px 0px;
 	margin: auto;
 }
 
@@ -668,7 +669,7 @@ h1.login-title {
 
 .main-features-layout-5 .main-feature-image{
 	text-align: center;
-	margin-left:-250px;
+	margin-left: -250px;
 }
 
 .main-features-layout-5 .main-feature-entry{
@@ -1141,7 +1142,15 @@ h1.login-title {
 /*****    05. Media Screens     *****/
 /************************************/
 
+
+
 @media only screen and (max-width: 991px){
+	
+	.banner-layout-10{
+		position: relative;
+		bottom:0;
+		
+	}
 	.banner-layout-10 .header-content{
 		margin-top: 0;
 		margin-bottom: 30px;
@@ -1428,6 +1437,20 @@ h3 > t:focus:before {
 /************************************/
 
 
+
+@media only screen and (min-width: 1500px){
+	.main-features-layout-5 .main-feature-image {
+	margin-top: -30px;
+	margin-left:-700px;
+	}
+	
+	.main-features-layout-5 .main-feature-entry {
+		margin-top: 50px;
+		margin-left:-230px;
+	}
+}
+
+
 @media only screen and (max-width: 647px){
 	.main-feature-image {
 	display: none;
@@ -1440,26 +1463,36 @@ h3 > t:focus:before {
 	}
 }
 
+
 @media only screen and (max-width: 1200px){
 	.banner-layout-5 .header-content{
 		padding: 0 40px;
 	}
 	
-	.main-features-layout-5 .main-feature-image{
-	margin-top: 40px;
-	height: 70%
+	.main-features-layout-5 {
+	padding-top: 0px;
+	margin-bottom: 20px;
+	height: 80%
+	}
+	
+	.main-features-layout-5 .main-feature-image {
+	margin-top: -30px;
+	margin-bottom: 20px;
+	}
+	
+	.main-features-layout-5 .main-feature-entry {
+	margin-top: 30px;
+	margin-left:-20px;
 	}
 }
 
 @media only screen and (max-width: 991px){
 	.banner-layout-10 .header-img img{
 		max-width: 40%;
-		margin-top:-100px;
 		margin-left: 300px;
 	}
-		
-	}
 	
+		
 	.header-layout-5 .navbar-nav{
 		display: none;
 	}
@@ -1518,7 +1551,7 @@ h3 > t:focus:before {
 	}
 	
 	.main-features-layout-5 .main-feature-image{
-		margin-top: -40px;
+		margin-top: -10px;
 		height: 90%
 		
 	}
@@ -1533,6 +1566,12 @@ h3 > t:focus:before {
 	
 	.main-features-layout-5{
 		padding: 0 0 10px;
+	}
+	
+	.main-features-layout-5 .main-feature-entry {
+	margin-top: 0px;
+	margin-left:10px;
+	margin-right:10px;
 	}
 	
 	.features-layout-5{
