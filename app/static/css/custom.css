@@ -484,8 +484,7 @@ h1.login-title {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height:66.67vh;
-	padding: 100px 0 0;
+	padding: 90px 0 0;
 }
 
 .banner-layout-10 .row{
@@ -493,7 +492,7 @@ h1.login-title {
 	z-index: 1;}
 
 .banner-layout-10 .header-content{
-	margin-top: 20px;
+	margin-top: 60px;
 }
 
 .banner-layout-10 .header-content p{
@@ -520,7 +519,7 @@ h1.login-title {
 
 .banner-layout-10 .header-img{
 	text-align: center;
-	bottom: 0;
+	margin-top:-100px;
 }
 
 .banner-layout-10 .btn-download{
@@ -1134,11 +1133,8 @@ h1.login-title {
 	color: #f56972;
 }
 
-.footer-layout-3{
-	position:relative;
-	left:0;
+footer.footer-layout-3{
 	width:100%;
-	bottom:0px;
 	padding:10px 0;
 	background: -webkit-linear-gradient(#dce3e9, #dce3e9);
 	background: -o-linear-gradient(#dce3e9, #dce3e9);
