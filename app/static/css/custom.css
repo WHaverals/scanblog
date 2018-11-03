@@ -418,11 +418,7 @@ h1.login-title {
 	color: #000;
 }
 
-.header-layout-6 {
-	width: 100%;
-	top:0;
-	position:absolute;
-}
+
 
 .header-layout-6 .navbar{
 	padding: 20px 0;
@@ -484,7 +480,7 @@ h1.login-title {
 }
 
 .banner-layout-10{
-	position: fixed;
+	position: relative;
 	bottom: 0;
 	left: 0;
 	width: 100%;
@@ -492,13 +488,11 @@ h1.login-title {
 }
 
 .banner-layout-10 .row{
-	position: fixed;
-	bottom: 0;
-	width:100%;
-}
+	position: relative;
+	z-index: 1;}
 
 .banner-layout-10 .header-content{
-	padding-bottom: 200px;
+	margin-top: 60px;
 }
 
 .banner-layout-10 .header-content h2{
@@ -517,6 +511,7 @@ h1.login-title {
 }
 
 .banner-layout-10 .header-img{
+	text-align: center;
 	bottom: 0;
 }
 
@@ -1152,15 +1147,14 @@ h1.login-title {
 
 @media only screen and (max-width: 991px){
 	
-	.banner-layout-10{
-		position: fixed;
-		width:100%;
-		bottom:0;
-	}
 	
 	.banner-layout-10 .header-content{
-		text-align: center;
-		bottom:0;
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+	
+	.banner-layout-10 .header-img{
+	display:none;
 	}
 	
 	.banner-layout-10 .btn-download{
@@ -1463,11 +1457,7 @@ h3 > t:focus:before {
 	}
 }
 
-@media only screen and (max-width: 575px){
-	.banner-layout-10 .header-img img{
-	display: none;
-	}
-}
+
 
 
 @media only screen and (max-width: 1200px){
@@ -1493,12 +1483,8 @@ h3 > t:focus:before {
 }
 
 @media only screen and (max-width: 991px){
-	.banner-layout-10 .header-img img{
-		max-width: 40%;
-		margin-left: 300px;
-	}
-	
-		
+
+			
 	.header-layout-5 .navbar-nav{
 		display: none;
 	}
