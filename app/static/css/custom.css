@@ -496,19 +496,26 @@ h1.login-title {
 	margin-top: 60px;
 }
 
+.banner-layout-10 .header-content p{
+	text-align: center;
+	font-size: 15px;
+	margin-top: 3em;
+	margin-bottom: 2.5em;
+}
+
 .banner-layout-10 .header-content h2{
 	font-family: 'Rubik', sans-serif;
-	font-size: 90px;
+	font-size: 35px;
 	font-weight: 500;
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 	color: #3e4555;
 }
 
 .banner-layout-10 .header-content p{
 	font-size: 15px;
-	color: #6C7995;
-	line-height: 1.7em;
-	margin-bottom: 1.7em;
+	color:#495265;
+	line-height: 2em;
+	margin-bottom: 3em;
 }
 
 .banner-layout-10 .header-img{
@@ -1173,7 +1180,7 @@ h1.login-title {
 /* Mobile Layout */
 @media only screen and (max-width : 710px ){
 	.banner-layout-10 .header-content h2{
-		font-size: 26px;
+		font-size: 30px;
 	}
 	
 	.download-app-layout-5 .btn-download {
@@ -1214,9 +1221,6 @@ h1.login-title {
 	}
 }
 	
-	.banner-layout-10 .header-content h2{
-		font-size: 22px;
-	}
 
 /*********************************************/
 /*****     12. Download Apps area css    *****/
