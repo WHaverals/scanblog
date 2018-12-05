@@ -418,6 +418,8 @@ h1.login-title {
 	color: #000;
 }
 
+
+
 .header-layout-6 .navbar{
 	padding: 20px 0;
 	transition: all 0.3s;
@@ -451,15 +453,6 @@ h1.login-title {
 	z-index: 1;
 }
 
-.banner-layout-5 .header-banner{
-	background: url(../images/header-bg.jpg) no-repeat top center;
-	background-size: cover;
-	padding: 80px 0;
-	border-radius: 10px;
-	margin-bottom: -140px;
-	position: relative;
-	overflow: hidden;
-}
 
 .banner-layout-5 .header-content{
 	padding: 0 80px;
@@ -488,38 +481,45 @@ h1.login-title {
 
 .banner-layout-10{
 	position: relative;
-	top: 0px;
+	bottom: 0;
 	left: 0;
 	width: 100%;
-	padding: 14px 0 0;
+	padding: 90px 0 0;
 }
 
 .banner-layout-10 .row{
 	position: relative;
-}
+	z-index: 1;}
 
 .banner-layout-10 .header-content{
 	margin-top: 60px;
 }
 
+.banner-layout-10 .header-content p{
+	text-align: center;
+	font-size: 15px;
+	margin-top: 3em;
+	margin-bottom: 2.5em;
+}
+
 .banner-layout-10 .header-content h2{
 	font-family: 'Rubik', sans-serif;
-	font-size: 40px;
+	font-size: 35px;
 	font-weight: 500;
-	margin-bottom: 0.5em;
+	margin-bottom: 1em;
 	color: #3e4555;
 }
 
 .banner-layout-10 .header-content p{
-	font-size: 14px;
-	color: #8d97ad;
-	line-height: 1.7em;
-	margin-bottom: 1.7em;
+	font-size: 15px;
+	color:#495265;
+	line-height: 2em;
+	margin-bottom: 3em;
 }
 
 .banner-layout-10 .header-img{
 	text-align: center;
-	bottom: 0;
+	margin-top:-100px;
 }
 
 .banner-layout-10 .btn-download{
@@ -530,8 +530,8 @@ h1.login-title {
     background: -moz-linear-gradient(to right,#b22222, #c14e4e);
     background: -o-linear-gradient(to right,#b22222, #c14e4e);
     color: #fff;
-    padding: 11px 20px 11px 56px;
-    font-size: 14px;
+    padding: 20px 40px 17px 60px;
+    font-size: 17px;
     font-weight: 600;
     margin-right: 10px;
     margin-top: 5px;
@@ -541,10 +541,10 @@ h1.login-title {
 }
 
 .banner-layout-10 .btn-download i{
-    font-size: 28px;
+    font-size: 30px;
     position: absolute;
-    top: 10px;
-    left: 16px;
+    top: 17px;
+    left: 20px;
 }
 
 .banner-layout-10 .btn-download span{
@@ -660,13 +660,12 @@ h1.login-title {
 /******************************************/
 
 .main-features-layout-5{
-	padding: 0 0 50px;
+	padding: 20px 0 30px 0px;
 	margin: auto;
 }
 
 .main-features-layout-5 .main-feature-header{
-	background-size: cover;
-	padding: 100px 0 80px;
+	padding: 0px 0 10px;
 }
 
 .main-features-layout-5 .main-feature-title h2{
@@ -678,7 +677,7 @@ h1.login-title {
 
 .main-features-layout-5 .main-feature-image{
 	text-align: center;
-	margin-top: -64%;
+	margin-left: -250px;
 }
 
 .main-features-layout-5 .main-feature-entry{
@@ -687,7 +686,7 @@ h1.login-title {
 
 .main-features-layout-5 .main-feature-entry p{
 	font-size: 14px;
-	color: #8d97ad;
+	color: #545a66;
 	line-height: 1.7em;
 }
 
@@ -744,7 +743,7 @@ h1.login-title {
 }
 
 .feature-single .icon-box{
-	font-size: 90px;
+	font-size: 140px;
 	background: linear-gradient(to right,#b22222, #c14e4e);
 	background: -webkit-linear-gradient(to right,#00bade,#4a77f4);
 	background: -moz-linear-gradient(to right,#00bade,#4a77f4);
@@ -1134,11 +1133,8 @@ h1.login-title {
 	color: #f56972;
 }
 
-.footer-layout-3{
-	position:fixed;
-	left:0;
+footer.footer-layout-3{
 	width:100%;
-	bottom:0px;
 	padding:10px 0;
 	background: -webkit-linear-gradient(#dce3e9, #dce3e9);
 	background: -o-linear-gradient(#dce3e9, #dce3e9);
@@ -1151,11 +1147,18 @@ h1.login-title {
 /*****    05. Media Screens     *****/
 /************************************/
 
+
+
 @media only screen and (max-width: 991px){
+	
+	
 	.banner-layout-10 .header-content{
 		margin-top: 0;
 		margin-bottom: 30px;
-		text-align: center;
+	}
+	
+	.banner-layout-10 .header-img{
+	display:none;
 	}
 	
 	.banner-layout-10 .btn-download{
@@ -1170,9 +1173,9 @@ h1.login-title {
 }
 
 /* Mobile Layout */
-@media only screen and (max-width: 767px){
+@media only screen and (max-width : 710px ){
 	.banner-layout-10 .header-content h2{
-		font-size: 26px;
+		font-size: 30px;
 	}
 	
 	.download-app-layout-5 .btn-download {
@@ -1213,9 +1216,6 @@ h1.login-title {
 	}
 }
 	
-	.banner-layout-10 .header-content h2{
-		font-size: 22px;
-	}
 
 /*********************************************/
 /*****     12. Download Apps area css    *****/
@@ -1437,27 +1437,55 @@ h3 > t:focus:before {
 /*****    14. Media Screens     *****/
 /************************************/
 
-@media only screen and (max-width: 575px){
-	.banner-layout-10 .header-img img{
+
+
+@media only screen and (min-width: 1500px){
+	.main-features-layout-5 .main-feature-image {
+	margin-top: -30px;
+	margin-left:-700px;
+	}
+	
+	.main-features-layout-5 .main-feature-entry {
+		margin-top: 50px;
+		margin-left:-230px;
+	}
+}
+
+
+@media only screen and (max-width: 647px){
+	.main-feature-image {
 	display: none;
 	}
 }
+
+
+
 
 @media only screen and (max-width: 1200px){
 	.banner-layout-5 .header-content{
 		padding: 0 40px;
 	}
+	
+	.main-features-layout-5 {
+	padding-top: 0px;
+	margin-bottom: 20px;
+	height: 80%
+	}
+	
+	.main-features-layout-5 .main-feature-image {
+	margin-top: -30px;
+	margin-bottom: 20px;
+	}
+	
+	.main-features-layout-5 .main-feature-entry {
+	margin-top: 30px;
+	margin-left:-20px;
+	}
 }
 
 @media only screen and (max-width: 991px){
-	.banner-layout-10 .header-img img{
-		max-width: 40%;
-		margin-top:-100px;
-		margin-left: 300px;
-	}
-		
-	}
-	
+
+			
 	.header-layout-5 .navbar-nav{
 		display: none;
 	}
@@ -1516,7 +1544,9 @@ h3 > t:focus:before {
 	}
 	
 	.main-features-layout-5 .main-feature-image{
-		margin-top: 40px;
+		margin-top: -10px;
+		height: 90%
+		
 	}
 	
 	.main-features-layout-5 .main-feature-header{
@@ -1528,7 +1558,13 @@ h3 > t:focus:before {
 	}
 	
 	.main-features-layout-5{
-		padding: 0 0 30px;
+		padding: 0 0 10px;
+	}
+	
+	.main-features-layout-5 .main-feature-entry {
+	margin-top: 0px;
+	margin-left:10px;
+	margin-right:10px;
 	}
 	
 	.features-layout-5{
@@ -1559,7 +1595,7 @@ h3 > t:focus:before {
 }
 
 /* Mobile Layout */
-@media only screen and (max-width: 767px){
+@media only screen and (max-width : 710px ){
 	.banner-layout-5 .header-content h2{
 		font-size: 26px;
 	}
