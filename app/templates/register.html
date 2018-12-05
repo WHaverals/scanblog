@@ -86,6 +86,9 @@
 				<p>
             	{{ form.language.label }}<br>
             	{{ form.language(size=2) }}
+		{% for error in form.language.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+		{% endfor %}
         		</p>
 				<p>
             	{{ form.middledutch.label }}<br>
