@@ -3,7 +3,7 @@ from wtforms import StringField, PasswordField, BooleanField, SubmitField, \
     TextAreaField, SelectField, RadioField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, \
     Length
-from app.models import User, JSONEncodedDict, Annotation
+from app.models import User, Annotation
 
 
 class LoginForm(FlaskForm):
@@ -19,10 +19,10 @@ class RegistrationForm(FlaskForm):
     password = PasswordField('Wachtwoord', validators=[DataRequired()])
     password2 = PasswordField(
         'Herhaal wachtwoord', validators=[DataRequired(), EqualTo('password')])
-    language = RadioField('Moedertaal', choices = [('vlaams', 'Vlaams'), 
-      ('nederlands', 'Nederlands')])
-    middledutch = RadioField('Hoe schat u uw kennis in van het Middelnederlands?', choices = [('geen', 'Geen'), 
-      ('gemiddeld', 'Gemiddeld'), ('goed', 'Goed')])
+    language = RadioField('Moedertaal', choices = [(1, 'Vlaams'), 
+      (2, 'Nederlands')])
+    middledutch = RadioField('Hoe schat u uw kennis in van het Middelnederlands?', choices = [(1, 'Geen'), 
+      (2, 'Gemiddeld'), (3, 'Goed')])
     submit = SubmitField('Registreer')
 
     def validate_username(self, username):

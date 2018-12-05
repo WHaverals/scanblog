@@ -15,9 +15,9 @@ def import_txt_files(path, cur):
 	# all data files are in the subdir data
 	files = glob.glob(path + '*.txt')
 	if len(files) > 0:
-		print " files found ", len(files)
+		print(" files found ", len(files))
 		for file in files:
-			print "-------> processing file ", file
+			print("-------> processing file ", file)
 			header = True
 			alist = []
 			line_nbr = 0 # because of the header :-)
@@ -29,12 +29,12 @@ def import_txt_files(path, cur):
 					story = m.group(1)
 					fragment = m.group(2)
 				else:
-					print "filename does not match"
+					print("filename does not match")
 				for line in f:
 					line_wnl = line.rstrip()
 					if header:
-						print "story -> ", story
-						print "descr -> ", line_wnl
+						print("story -> ", story)
+						print("descr -> ", line_wnl)
 						header = False
 						cur.execute("select * from story where title = ? ", (story, ))
 						st = cur.fetchone()
@@ -43,26 +43,29 @@ def import_txt_files(path, cur):
 							story_id = cur.lastrowid
 						else:
 							story_id = st[0]
+						#we have a new fragment
+						cur.execute("insert into fragment (story_id) values ( ? )", (story_id,))
+						frag_id = cur.lastrowid						
 					else:
-						print "line -> ", line_wnl
+						print("line -> ", line_wnl)
 						llist = eval(line_wnl)
 						# llist is a list of lists 
 						for alist in llist:
 							for syl in alist:
-								print "story %s, syllable_nr %s, word_nbr %s, line_nbr %s, fragment %s , %s"  \
-								% (story, syl_nbr, word_nbr, line_nbr, fragment, syl)
-								cur.execute("insert into syllable (story_id, frag_nbr, line_nbr, word_nbr, syll_nbr, syllable ) \
-								values ( ?, ?, ?, ? ,? , ? )", (story_id, fragment, line_nbr, word_nbr, syl_nbr, syl))
+								print("frag_id %s, syllable_nr %s, word_nbr %s, line_nbr %s, fragment %s , %s"  \
+								% (frag_id, syl_nbr, word_nbr, line_nbr, fragment, syl))
+								cur.execute("insert into syllable (frag_id, frag_nbr, line_nbr, word_nbr, syll_nbr, syllable ) \
+								values ( ?, ?, ?, ? ,? , ? )", (frag_id, fragment, line_nbr, word_nbr, syl_nbr, syl))
 								syl_nbr += 1
 							syl_nbr = 1
 							word_nbr += 1
 						word_nbr = 1
 					line_nbr += 1
 	else:
-		print "no files found in this path %s" % (path)			
+		print("no files found in this path %s" % (path))
     	
 #f __name__ == 'main':
-print "ok, starting conversion txt-> db"
+print("ok, starting conversion txt-> db")
 path='./data/'
 con = lite.connect('app.db')
 cur = con.cursor()

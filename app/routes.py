@@ -7,11 +7,14 @@ from werkzeug.urls import url_parse
 
 from app import app, db, login
 from app.forms import LoginForm, RegistrationForm
-from app.models import User, Annotation, JSONEncodedDict
+from app.models import User, Annotation, Fragment, Syllable
 
 import json
 from sqlalchemy.types import TypeDecorator, VARCHAR
+import logging
 
+logging.basicConfig(filename='/var/log/scanblog.log',level=logging.DEBUG)
+logger = logging.getLogger()
 
 @app.route('/')
 @app.route('/index')
@@ -50,11 +53,12 @@ def logout():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    if current_user.is_authenticated:
-        return redirect(url_for('index'))
+    #if current_user.is_authenticated:
+    #    return redirect(url_for('index'))
     form = RegistrationForm()
     if form.validate_on_submit():
-        user = User(username=form.username.data, email=form.email.data)
+        user = User(username=form.username.data, email=form.email.data, \
+        language=form.language, middledutch=form.middledutch)
         user.set_password(form.password.data)
         db.session.add(user)
         db.session.commit()
@@ -67,36 +71,36 @@ def register():
 @login_required
 def save_annotation():
     data = flask.request.json
-    story_id = data['story_id']
-    annotations = data['annotations']
-    annotation = Annotation(
-        user_id=int(current_user.id), story_id=int(story_id), annotation=annotations)
+    logger.info('saving annotation with data %s', data)
+    syl_id = data['syl_id']
+    stressed = data['stressed']
+    annotation = Annotation(user_id=int(current_user.id), \
+    syllable_id=int(syl_id), stressed=stressed)
     db.session.add(annotation)
     db.session.commit()
     return flask.jsonify(status="OK")
 
 
-
 @app.route('/scansion', methods=['GET', 'POST'])
 @login_required
 def scansion():
+    logger.info('entering scansion')
     user_id = int(current_user.id)
-    fragments_done = Annotation.query.filter_by(done=1, user_id=user_id).all()
-    if len(fragments_done) < 3000:
-         with app.open_resource('static/js/test.json') as f:
-#        with open("app/static/js/test.json") as f:
-            data = json.load(f)
-            story_ids = [story["story_id"] for story in data["stories"]]
-            done = [fragment.story_id for fragment in fragments_done]
-            story_ids = [id for id in story_ids if id not in done]
-            if not story_ids:
+    frag_ids_done = Annotation.get_fragments_done(user_id)
+    logger.info("fragments done %s ", frag_ids_done)
+    frag_ids = Fragment.get_all_ids()
+    logger.info("all fragments %s", frag_ids)
+    if len(frag_ids_done) < len(frag_ids):            
+            frag_ids_n_done = [id for id in frag_ids if id not in frag_ids_done]
+            if not frag_ids_n_done:
                 return render_template('index.html')
-            story_id = random.sample(story_ids, 1)[0]
-            story = next(story for story in data["stories"] if story["story_id"] == story_id)
-            annotations = {syllable["id"]: {'syllable': syllable["text"], 'stressed': False}
-                           for line in story["fragments"][0]["lines"] 
-                           for word in line for syllable in word}
-            return render_template('scansion.html', story_id=story_id, annotations=annotations, title=story["title"], lines=story["fragments"][0]["lines"])
+            frag_id = random.sample(frag_ids_n_done, 1)[0]
+            logger.info("frag_id choosen bij random %s", frag_id)
+            title = Fragment.get_story_description(frag_id)
+            logger.info("descr %s", title)
+            lines = Syllable.convert_to_list(frag_id)
+            #logger.info("lines %s", lines)
+            return render_template('scansion.html', frag_id=frag_id, title=title, lines=lines)
     else:
         return redirect(url_for('index'))
 
@@ -105,12 +109,13 @@ def scansion():
 @app.route('/finalize_annotation', methods=['GET', 'POST'])
 @login_required
 def finalize_annotation():
-    user_id = int(current_user.id)
-    data = flask.request.json
-    story_id = data['story_id']
-    annotations = data['annotations']
-    annotation = Annotation(
-        user_id=int(current_user.id), story_id=int(story_id), annotation=annotations, done=1)
-    db.session.add(annotation)
-    db.session.commit()
-    return flask.jsonify(status="OK")
+	user_id = int(current_user.id)
+	data = flask.request.json
+	logger.info('finalizing annotation with data %s', data)
+	for el in data:
+		syl_id = el['syl_id']
+		annotation = Annotation(user_id=int(current_user.id), \
+		syllable_id=int(syl_id), stressed=True, fragment_done = True)
+		db.session.add(annotation)
+	db.session.commit()
+	return flask.jsonify(status="OK")
