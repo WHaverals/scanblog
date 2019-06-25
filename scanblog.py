@@ -1,2 +1,2 @@
 from app import app, db
-from app.models import User, Annotation, Story, Syllable, Fragment
+from app.models import User, Annotation, Story, Syllable, Fragment, Scanned

@@ -7,13 +7,13 @@ from werkzeug.urls import url_parse
 
 from app import app, db, login
 from app.forms import LoginForm, RegistrationForm
-from app.models import User, Annotation, Fragment, Syllable
+from app.models import User, Annotation, Fragment, Syllable, Scanned
 
 import json
 from sqlalchemy.types import TypeDecorator, VARCHAR
 import logging
 
-logging.basicConfig(filename='/var/log/scanblog.log',level=logging.DEBUG)
+logging.basicConfig(filename='/var/log/scanblog.log', level=logging.DEBUG)
 logger = logging.getLogger()
 
 @app.route('/')
@@ -86,21 +86,23 @@ def save_annotation():
 def scansion():
     logger.info('entering scansion')
     user_id = int(current_user.id)
-    frag_ids_done = Annotation.get_fragments_done(user_id)
+    frag_ids_done = Scanned.get_frag_done(user_id)
     logger.info("fragments done %s ", frag_ids_done)
     frag_ids = Fragment.get_all_ids()
+    frag_ids_max_freq = Scanned.get_frag_maxfreq()
     logger.info("all fragments %s", frag_ids)
-    if len(frag_ids_done) < len(frag_ids):            
-            frag_ids_n_done = [id for id in frag_ids if id not in frag_ids_done]
-            if not frag_ids_n_done:
-                return render_template('index.html')
-            frag_id = random.sample(frag_ids_n_done, 1)[0]
-            logger.info("frag_id choosen bij random %s", frag_id)
-            title = Fragment.get_story_description(frag_id)
-            logger.info("descr %s", title)
-            lines = Syllable.convert_to_list(frag_id)
-            #logger.info("lines %s", lines)
-            return render_template('scansion.html', frag_id=frag_id, title=title, lines=lines)
+    logger.info("fragments with max freq %s", frag_ids_max_freq)
+    if len(frag_ids_done) < current_app.config['MAX_SCANS_USER']:
+        frag_ids_n_done = [id for id in frag_ids if (id not in frag_ids_done and id not in frag_ids_max_freq)]
+        if not frag_ids_n_done:
+            return render_template('index.html')
+        frag_id = random.sample(frag_ids_n_done, 1)[0]
+        logger.info("frag_id choosen bij random %s", frag_id)
+        title = Fragment.get_story_description(frag_id)
+        logger.info("descr %s", title)
+        lines = Syllable.convert_to_list(frag_id)
+        #logger.info("lines %s", lines)
+        return render_template('scansion.html', frag_id=frag_id, title=title, lines=lines)
     else:
         return redirect(url_for('index'))
 
@@ -109,13 +111,16 @@ def scansion():
 @app.route('/finalize_annotation', methods=['GET', 'POST'])
 @login_required
 def finalize_annotation():
-	user_id = int(current_user.id)
-	data = flask.request.json
-	logger.info('finalizing annotation with data %s', data)
-	for el in data:
-		syl_id = el['syl_id']
-		annotation = Annotation(user_id=int(current_user.id), \
-		syllable_id=int(syl_id), stressed=True, fragment_done = True)
-		db.session.add(annotation)
-	db.session.commit()
-	return flask.jsonify(status="OK")
+    user_id = int(current_user.id)
+    data = flask.request.json
+    logger.info('finalizing annotation with data %s', data)
+    for el in data:
+        syl_id = el['syl_id']
+        annotation = Annotation(user_id=int(current_user.id), \
+                                syllable_id=int(syl_id), stressed=True, fragment_done = True)
+        db.session.add(annotation)
+    #we also add a line to the scanned table
+    scan = Scanned(user_id=user_id, frag_id=Syllable.get_frag_id(syl_id))
+    db.session.add(scan)
+    db.session.commit()
+    return flask.jsonify(status="OK")
