@@ -103,3 +103,4 @@ ENV/
 .pyc
 
 app.db
+templates2/

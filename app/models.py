@@ -6,6 +6,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 from sqlalchemy.types import VARCHAR
 import json
+import pprint
+import csv
 
 
 class User(UserMixin, db.Model):
@@ -53,6 +55,7 @@ class Fragment(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     story_id = db.Column(db.Integer, db.ForeignKey(Story.id),\
                          nullable=False, index=True)
+    frag_nbr = db.Column(db.SmallInteger, nullable=False)
 
     def get_all_ids():
         """get a list of all fragment id's"""
@@ -79,7 +82,7 @@ class Syllable(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     frag_id = db.Column(db.Integer, db.ForeignKey(Fragment.id),\
                         nullable=False, index=True)
-    frag_nbr = db.Column(db.SmallInteger, nullable=False)
+    #frag_nbr = db.Column(db.SmallInteger, nullable=False)
     line_nbr = db.Column(db.SmallInteger, nullable=False)
     word_nbr = db.Column(db.SmallInteger, nullable=False)
     syll_nbr = db.Column(db.SmallInteger, nullable=False)
@@ -108,8 +111,9 @@ class Syllable(db.Model):
 
     #convert the fragment in the database to a list of lists of lists of
     #dictionaries(frag->lines->line->words->word->syllables
+    #lolg -> list of lists
     @staticmethod
-    def convert_to_list(frag_id):
+    def convert_to_list(frag_id, lol=False):
         nbr_lines = Syllable.nbr_lines(frag_id)
         if nbr_lines:
             lines_list = []
@@ -121,7 +125,10 @@ class Syllable(db.Model):
                                                     line_nbr=line_idx, word_nbr=word_idx).all()
                     word_list = []
                     for syl in syls:
-                        sdict = dict(id=syl.id, text=syl.syllable)
+                        if(not lol):
+                            sdict = dict(id=syl.id, text=syl.syllable)
+                        else:
+                            sdict = syl.syllable
                         word_list.append(sdict)
                     line_list.append(word_list)
                 lines_list.append(line_list)
@@ -174,3 +181,70 @@ class Scanned(db.Model):
         frag_done = res.fetchall()
         frag_done_l = [frag[0] for frag in frag_done]
         return frag_done_l
+
+class Report():
+    """ produces some reports concerning the scanning of the poems """
+
+    def test():
+        print("in method test from class Report")
+        
+    @staticmethod
+    def get_freq_stressed_frag(frag_id):
+        qwry = """
+select count(*), syllable_id, syllable from syllable left join annotation on syllable.id = annotation.syllable_id where annotation.fragment_done and syllable.frag_id = :frag_id group by annotation.syllable_id;
+"""
+        res = db.session.execute(qwry, {'frag_id':frag_id})
+        scans = res.fetchall()
+        #print("scans -> ", scans)
+        syls = Report.get_syl_frag(frag_id)
+        for scan in scans:
+            syls[scan['syllable_id']]['cnt'] = scan[0]
+            syls[scan['syllable_id']]['stress'] = True
+        return syls
+        
+    @staticmethod
+    def get_syl_frag(frag_id):
+        """get all syllables of a fragment in the correct order """
+        s = "select id, syllable from syllable where frag_id = :id order by \
+        line_nbr,word_nbr,syll_nbr"
+        res = db.session.execute(s, {'id':frag_id})
+        syls = {}
+        for syl in res:
+            syls[syl['id']] = {'syl': syl['syllable'], 'stress':False, 'cnt':0}
+        return syls
+
+    @staticmethod
+    def get_syl_story(story_id):
+        """ get all syllables of a story """
+        s = "select story_id, fragment.id, title, frag_nbr from fragment join story on story.id = fragment.story_id where story.id = :id"
+        res = db.session.execute(s, {'id' : story_id})
+        frags = res.fetchall()
+        syl_st = {}
+        for frag in frags:
+            print(frag['id'])
+            syl_st[frag['title'] + '_' + str(frag['frag_nbr'])] = Report.get_freq_stressed_frag(frag['id'])
+        return syl_st
+    
+    @staticmethod
+    def get_syl_all():
+        """ get all syllables of all stories """
+        s = "select * from story"
+        res = db.session.execute(s)
+        stories = res.fetchall()
+        a_syls = {}
+        for story in stories:
+            syls = Report.get_syl_story(story['id'])
+            a_syls.update(syls)
+        return a_syls
+
+    @staticmethod
+    def res_to_csv(fname, res):
+        with open(fname, 'w', newline='') as csvfile:
+            fieldnames = ['title', 'syl', 'cnt', 'stress']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            for title,rows in res.items():
+                writer.writerow({'title':title})
+                for syl_id, row in rows.items():
+                    writer.writerow(row)
+        
