@@ -1,0 +1,6 @@
+Arturs doet
+[['die'], ['jonc', 'frou', 'we'], ['por', 'de'], ['met', 'ter'], ['vard']]
+[['en', 'de'], ['voer'], ['ten'], ['co', 'ninc'], ['ar', 'tur', 'ward']]
+[['en', 'de'], ['de', 'de'], ['ha', 're'], ['boet', 'scap'], ['groet'], ['en', 'de'], ['smal']]
+[['al', 'soe'], ['al', 'se'], ['ha', 're'], ['lan', 'ce', 'loet'], ['be', 'val']]
+[['si', 'ne'], ['liets'], ['ach', 'ter'], ['niet'], ['een'], ['word']]
