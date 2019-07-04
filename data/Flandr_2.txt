@@ -1,0 +1,5 @@
+Flandrijs
+[['doe'], ['hief'], ['de'], ['he', 'ke'], ['de'], ['sa', 'git', 'ta', 're']]
+[['en', 'de'], ['sloech'], ['op'], ['flan', 'dri', 'se'], ['den'], ['rid', 'da', 're']]
+[['e', 'nen'], ['vre', 'se', 'li', 'ken'], ['slach']]
+[['het'], ['wa', 're'], ['flan', 'drijs'], ['sterf', 'dach']]

@@ -1,0 +1,5 @@
+Torec
+[['en', 'de'], ['to', 'rec'], ['was'], ['bi', 'der'], ['jonc', 'frou', 'wen'], ['ge', 'se', 'ten']]
+[['in'], ['die'], ['ten', 'te'], ['en', 'de'], ['sou', 'de'], ['ger', 'ne'], ['we', 'ten']]
+[['hoe'], ['si'], ['hie', 'te'], ['en', 'de'], ['wie'], ['si'], ['wa', 're']]
+[['en', 'de'], ['wa', 'nen'], ['si'], ['al', 'so'], ['quam'], ['da', 're']]

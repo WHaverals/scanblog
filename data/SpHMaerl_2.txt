@@ -1,0 +1,6 @@
+Spiegel historiael
+[['al', 'se'], ['ka', 'rel'], ['had', 'de'], ['vro', 'me', 'li', 'ke']]
+[['ver', 'won', 'nen'], ['me', 'nech'], ['co', 'nin', 'cri', 'ke']]
+[['had', 'di'], ['ach', 'tin', 'ge'], ['dat'], ['hi'], ['wou', 'de']]
+[['ta', 'ken'], ['rus', 'ten'], ['in'], ['sie', 're'], ['ou', 'de']]
+[['en', 'de'], ['la', 'ten'], ['dor', 'lo', 'ghe'], ['va', 'ren']]

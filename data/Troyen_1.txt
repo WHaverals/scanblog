@@ -1,0 +1,5 @@
+Historie van Troyen
+[['sy'], ['maec', 'te'], ['groot'], ['hant', 'ghe', 'sclach']]
+[['want'], ['sy'], ['ont', 'sach'], ['den'], ['wre', 'den'], ['dach']]
+[['seer'], ['bat'], ['sy'], ['hem'], ['dat'], ['hy'], ['bly', 've']]
+[['en', 'de'], ['hy'], ['hem'], ['sel', 'ven'], ['niet'], ['en'], ['ont', 'ly', 've']]

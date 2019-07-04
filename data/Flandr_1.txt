@@ -1,0 +1,6 @@
+Flandrijs
+[['flan', 'drijs'], ['sprac'], ['jonc', 'frou', 'we'], ['fi', 'ne']]
+[['opt'], ['ors'], ['dat'], ['te'], ['voe', 'ren'], ['was'], ['mi', 'ne']]
+[['sul', 'di'], ['ri', 'den'], ['en', 'de'], ['heb', 'ben'], ['te'], ['de', 'le']]
+[['ic'], ['wil', 'le'], ['met'], ['u'], ['ten'], ['bru', 'nen'], ['cas', 'te', 'le']]
+[['va', 'ren'], ['daer'], ['ghi'], ['in'], ['be', 'hoert']]
