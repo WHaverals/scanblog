@@ -1,0 +1,3 @@
+Rijmspreuken
+[['nye', 'mant'], ['en'], ['sel'], ['sijn'], ['volc', 'ke'], ['laen']]
+[['son', 'der'], ['vroech', 'de'], ['wil'], ['hi'], ['ee', 're'], ['haen']]

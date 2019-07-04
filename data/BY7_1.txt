@@ -1,5 +1,7 @@
 Brabantsche Yeesten, Zevende Boek
-[['hier'], ['na'], ['soe'], ['troc', 'ken'], ['des'], ['sijt'], ['vroe', 'der']]
-[['die'], ['her', 'to', 'ghe'], ['en', 'de'], ['met'], ['hem'], ['sijn'], ['broe', 'der']]
-[['van'], ['ny', 'veers'], ['die'], ['hee', 're'], ['va', 'li', 'ant']]
-[['met'], ['rid', 'de', 'ren'], ['met'], ['cna', 'pen'], ['uut'], ['bra', 'bant']]
+[['in'], ['bour', 'gog', 'nen'], ['te'], ['dien'], ['ston', 'den']]
+[['heeft'], ['na'], ['her', 'to', 'ghe'], ['an', 'tho', 'nijs'], ['doot'], ['ghe', 'son', 'den']]
+[['sijns'], ['ooms'], ['her', 'de'], ['eer', 'baer', 'li', 'ke']]
+[['den'], ['bis', 'scop'], ['van'], ['dor', 'ni', 'ke']]
+[['met'], ['meer'], ['an', 'de', 'ren'], ['al', 'te', 'hant']]
+[['aen'], ['her', 'to', 'ghe'], ['jan', 'ne'], ['van'], ['bra', 'bant']]

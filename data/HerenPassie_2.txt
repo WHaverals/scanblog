@@ -1,0 +1,5 @@
+Ons Heren Passie
+[['die'], ['bis', 'cop'], ['vraech', 'de'], ['hem'], ['al', 'leen']]
+[['wat'], ['ant', 'woer', 'stu'], ['tot'], ['de', 'se'], ['reen']]
+[['die'], ['hier'], ['die'], ['jo', 'den'], ['brin', 'ghen'], ['voert']]
+[['jhe', 'sus'], ['en'], ['gaf'], ['hem'], ['gheen'], ['ant', 'woert']]

@@ -1,0 +1,6 @@
+Brabantsche Yeesten, Vijfde Boek
+[['al', 'se'], ['die'], ['bis', 'scop'], ['sach'], ['dat']]
+[['trac'], ['hi'], ['te'], ['bon', 'nen'], ['in'], ['die'], ['stat']]
+[['en', 'de'], ['croen', 'den'], ['in'], ['die'], ['ker', 'ke'], ['da', 're']]
+[['dits'], ['te'], ['hoer', 'ne'], ['vrem', 'de'], ['ma', 're']]
+[['den'], ['her', 'to', 'ghe'], ['van'], ['oest', 'ri', 'ke']]

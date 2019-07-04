@@ -1,11 +1,3 @@
 Rijmspreuken
 [['so'], ['wye'], ['twee'], ['he', 'ren'], ['die', 'nen'], ['sel']]
 [['die'], ['be', 'hoe', 'vet'], ['veel'], ['ghe', 'luc', 'kes'], ['wel']]
-[['soe'], ['wat'], ['een'], ['man'], ['mit'], ['e', 'ren'], ['haet']]
-[['schaemt'], ['hi'], ['hem'], ['des'], ['dat'], ['is'], ['mis', 'daet']]
-[['wye'], ['meynt'], ['dat'], ['hi'], ['die'], ['wijs', 'te'], ['sy']]
-[['veel', 'tijt'], ['woen', 're'], ['do', 'ren'], ['by']]
-[['soe'], ['gan', 'se'], ['doecht'], ['nye'], ['man'], ['en'], ['haet']]
-[['hi', 'ne'], ['mos', 'te'], ['noch', 'tan'], ['ken', 'nen'], ['mis', 'daet']]
-[['hoe'], ['zeer'], ['een'], ['wijf'], ['be', 'hoe', 'det'], ['si']]
-[['noch', 'tan'], ['is'], ['hoer'], ['be', 'gheer', 'te'], ['vry']]

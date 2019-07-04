@@ -1,0 +1,5 @@
+Natuurkunde van het Geheelal
+[['wil', 'tu'], ['we', 'ten'], ['die'], ['hoec', 'heyt'], ['des']]
+[['die'], ['to', 'ten'], ['fir', 'ma', 'men', 'ten'], ['es']]
+[['daer'], ['die'], ['ster', 'ren'], ['al', 'le'], ['in'], ['staen']]
+[['nu'], ['hoert'], ['hier'], ['ic'], ['seg', 'di'], ['saen']]

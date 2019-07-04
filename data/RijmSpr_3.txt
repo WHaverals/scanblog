@@ -1,0 +1,3 @@
+Rijmspreuken
+[['wye'], ['meynt'], ['dat'], ['hi'], ['die'], ['wijs', 'te'], ['sy']]
+[['veel', 'tijt'], ['woen', 're'], ['do', 'ren'], ['by']]

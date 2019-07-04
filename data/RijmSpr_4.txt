@@ -1,0 +1,3 @@
+Rijmspreuken
+[['soe'], ['wye'], ['can'], ['hou', 'den'], ['en', 'de'], ['ghe', 'ven']]
+[['te'], ['recht'], ['mach'], ['hi'], ['mit'], ['e', 'ren'], ['le', 'ven']]
