@@ -1,0 +1,7 @@
+Lanseloet van Denemerken
+[['san', 'de', 'rijn'], ['bi', 'der'], ['ma', 'ghet'], ['ma', 'rie']]
+[['dor', 'per', 'heit'], ['en'], ['leg', 'gic'], ['u'], ['niet'], ['te'], ['vo', 'ren']]
+[['en'], ['es'], ['nu'], ['gheen'], ['wijf'], ['ghe', 'bo', 'ren']]
+[['op'], ['eer', 'de'], ['on', 'der'], ['des'], ['he', 'mels'], ['tro', 'ne']]
+[['soe'], ['ri', 'ke'], ['soe'], ['mech', 'tich'], ['no'], ['soe'], ['sco', 'ne']]
+[['die'], ['mi'], ['ver', 'ho', 'ghen'], ['mach'], ['dan'], ['ghi']]

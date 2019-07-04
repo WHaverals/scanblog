@@ -1,0 +1,5 @@
+Dietsche doctrinale
+[['die'], ['wi', 'se'], ['se', 'ne', 'ca'], ['hi'], ['seit']]
+[['dat'], ['tsprin', 'sen'], ['goe', 'der', 'tie', 'ren', 'heit']]
+[['sijn'], ['ri', 'ke'], ['can'], ['doen'], ['meer', 'ren']]
+[['en', 'de'], ['set', 'ten'], ['in'], ['gro', 'ter'], ['e', 'ren']]

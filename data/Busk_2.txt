@@ -1,0 +1,5 @@
+Buskenblazer
+[['ghi'], ['goe', 'de'], ['lie', 'de'], ['dit'], ['spel'], ['es'], ['ghe', 'daen']]
+[['ghi'], ['mocht'], ['wel'], ['al', 'le'], ['thuus', 'weert'], ['gaen']]
+[['en', 'de'], ['lo', 'pen'], ['al', 'le'], ['den'], ['graet'], ['ne', 'der']]
+[['ghe', 'noe', 'ghet'], ['u'], ['comt'], ['al', 'le'], ['we', 'der']]

@@ -1,0 +1,5 @@
+Buskenblazer
+[['hout'], ['set'], ['dat'], ['bus', 'ken'], ['a', 'ne'], ['u', 'wen'], ['mont']]
+[['en', 'de'], ['blaest'], ['stijf'], ['met'], ['al'], ['u', 'wer'], ['macht']]
+[['ic'], ['heb', 'be'], ['soe'], ['me', 'nich'], ['const'], ['vol', 'bracht']]
+[['ic'], ['sal'], ['em', 'mer'], ['de', 'se'], ['oec'], ['vol', 'brin', 'gen']]

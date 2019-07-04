@@ -1,0 +1,7 @@
+Korte kroniek van Brabant
+[['bi'], ['flo', 'ri', 'nes'], ['in'], ['ee', 'nen'], ['stri', 'de']]
+[['daer'], ['si'], ['bei', 'de'], ['stre', 'den'], ['met'], ['ni', 'de']]
+[['gheer', 'bergh'], ['die'], ['dus'], ['ver', 'loos'], ['al', 'ga', 'der']]
+[['vran', 'ke', 'rijc'], ['loth', 'rijc'], ['man'], ['en', 'de'], ['va', 'der']]
+[['had', 'de'], ['ee', 'nen'], ['so', 'ne'], ['hein', 'ri', 'ke'], ['den'], ['ou', 'den']]
+[['die'], ['dat'], ['graef', 'schap'], ['heeft'], ['be', 'hou', 'den']]

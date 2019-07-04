@@ -1,0 +1,5 @@
+Brabantse Rose
+[['re', 'de', 'ne'], ['had', 'de'], ['recht'], ['die'], ['mi'], ['bla', 'meer', 'de']]
+[['dat'], ['ic'], ['mi'], ['noit'], ['ter'], ['min', 'nen'], ['keer', 'de']]
+[['mi', 'ne'], ['pi', 'ne'], ['es'], ['swaer'], ['die'], ['ic'], ['do', 'gen'], ['moet']]
+[['ic'], ['wil', 'se'], ['la', 'ten'], ['het'], ['es'], ['mi'], ['goet']]

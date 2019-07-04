@@ -1,0 +1,7 @@
+Dietsche doctrinale
+[['met'], ['vre', 'den'], ['en', 'de'], ['een', 'drach', 'tec', 'hei', 'den']]
+[['sel', 'di'], ['al'], ['v'], ['din', 'ghen'], ['be', 'lei', 'den']]
+[['soe'], ['waer'], ['ghi'], ['moeght'], ['en', 'de'], ['coent']]
+[['soe'], ['wert'], ['v'], ['le', 'uen'], ['ghe', 'scoent']]
+[['ghi'], ['selt'], ['heb', 'ben'], ['pays'], ['en', 'de'], ['vre', 'de']]
+[['met'], ['al', 'len'], ['men', 'schen'], ['tel', 'ker'], ['ste', 'de']]
