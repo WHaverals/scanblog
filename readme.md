@@ -47,14 +47,35 @@ CREATE TABLE syllable (
         FOREIGN KEY(frag_id) REFERENCES fragment (id)
 );
 CREATE INDEX ix_syllable_frag_id ON syllable (frag_id);
-sqlite
+sqlite>
+```
+sqlite3>
+All sql commands can be executed from the sqlite3 prompt, like this one (mind the semicolon at the end!)
+```
+select * from story;
+1|Haghe|Lantsloot vander Haghedochte
+2|Lutgart|Het Leven van Sinte Lutgart
+3|HerenPassie|Ons Heren Passie
+4|Beatrijs|Beatrijs
+5|RijmSpr|Rijmspreuken
+6|Reynaert|Van den vos Reyanerde
+7|GrimOorlog|De Grimbergse Oorlog
+8|FloBla|Floris ende Blancefloer
+9|Heelal|Natuurkunde van het Geheelal
+10|Limb_Aiol|De Limburgse Aiol
+11|BY5|Brabantsche Yeesten, Vijfde Boek
+12|Walewein|Walewein
+13|Karel|Karel ende Elegast
+14|BY7|Brabantsche Yeesten, Zevende Boek
+15|Brandaen|De Reis van Sente Brandane
+16|BY1|Brabantsche Yeetsen, Eerste Boek
+17|Woeringen|De Slag bij Woeringen
 ```
 
 database creation/initialisation
 ===============================
 
-
-This database can be initalised from scratch as follows
+This database can be initalised from scratch as follows:
 ```
 #ls app.db
 app.db
@@ -65,4 +86,218 @@ ls: cannot access 'app.db': No such file or directory
 #ls app.db
 app.db
 #python3 import_txt.py
+-------> processing file  ./data/Heelal_2.txt
+story ->  Heelal
+descr ->  Natuurkunde van het Geheelal
+frag_id -> %d 68
+line ->  [['wil', 'tu'], ['we', 'ten'], ['die'], ['hoec', 'heyt'], ['des']]
+frag_id 68, syllable_nr 1, word_nbr 1, line_nbr 1, wil
+frag_id 68, syllable_nr 2, word_nbr 1, line_nbr 1, tu
+frag_id 68, syllable_nr 1, word_nbr 2, line_nbr 1, we
+frag_id 68, syllable_nr 2, word_nbr 2, line_nbr 1, ten
+frag_id 68, syllable_nr 1, word_nbr 3, line_nbr 1, die
+frag_id 68, syllable_nr 1, word_nbr 4, line_nbr 1, hoec
+frag_id 68, syllable_nr 2, word_nbr 4, line_nbr 1, heyt
+frag_id 68, syllable_nr 1, word_nbr 5, line_nbr 1, des
+line ->  [['die'], ['to', 'ten'], ['fir', 'ma', 'men', 'ten'], ['es']]
+frag_id 68, syllable_nr 1, word_nbr 1, line_nbr 2, die
+frag_id 68, syllable_nr 1, word_nbr 2, line_nbr 2, to
+frag_id 68, syllable_nr 2, word_nbr 2, line_nbr 2, ten
+frag_id 68, syllable_nr 1, word_nbr 3, line_nbr 2, fir
+frag_id 68, syllable_nr 2, word_nbr 3, line_nbr 2, ma
+frag_id 68, syllable_nr 3, word_nbr 3, line_nbr 2, men
+frag_id 68, syllable_nr 4, word_nbr 3, line_nbr 2, ten
+frag_id 68, syllable_nr 1, word_nbr 4, line_nbr 2, es
+line ->  [['daer'], ['die'], ['ster', 'ren'], ['al', 'le'], ['in'], ['staen']]
+frag_id 68, syllable_nr 1, word_nbr 1, line_nbr 3, daer
+frag_id 68, syllable_nr 1, word_nbr 2, line_nbr 3, die
+frag_id 68, syllable_nr 1, word_nbr 3, line_nbr 3, ster
+frag_id 68, syllable_nr 2, word_nbr 3, line_nbr 3, ren
+frag_id 68, syllable_nr 1, word_nbr 4, line_nbr 3, al
+frag_id 68, syllable_nr 2, word_nbr 4, line_nbr 3, le
+frag_id 68, syllable_nr 1, word_nbr 5, line_nbr 3, in
+frag_id 68, syllable_nr 1, word_nbr 6, line_nbr 3, staen
+line ->  [['nu'], ['hoert'], ['hier'], ['ic'], ['seg', 'di'], ['saen']]
+frag_id 68, syllable_nr 1, word_nbr 1, line_nbr 4, nu
+frag_id 68, syllable_nr 1, word_nbr 2, line_nbr 4, hoert
+frag_id 68, syllable_nr 1, word_nbr 3, line_nbr 4, hier
+frag_id 68, syllable_nr 1, word_nbr 4, line_nbr 4, ic
+frag_id 68, syllable_nr 1, word_nbr 5, line_nbr 4, seg
+frag_id 68, syllable_nr 2, word_nbr 5, line_nbr 4, di
+frag_id 68, syllable_nr 1, word_nbr 6, line_nbr 4, saen
+```
+reporting
+=========
+To easy the creation of reports, a Report class has been defined in *models.py*. Most methods are staticly defined, and do not require initialisation of the class. The report methods can be accessed easily via the *flask* shell prompt. Best is to define an environment variable on the command line, prior to start using the flask shell:
+```
+#export FLASK_APP=scanblog.py
+```
+ * get\_syl\_frag(frag_id)
+ Puts all syllables of a fragment in a dictionary, initalising the key 'stress' to False and 'cnt' to 0
+ ```
+ >>> Report.get_syl_frag(1)
+{1: {'syl': 're', 'stress': False, 'cnt': 0}, 2: {'syl': 'de', 'stress': False, 'cnt': 0}, 3: {'syl': 'ne', 'stress': False, 'cnt': 0}, 4: {'syl': 'had', 'stress': False, 'cnt': 0}, 5: {'syl': 'de', 'stress': False, 'cnt': 0}, 6: {'syl': 'recht', 'stress': False, 'cnt': 0}, 7: {'syl': 'die', 'stress': False, 'cnt': 0}, 8: {'syl': 'mi', 'stress': False, 'cnt': 0}, 9: {'syl': 'bla', 'stress': False, 'cnt': 0}, 10: {'syl': 'meer', 'stress': False, 'cnt': 0}, 11: {'syl': 'de', 'stress': False, 'cnt': 0}, 12: {'syl': 'dat', 'stress': False, 'cnt': 0}, 13: {'syl': 'ic', 'stress': False, 'cnt': 0}, 14: {'syl': 'mi', 'stress': False, 'cnt': 0}, 15: {'syl': 'noit', 'stress': False, 'cnt': 0}, 16: {'syl': 'ter', 'stress': False, 'cnt': 0}, 17: {'syl': 'min', 'stress': False, 'cnt': 0}, 18: {'syl': 'nen', 'stress': False, 'cnt': 0}, 19: {'syl': 'keer', 'stress': False, 'cnt': 0}, 20: {'syl': 'de', 'stress': False, 'cnt': 0}, 21: {'syl': 'mi', 'stress': False, 'cnt': 0}, 22: {'syl': 'ne', 'stress': False, 'cnt': 0}, 23: {'syl': 'pi', 'stress': False, 'cnt': 0}, 24: {'syl': 'ne', 'stress': False, 'cnt': 0}, 25: {'syl': 'es', 'stress': False, 'cnt': 0}, 26: {'syl': 'swaer', 'stress': False, 'cnt': 0}, 27: {'syl': 'die', 'stress': False, 'cnt': 0}, 28: {'syl': 'ic', 'stress': False, 'cnt': 0}, 29: {'syl': 'do', 'stress': False, 'cnt': 0}, 30: {'syl': 'gen', 'stress': False, 'cnt': 0}, 31: {'syl': 'moet', 'stress': False, 'cnt': 0}, 32: {'syl': 'ic', 'stress': False, 'cnt': 0}, 33: {'syl': 'wil', 'stress': False, 'cnt': 0}, 34: {'syl': 'se', 'stress': False, 'cnt': 0}, 35: {'syl': 'la', 'stress': False, 'cnt': 0}, 36: {'syl': 'ten', 'stress': False, 'cnt': 0}, 37: {'syl': 'het', 'stress': False, 'cnt': 0}, 38: {'syl': 'es', 'stress': False, 'cnt': 0}, 39: {'syl': 'mi', 'stress': False, 'cnt': 0}, 40: {'syl': 'goet', 'stress': False, 'cnt': 0}}
+>>> ```
 
+ * get\_freq\_stressed\_frag(frag\_id)
+ Counts all the syllables that were stressed by all the users in a fragment. These are updated in the previous structured, so that the result is a complete dictionary of 1 fragment, with all stressed and non-stressed syllables. So the output looks the same as above, with the syllables that were stressed indicated with 'True' and with 'cnt' the number of times it was stressed.
+ 
+ * get\_syl\_story(story_id)
+ Same as above, but for a complete story. The stories title (original filename) and fragment number, will be included as a key element in the result. In the next example we use the *pprint* module, so before using it, just do *import pprint*
+ ```
+ >>> pprint.pprint(Report.get_syl_story(1))         
+1
+63
+{'BrRose_1': {2874: {'cnt': 0, 'stress': False, 'syl': 'al'},
+              2875: {'cnt': 0, 'stress': False, 'syl': 'se'},
+              2876: {'cnt': 0, 'stress': False, 'syl': 'oft'},
+              2877: {'cnt': 0, 'stress': False, 'syl': 'wa'},
+              2878: {'cnt': 0, 'stress': False, 'syl': 'ren'},
+              2879: {'cnt': 0, 'stress': False, 'syl': 'nu'},
+              2880: {'cnt': 0, 'stress': False, 'syl': 'we'},
+              2881: {'cnt': 0, 'stress': False, 'syl': 'ro'},
+              2882: {'cnt': 0, 'stress': False, 'syl': 'sen'},
+              2883: {'cnt': 0, 'stress': False, 'syl': 'vrou'},
+              2884: {'cnt': 0, 'stress': False, 'syl': 'we'},
+              2885: {'cnt': 0, 'stress': False, 'syl': 'bli'},
+              2886: {'cnt': 0, 'stress': False, 'syl': 'scap'},
+              2887: {'cnt': 0, 'stress': False, 'syl': 'was'},
+              2888: {'cnt': 0, 'stress': False, 'syl': 'so'},
+              2889: {'cnt': 0, 'stress': False, 'syl': 'o'},
+              2890: {'cnt': 0, 'stress': False, 'syl': 'ver'},
+              2891: {'cnt': 0, 'stress': False, 'syl': 'sco'},
+              2892: {'cnt': 0, 'stress': False, 'syl': 'ne'},
+              2893: {'cnt': 0, 'stress': False, 'syl': 'dat'},
+              2894: {'cnt': 0, 'stress': False, 'syl': 'sceen'},
+              2895: {'cnt': 0, 'stress': False, 'syl': 'e'},
+              2896: {'cnt': 0, 'stress': False, 'syl': 'ne'},
+              2897: {'cnt': 0, 'stress': False, 'syl': 'god'},
+              2898: {'cnt': 0, 'stress': False, 'syl': 'din'},
+              2899: {'cnt': 0, 'stress': False, 'syl': 'ne'},
+              2900: {'cnt': 0, 'stress': False, 'syl': 'u'},
+              2901: {'cnt': 0, 'stress': False, 'syl': 'ten'},
+              2902: {'cnt': 0, 'stress': False, 'syl': 'tro'},
+              2903: {'cnt': 0, 'stress': False, 'syl': 'ne'},
+              2904: {'cnt': 0, 'stress': False, 'syl': 'so'},
+              2905: {'cnt': 0, 'stress': False, 'syl': 'ver'},
+              2906: {'cnt': 0, 'stress': False, 'syl': 'lich'},
+              2907: {'cnt': 0, 'stress': False, 'syl': 'tes'},
+              2908: {'cnt': 0, 'stress': False, 'syl': 'se'},
+              2909: {'cnt': 0, 'stress': False, 'syl': 'daer'},
+              2910: {'cnt': 0, 'stress': False, 'syl': 'se'},
+              2911: {'cnt': 0, 'stress': False, 'syl': 'ginc'},
+              2912: {'cnt': 0, 'stress': False, 'syl': 'ne'},
+              2913: {'cnt': 0, 'stress': False, 'syl': 'ven'},
+              2914: {'cnt': 0, 'stress': False, 'syl': 'de'},
+              2915: {'cnt': 0, 'stress': False, 'syl': 'du'},
+              2916: {'cnt': 0, 'stress': False, 'syl': 'te'},
+              2917: {'cnt': 0, 'stress': False, 'syl': 'den'},
+              2918: {'cnt': 0, 'stress': False, 'syl': 'jon'},
+              2919: {'cnt': 0, 'stress': False, 'syl': 'ge'},
+              2920: {'cnt': 0, 'stress': False, 'syl': 'linc'}},
+```
+ * get\_syl\_all()
+ Gets the same result as above, but for all the stories defined in the story table.
+ * res\_to\_csv(fname, res)
+ Puts the result of the methods above (dictionaries) into a csv file, enhanced with the description of the stories.
+ ```
+ >>> res=Report.get_syl_story(1)
+1
+63
+>>> Report.res_to_csv('test4.csv', res)
+```
+The file *test4.csv* will be created in the directory were the flask shell was started.
+```
+#cat test4.csv
+cat test4.csv
+title,syl,cnt,stress
+BrRose_2,,,
+,re,0,False
+,de,0,False
+,ne,0,False
+,had,0,False
+,de,0,False
+,recht,0,False
+,die,0,False
+,mi,0,False
+,bla,0,False
+,meer,0,False
+,de,0,False
+,dat,0,False
+,ic,0,False
+,mi,0,False
+,noit,0,False
+,ter,0,False
+,min,0,False
+,nen,0,False
+,keer,0,False
+,de,0,False
+,mi,0,False
+,ne,0,False
+,pi,0,False
+,ne,0,False
+,es,0,False
+,swaer,0,False
+,die,0,False
+,ic,0,False
+,do,0,False
+,gen,0,False
+,moet,0,False
+,ic,0,False
+,wil,0,False
+,se,0,False
+,la,0,False
+,ten,0,False
+,het,0,False
+,es,0,False
+,mi,0,False
+,goet,0,False
+BrRose_1,,,
+,al,0,False
+,se,0,False
+,oft,0,False
+,wa,0,False
+,ren,0,False
+,nu,0,False
+,we,0,False
+,ro,0,False
+,sen,0,False
+,vrou,0,False
+,we,0,False
+,bli,0,False
+,scap,0,False
+,was,0,False
+,so,0,False
+,o,0,False
+,ver,0,False
+,sco,0,False
+,ne,0,False
+,dat,0,False
+,sceen,0,False
+,e,0,False
+,ne,0,False
+,god,0,False
+,din,0,False
+,ne,0,False
+,u,0,False
+,ten,0,False
+,tro,0,False
+,ne,0,False
+,so,0,False
+,ver,0,False
+,lich,0,False
+,tes,0,False
+,se,0,False
+,daer,0,False
+,se,0,False
+,ginc,0,False
+,ne,0,False
+,ven,0,False
+,de,0,False
+,du,0,False
+,te,0,False
+,den,0,False
+,jon,0,False
+,ge,0,False
+,linc,0,False
+```

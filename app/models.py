@@ -197,6 +197,7 @@ select count(*), syllable_id, syllable from syllable left join annotation on syl
         scans = res.fetchall()
         #print("scans -> ", scans)
         syls = Report.get_syl_frag(frag_id)
+        #we update the syls that are stressed with True and the count
         for scan in scans:
             syls[scan['syllable_id']]['cnt'] = scan[0]
             syls[scan['syllable_id']]['stress'] = True
@@ -209,6 +210,7 @@ select count(*), syllable_id, syllable from syllable left join annotation on syl
         line_nbr,word_nbr,syll_nbr"
         res = db.session.execute(s, {'id':frag_id})
         syls = {}
+        #we set stress to False for each syl in a fragment
         for syl in res:
             syls[syl['id']] = {'syl': syl['syllable'], 'stress':False, 'cnt':0}
         return syls
