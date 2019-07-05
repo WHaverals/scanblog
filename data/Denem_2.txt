@@ -1,0 +1,5 @@
+Lanseloet van Denemerken
+[['scaemt'], ['u'], ['der'], ['scan', 'den'], ['vul'], ['key', 'tijf']]
+[['dat'], ['ghi'], ['soe'], ['ne', 'der'], ['mint']]
+[['en', 'de'], ['men'], ['soe'], ['sco', 'ne'], ['jonc', 'frou', 'wen'], ['vint']]
+[['van'], ['ho', 'gher'], ['ge', 'boert'], ['van'], ['gro', 'ten'], ['ge', 'slacht']]

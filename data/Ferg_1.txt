@@ -1,0 +1,5 @@
+Ferguut
+[['die'], ['co', 'ninc'], ['aertuer'], ['had', 'de'], ['hof']]
+[['ge', 'hou', 'den'], ['daer'], ['hi'], ['gro', 'ten'], ['lof']]
+[['eens'], ['sin', 'xen', 'da', 'ges'], ['had', 'de'], ['ont', 'faen']]
+[['ter'], ['borch'], ['die'], ['hiet'], ['ca', 'ra', 'di', 'gaen']]

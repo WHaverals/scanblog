@@ -1,0 +1,6 @@
+Alexanders geesten
+[['an'], ['deen'], ['si', 'de'], ['lach'], ['a', 'le', 'xan', 'der']]
+[['an'], ['dan', 'der'], ['po', 'rus'], ['en', 'de'], ['me', 'nech'], ['an', 'der']]
+[['po', 'rus'], ['he', 're'], ['was'], ['wel'], ['be', 'waert']]
+[['met'], ['o', 'lip', 'han', 'ten'], ['al'], ['om'], ['ghe', 'scaert']]
+[['daer'], ['ho', 'ghe'], ['tor', 're'], ['up'], ['wa', 'ren'], ['ghe', 'staen']]

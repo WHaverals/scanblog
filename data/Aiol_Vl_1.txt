@@ -1,0 +1,7 @@
+Vlaamse Aiol
+[['ay', 'oel'], ['de', 'de'], ['af'], ['si', 'ne'], ['ghe', 'ga', 'ren']]
+[['cou', 'cen'], ['hals', 'berch'], ['en', 'de'], ['swaert']]
+[['ser', 'jan', 'te'], ['lie', 'pen'], ['on', 'ge', 'spaert']]
+[['die', 're'], ['toe'], ['moch', 'ten'], ['ge', 'scie', 'ten']]
+[['want'], ['sijt'], ['niet'], ['en'], ['lie', 'ten']]
+[['si'], ['kin', 'de', 'ne'], ['mil', 'de'], ['en', 'de'], ['goet']]

@@ -5,6 +5,3 @@ Van den vos Reyanerde
 [['ic'], ['wa', 'ne'], ['daer'], ['nie', 'me', 'ne'], ['ne'], ['was']]
 [['so'], ['a', 'rem'], ['no'], ['van'], ['so'], ['cranc', 'ken'], ['ma', 'ghen']]
 [['hi', 'ne'], ['ghe', 'reed', 'de'], ['hem'], ['up'], ['een'], ['cla', 'ghen']]
-[['dit'], ['was'], ['al'], ['je', 'ghen'], ['rey', 'naer', 'de']]
-[['noch', 'tan'], ['de', 'di'], ['als'], ['die'], ['on', 'ver', 'vaer', 'de']]
-[['hoe'], ['so'], ['hem'], ['te'], ['moe', 'de'], ['was']]

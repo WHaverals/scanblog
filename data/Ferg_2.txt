@@ -1,0 +1,5 @@
+Ferguut
+[['he', 're'], ['wi'], ['sijn'], ['ghe', 'reet'], ['al'], ['ga', 'der']]
+[['wi'], ['se', 'len'], ['v'], ['vol', 'gen'], ['al', 'se'], ['on', 'sen'], ['va', 'der']]
+[['fer', 'guut'], ['nam'], ['e', 'ne'], ['ba', 'nie', 're']]
+[['van'], ['bin', 'nen'], ['en', 'de'], ['sloech'], ['met'], ['spo', 'ren'], ['scie', 're']]

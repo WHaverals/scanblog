@@ -1,0 +1,6 @@
+Historie van den Grale
+[['die'], ['hof'], ['was'], ['groet'], ['zi'], ['gin', 'gen'], ['e', 'ten']]
+[['die'], ['rid', 'der'], ['wa', 'ren'], ['al'], ['ge', 'se', 'ten']]
+[['hi'], ['sprac'], ['ick'], ['ko', 'me'], ['tot'], ['iu'], ['nu']]
+[['si'], ['zwe', 'gen'], ['al', 'le'], ['dat'], ['zeg', 'gick'], ['iu']]
+[['en', 'de'], ['za', 'gen'], ['wat'], ['hi'], ['zou', 'de'], ['doen']]

@@ -1,4 +1,4 @@
-Brabantsche Yeetsen, Eerste Boek
+Brabantsche Yeesten, Eerste Boek
 [['en', 'de'], ['clo', 'do', 've', 'us'], ['groot'], ['ghe', 'slach', 'te']]
 [['ghinc'], ['te'], ['nieu', 'te'], ['dus'], ['met'], ['mach', 'te']]
 [['bi'], ['den'], ['paus'], ['en', 'de'], ['bi'], ['den'], ['he', 'ren']]

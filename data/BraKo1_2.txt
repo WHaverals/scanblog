@@ -1,0 +1,7 @@
+Korte kroniek van Brabant
+[['na'], ['hem'], ['soe'], ['liet'], ['hi'], ['te'], ['wa', 'ren']]
+[['den'], ['vro', 'men'], ['her', 'to', 'ghe'], ['jan']]
+[['die'], ['tlant'], ['van'], ['lim', 'borch'], ['wan']]
+[['te'], ['woe', 'ronc'], ['in'], ['den'], ['groo', 'ten'], ['strijt']]
+[['soe'], ['dat'], ['men'], ['in'], ['der'], ['we', 'relt'], ['wijt']]
+[['van'], ['hem'], ['te'], ['seg', 'ghe', 'ne'], ['wis', 'te']]

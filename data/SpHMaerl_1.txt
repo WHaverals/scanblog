@@ -1,0 +1,5 @@
+Spiegel historiael
+[['ma', 'ri', 'a'], ['heeft'], ['die'], ['pal', 'me'], ['ont', 'faen']]
+[['die'], ['se', 're'], ['claer'], ['was'], ['son', 'der'], ['waen']]
+[['en', 'de'], ['drouch', 'se'], ['in'], ['ha', 're'], ['hant']]
+[['up', 'ten'], ['o', 'li', 'ven', 'berch'], ['te'], ['hant']]

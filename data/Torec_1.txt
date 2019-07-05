@@ -1,0 +1,6 @@
+Torec
+[['nu'], ['ge', 'wa', 'get'], ['da', 'ven', 'tu', 're']]
+[['dat'], ['to', 'rec'], ['reet'], ['ter'], ['sel', 'ver'], ['u', 're']]
+[['al', 'so'], ['vord'], ['al'], ['dien'], ['dach']]
+[['en', 'de'], ['sa', 'vons'], ['te'], ['eens'], ['rid', 'ders'], ['lach']]
+[['daer'], ['hi'], ['wel'], ['was'], ['ont', 'faen']]

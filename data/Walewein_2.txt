@@ -6,7 +6,3 @@ Walewein
 [['die'], ['sco', 'ne'], ['jonc', 'frou', 'we'], ['die'], ['ic'], ['min', 'ne']]
 [['want'], ['ve', 'nus'], ['die'], ['go', 'din', 'ne']]
 [['gaf'], ['ha', 're'], ['dat'], ['sco', 'ne'], ['gou', 'di', 'ne'], ['haer']]
-[['ooc'], ['seg', 'ghic'], ['jou'], ['al'], ['o', 'ver'], ['waer']]
-[['dat'], ['up'], ['ha', 're'], ['ho', 'vet'], ['es'], ['ghe', 'staen']]
-[['daer'], ['ha', 're'], ['scoon', 'heit'], ['bi'], ['es'], ['vul', 'daen']]
-[['dit'], ['es'], ['die'], ['jonc', 'frou', 'we'], ['die'], ['ic'], ['min', 'ne']]

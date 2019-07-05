@@ -1,0 +1,3 @@
+Rijmspreuken
+[['soe'], ['wye'], ['schoen', 'heit'], ['in'], ['sijn'], ['ze', 'den'], ['can']]
+[['ghe', 'doen'], ['dat'], ['is'], ['een'], ['wi', 'se'], ['man']]

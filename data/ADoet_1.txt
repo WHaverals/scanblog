@@ -1,0 +1,5 @@
+Arturs doet
+[['ar', 'tur'], ['vra', 'ge', 'de'], ['hem'], ['na'], ['de', 'sen']]
+[['wie'], ['die'], ['rid', 'de', 're'], ['dan'], ['moch', 'te'], ['we', 'sen']]
+[['in'], ['weet'], ['sprac'], ['wa', 'le', 'wein'], ['ne'], ['wa', 're']]
+[['hi'], ['es'], ['een'], ['goet'], ['man'], ['op', 'pen', 'ba', 're']]

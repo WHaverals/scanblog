@@ -1,0 +1,4 @@
+Dietsche doctrinale
+[['drie'], ['din', 'ghe'], ['sijn'], ['als'], ['men'], ['vint']]
+[['daer'], ['men'], ['gods'], ['vrien', 'scap'], ['met'], ['wint']]
+[['ghe', 'lo', 've'], ['ho', 'pe'], ['en', 'de'], ['ca', 'ri', 'ta', 'te']]

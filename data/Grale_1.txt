@@ -1,0 +1,7 @@
+Historie van den Grale
+[['mer', 'lijn'], ['sprack'], ['ick'], ['wil'], ['by'], ['go', 'de']]
+[['dat'], ['gy'], ['in'], ['ir', 'lant'], ['nu'], ['sin', 'det']]
+[['om', 'be'], ['gro', 'te'], ['ste', 'ne'], ['die'], ['men'], ['daer'], ['vin', 'det']]
+[['en', 'de'], ['doet', 'se'], ['bren', 'gen'], ['met'], ['bal', 'lin', 'gen']]
+[['men'], ['kan', 'se'], ['niet'], ['so'], ['groet'], ['ge', 'brin', 'gen']]
+[['ick'], ['en'], ['sal', 'se'], ['wel'], ['al', 'le', 'ne'], ['o', 'prech', 'ten']]

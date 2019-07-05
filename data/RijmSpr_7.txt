@@ -1,0 +1,3 @@
+Rijmspreuken
+[['be', 'gra', 'ven'], ['schat'], ['ver', 'bor', 'ghen'], ['min']]
+[['daer'], ['of'], ['en'], ['haet'], ['nye', 'mant'], ['ghe', 'win']]

@@ -1,0 +1,5 @@
+Alexanders geesten
+[['doe'], ['ster', 'ven'], ['sou', 'de'], ['de', 'de', 'le'], ['paert']]
+[['bo', 'ghet'], ['si', 'ne'], ['knien'], ['met'], ['gro', 'ter'], ['weer', 'de']]
+[['en', 'de'], ['set', 'te'], ['dien'], ['co', 'ninc'], ['up', 'tie'], ['eer', 'de']]
+[['om'], ['dat', 'te', 'ne'], ['quet', 'sen'], ['niet'], ['en'], ['sou', 'de']]
