@@ -1,0 +1,7 @@
+Roelantslied
+[['van'], ['rou', 'we'], ['die'], ['had', 'de'], ['roe', 'lant']]
+[['viel'], ['hi'], ['in'], ['on', 'mach', 'te'], ['te'], ['hant']]
+[['maer'], ['saen'], ['hi'], ['be', 'quam']]
+[['doen'], ['sach'], ['hi'], ['en', 'de'], ['ver', 'nam']]
+[['o', 'li', 'vier'], ['ten'], ['wi', 'ge'], ['gaen']]
+[['en', 'de'], ['gro', 'te'], ['sla', 'ge'], ['slaen']]

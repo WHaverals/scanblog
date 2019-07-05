@@ -1,0 +1,6 @@
+Jonathas en Rosafiere
+[['ic'], ['lach'], ['te'], ['nacht'], ['bij'], ['u', 'wer'], ['sij', 'den']]
+[['als'], ['dit'], ['die'], ['co', 'ninc'], ['hoer', 'den']]
+[['ver', 'such', 'ti'], ['met', 'ten'], ['wor', 'de']]
+[['en', 'de'], ['se', 'de'], ['scoe', 'ne'], ['wat'], ['vraeg', 'dij'], ['dan']]
+[['se', 'ker', 'lijc'], ['ghij'], ['we', 'tet'], ['al']]

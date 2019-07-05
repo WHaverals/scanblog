@@ -1,0 +1,6 @@
+Roman van Perchevael
+[['da', 'ven', 'tu', 're'], ['ge', 'wa', 'get'], ['nu'], ['das']]
+[['dat'], ['me', 'nech'], ['man'], ['bli', 'de'], ['was']]
+[['dor'], ['dat'], ['per', 'che', 'vael'], ['te'], ['ho', 've'], ['es'], ['co', 'men']]
+[['en', 'de'], ['om'], ['dat'], ['si'], ['me', 'de'], ['heb', 'ben'], ['ver', 'no', 'men']]
+[['dat'], ['hi'], ['ge', 'won', 'nen'], ['heeft'], ['sijn'], ['lant']]

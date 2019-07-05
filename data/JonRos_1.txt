@@ -1,0 +1,7 @@
+Jonathas en Rosafiere
+[['doen'], ['dit'], ['see', 'de'], ['die'], ['co', 'ninc']]
+[['in'], ['die'], ['ca', 'me', 're'], ['dat'], ['hij'], ['ghinc']]
+[['voir'], ['dat'], ['bed', 'de'], ['ghinc'], ['hij'], ['staen']]
+[['si', 'ne'], ['clee', 'de', 'ren'], ['heeft'], ['hij'], ['uut', 'ghe', 'daen']]
+[['vrien', 'de', 'lijc', 'ke'], ['daer'], ['ter'], ['ste', 'den']]
+[['nu'], ['sul', 'dij'], ['hoe', 'ren'], ['wat'], ['hij'], ['de', 'de']]

@@ -1,0 +1,7 @@
+Roman van Perchevael
+[['en', 'de'], ['al', 'si'], ['in'], ['de', 'se'], ['fees', 'te'], ['sa', 'ten']]
+[['quam'], ['daer'], ['e', 'ne'], ['jonc', 'frou', 'we'], ['di'], ['u', 'ter', 'ma', 'te']]
+[['le', 'lijc'], ['was'], ['in'], ['al', 'len'], ['ma', 'ni', 'ren']]
+[['men'], ['moch', 'se'], ['niet'], ['wel'], ['vi', 'si', 'ren']]
+[['van'], ['ge', 'da', 'ne'], ['hoe'], ['swerd'], ['si'], ['was']]
+[['si'], ['had', 'de'], ['di'], ['tan', 'de'], ['ge', 'lijc'], ['den'], ['das']]

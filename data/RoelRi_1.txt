@@ -1,0 +1,5 @@
+Roelantslied
+[['hi'], ['sprac'], ['ic'], ['heb', 'be'], ['wel'], ['ver', 'staen']]
+[['dat'], ['met'], ['roe', 'lant'], ['qua', 'lyc'], ['es'], ['gaen']]
+[['bi', 'der'], ['der', 'de'], ['werf'], ['die'], ['hi'], ['blies']]
+[['roe', 'lant'], ['duch', 'te'], ['fer', 'lies']]
