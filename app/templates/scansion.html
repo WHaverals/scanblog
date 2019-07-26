@@ -38,73 +38,73 @@
 
 <body data-spy="scroll" data-target="#navigation" data-offset="71">
 	
-	<!-- Page Header Section Starts -->
-	<section class="page-header" >
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<!-- Page Header start -->
-					<div class="page-header-title wow fadeInUp">
-						<h1>{{ title }}</h1>					
-					</div>
-					<!-- Page Header start -->
-				</div>
-			</div>
-		</div>	
-	</section>
-	<!-- Banner Section Ends -->
+  <!-- Page Header Section Starts -->
+  <section class="page-header" >
+    <div class="container">
+      <div class="row">
+	<div class="col-lg-12">
+	  <!-- Page Header start -->
+	  <div class="page-header-title wow fadeInUp">
+	    <h1>{{ title }}</h1>					
+	  </div>
+	  <!-- Page Header start -->
+	</div>
+      </div>
+    </div>	
+  </section>
+  <!-- Banner Section Ends -->
 	
-	<div class="page-blog">
-		<div class="row">
-    		<div id="frag" class="container">
-    		{% for line in lines %}
-        		<p>
-					<h3>
-        			{% for word in line %}
-            			{% for syllable in word %}
-							
-            			<t href='' id="{{ syllable['id'] }}" onclick="changeColor('{{ syllable['id'] }}')">{{ syllable['text'] }}</t>
-		
-            			{% endfor %}
-						<divider class="divider"></divider>
-        			{% endfor %}
-					</h3>
-        		</p>
-    {% endfor %}
+  <div class="page-blog">
+    <div class="row">
+      <div id="frag" class="container">
+    	{% for line in lines %}
+        <p>
+	  <h3>
+            {% for word in line %}
+		{% for syllable in word %}
+	    
+		<t href='' id="{{ syllable['id'] }}" onclick="changeColor('{{ syllable['id'] }}')">{{ syllable['text'] }}</t>
+	    
+		{% endfor %}
+		<divider class="divider"></divider>
+            {% endfor %}
+	  </h3>
+        </p>
+	{% endfor %}
     </div>
-	</div>
-	</div>
+    </div>
+  </div>
 	
-    <!-- submit button -->
-	<section class="download-app-layout-5" id="download">
-		<div class="c container-fluid">
-			<div class="row">
-				<div class="col-md-12 col-lg-12 col-xl-12">						
-					<p class="lead">
-						<g class="btn-download" onclick="save_and_submit()"><i class="flaticon-paper-plane"></i>Verstuur en naar volgende verzen!</g>
-					</p>
-				</div>
-			</div>
-		</div>
-	</section>
+  <!-- submit button -->
+  <section class="download-app-layout-5" id="download">
+    <div class="c container-fluid">
+      <div class="row">
+	<div class="col-md-12 col-lg-12 col-xl-12">						
+	  <p class="lead">
+	    <g class="btn-download" onclick="save_and_submit()"><i class="flaticon-paper-plane"></i>Verstuur en naar volgende verzen!</g>
+	  </p>
+	</div>
+      </div>
+    </div>
+  </section>
 	
 
-	<!-- Footer Section starts -->
-	<footer class="footer-layout-3">
-		<div class="container">
-			<div class="row">
+  <!-- Footer Section starts -->
+  <footer class="footer-layout-3">
+    <div class="container">
+      <div class="row">
 	
-					<!-- Footer Copyright start -->
-					<div class="copyright">
-					  <p class="text-left col-md-12 col-lg-12 col-xl-12">Dit experiment maakt deel uit van het docotraatsonderzoek van Wouter Haverals en wordt gefinancierd door het Fonds voor Wetenschappelijk Onderzoek. Voor meer informatie over het project, kan u een bericht sturen naar <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be</a></p>
-					  <div class="col-lg-2 col-md-3 col-xl-2 offset-lg-0 col-sm-4 col-4 offset-xl-0"> <img src="/static/images/uafwo.png" alt="" /></div>
-					</div>
-					<!-- Footer Copyright end -->
-
-			</div>
-		</div>
-	</footer>
+	<!-- Footer Copyright start -->
+	<div class="copyright">
+	  <p class="text-left col-md-12 col-lg-12 col-xl-12">Dit experiment maakt deel uit van het docotraatsonderzoek van Wouter Haverals en wordt gefinancierd door het Fonds voor Wetenschappelijk Onderzoek. Voor meer informatie over het project, kan u een bericht sturen naar <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be</a></p>
+	  <div class="col-lg-2 col-md-3 col-xl-2 offset-lg-0 col-sm-4 col-4 offset-xl-0"> <img src="/static/images/uafwo.png" alt="" /></div>
+	</div>
+	<!-- Footer Copyright end -->
 	
+      </div>
+    </div>
+  </footer>
+  
 </body>
 </html>
 

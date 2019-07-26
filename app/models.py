@@ -8,6 +8,7 @@ from sqlalchemy.types import VARCHAR
 import json
 import pprint
 import csv
+import pickle
 
 
 class User(UserMixin, db.Model):
@@ -48,6 +49,12 @@ class Story(db.Model):
 
     def __repr__(self):
         return "<Story %r>" % self.title
+    
+    @staticmethod
+    def get_nbr_of_stories():
+        res = db.engine.execute('select count(*) from story')
+        return res.fetchone()[0]
+
 
 class Fragment(db.Model):
     """a fragment will be presented to the user for a scansession"""
@@ -70,6 +77,11 @@ class Fragment(db.Model):
         story on (story.id = fragment.story_id) where fragment.id=?', (frag_id,))
         descr = res.fetchone()
         return descr[0]
+    
+    @staticmethod
+    def get_nbr_of_fragments():
+        res = db.engine.execute('select count(*) from fragment')
+        return res.fetchone()[0]
 
     def __repr__(self):
         return "Fragment %r story %r" % (self.id, self.story_id)
@@ -90,7 +102,8 @@ class Syllable(db.Model):
 
     def __repr__(self):
         return "<Syllable %r %r %r %r %r>" % (self.frag_nbr, self.line_nbr, \
-                                              self.word_nbr, self.syll_nbr, self.syllable)
+                                              self.word_nbr, self.syll_nbr, \
+                                              self.syllable)
 
     #returns nbr lines in a fragment
     @staticmethod
@@ -122,7 +135,8 @@ class Syllable(db.Model):
                 line_list = []
                 for word_idx in range(1, nbr_words + 1):
                     syls = Syllable.query.filter_by(frag_id=frag_id, \
-                                                    line_nbr=line_idx, word_nbr=word_idx).all()
+                                                    line_nbr=line_idx, \
+                                                    word_nbr=word_idx).all()
                     word_list = []
                     for syl in syls:
                         if(not lol):
@@ -139,7 +153,8 @@ class Syllable(db.Model):
         return res.fetchone()[0]
 
 class Annotation(db.Model):
-    """all the annotation of a user for the different syllables of a fragment of a story"""
+    """all the annotation of a user for the different syllables 
+    of a fragment of a story"""
     __tablename__ = 'annotation'
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey(User.id), index=True)
@@ -187,6 +202,22 @@ class Report():
 
     def test():
         print("in method test from class Report")
+
+    @staticmethod
+    def get_scans_frag(frag_id, user_id):
+        qwry = """
+select count(*), syllable_id, syllable from syllable left join annotation on syllable.id = annotation.syllable_id where annotation.fragment_done and syllable.frag_id = :frag_id and annotation.user_id = :user_id group by annotation.syllable_id;
+"""
+        res = db.session.execute(qwry, {'frag_id':frag_id, 'user_id' : user_id})
+        scans = res.fetchall()
+        #print("scans -> ", scans)
+        syls = Report.get_syl_frag(frag_id)
+        #we update the syls that are stressed with True and the count
+        for scan in scans:
+            syls[scan['syllable_id']]['cnt'] = scan[0]
+            syls[scan['syllable_id']]['stress'] = True
+        return syls
+
         
     @staticmethod
     def get_freq_stressed_frag(frag_id):
@@ -249,4 +280,33 @@ select count(*), syllable_id, syllable from syllable left join annotation on syl
                 writer.writerow({'title':title})
                 for syl_id, row in rows.items():
                     writer.writerow(row)
-        
+    @staticmethod
+    def get_scans_user(user_id):
+        """get all scans of a specified user (id). It will be stored in a dictionary, with the title and fragment number combined as key"""
+        s = "select user_id, frag_id from fragmentdone where user_id = :user_id"
+        res = db.session.execute(s, {'user_id':user_id})
+        scans = res.fetchall()
+        scans_st = {}
+        for scan in scans:
+            #first get the story id and title
+            s = "select story_id, fragment.id, title, frag_nbr from fragment join story on story.id = fragment.story_id where fragment.id = :id"
+            res = db.session.execute(s, {'id' : scan['frag_id']})
+            story = res.fetchone()
+            user_scan = Report.get_scans_frag(scan['frag_id'], user_id)
+            #print(user_scan)
+            scans_st[story['title'] + '_' + str(story['frag_nbr'])] = user_scan
+        return scans_st
+            
+    @staticmethod
+    def user_scans_to_file(user_id, filename):
+        with open(filename, 'wb') as f:
+            # Pickle the 'data' dictionary using the highest protocol available.
+            data = Report.get_scans_user(user_id)
+            pickle.dump(data, f, pickle.HIGHEST_PROTOCOL)
+        print("user scans for id %s have been written to %s" % (user_id, filename))
+
+    @staticmethod
+    def file_scans_to_dict(filename):
+        with open(filename, 'rb') as f:
+            data = pickle.load(f)
+        return data
