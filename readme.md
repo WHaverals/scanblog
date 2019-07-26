@@ -353,12 +353,12 @@ BrRose_1,,,
                 2965: {'cnt': 1, 'stress': True, 'syl': 'baert'}},
  
 ```
-	* To save the result in a file, we just pickle it, but there is a method in the class Report, called **user\_scans\_to\_file(user\_id, filename). This will call the previous method (get\_scnas\_user), and then save the dictionary to a file.
+ * To save the result in a file, we just pickle it, but there is a method in the class Report, called **user\_scans\_to\_file(user\_id, filename). This will call the previous method (get\_scnas\_user), and then save the dictionary to a file.
 ```
 >>> Report.user_scans_to_file(1, 'test2.pickle')
 user scans for id 1 have been written to test2.pickle
 ```
-	* to get the data in the file back into a dictionary, use the following function *file\_scnas\_to\_dict(filename)
+ * to get the data in the file back into a dictionary, use the following function *file\_scnas\_to\_dict(filename)
 ```
 >>> scans_dict=Report.file_scans_to_dict('test2.pickle')
 >>> pprint.pprint(scans_dict)
