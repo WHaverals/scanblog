@@ -3,7 +3,7 @@ from app import db, login
 from flask_login import UserMixin
 from flask import current_app
 from werkzeug.security import generate_password_hash, check_password_hash
-
+import random
 from sqlalchemy.types import VARCHAR
 import json
 import pprint
@@ -55,6 +55,13 @@ class Story(db.Model):
         res = db.engine.execute('select count(*) from story')
         return res.fetchone()[0]
 
+    #we only take 5 elements of the list, otherwise their seems to a sort
+    #of overflow in fadein....
+    def all_descriptions():
+        res = db.session.execute('select description from story')
+        descr = res.fetchall()
+        descrl = [des[0] for des in descr]
+        return random.sample(descrl,5)
 
 class Fragment(db.Model):
     """a fragment will be presented to the user for a scansession"""

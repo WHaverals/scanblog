@@ -41,70 +41,68 @@
 	
 	<!-- Header Section Starts-->
 	<header class="header-layout-6">
-		<nav class="navbar navbar-toggleable-md navbar-light" id="navigation">
-			<div class="container">
-				<div class="navbar-header">
-					<h1 href="#">De maat van het <br><h1 style="color:firebrick">Middelnederlands</h1></h1>
-				</div>
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="{{ url_for('login') }}">Log in</a></li>
-					<li><a href="{{ url_for('register') }}">Registreer</a></li>
-				</ul>
-			</div>			
-		</nav>
+	  <nav class="navbar navbar-toggleable-md navbar-light" id="navigation">
+	    <div class="container">
+	      <div class="navbar-header">
+		<h1 href="#">De maat van het <br><h1 style="color:firebrick">Middelnederlands</h1></h1>
+	      </div>
+	      <ul class="nav navbar-nav navbar-right">
+		<li><a href="{{ url_for('login') }}">Log in</a></li>
+		<li><a href="{{ url_for('register') }}">Registreer</a></li>
+	      </ul>
+	    </div>			
+	  </nav>
 	</header>
 	<!-- Header Section ends -->
 	
 	<!-- Banner Section Starts -->
 	<section class="banner-layout-10" id="home">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-7">
-					<!-- Header content start -->
-					<div class="header-content wow fadeInUp">
-						<h2 class="text-left">Bepaal het ritme van<br>
-						<div class="fadeIn">
-      						<span>Van den Vos Reynaerde</span>
-      						<span>Karel ende Elegast</span>
-      						<span>Beatrijs</span>
-      						<span>Walewein</span>
-							<span>Floris ende Blancefloer</span></br>
-						</div>
-						</h2>
-					  <p class="text-left">Via dit online-project willen we zicht krijgen op hoe men vandaag Middelnederlandse dichtwerken voordraagt. Daarom vragen we u, hedendaagse stembanden van deze teksten, de ritmische voorkeuren toe te passen.</p>
-					<div class="app-download">
-				   		<a class="btn-download" href="{{ url_for('task_description') }}" role="button"><i class="fa fa-hand-o-right"></i>Aan de slag!</a>
-					</div>
-				</div>
-					<!-- Header content end -->
-				</div>
-				
-				<div class="col-lg-5">
-					<!-- Header image start -->
-					<div class="header-img">
-						<img src="../static/images/voordracht_kleiner.png" alt="" />
-					</div>
-					<!-- Header image end -->
-				</div>
-			</div>
+	  <div class="container">
+	    <div class="row">
+	      <div class="col-lg-7">
+		<!-- Header content start -->
+		<div class="header-content wow fadeInUp">
+		  <h2 class="text-left">Bepaal het ritme van<br>
+		    <div class="fadeIn">
+		      {% for story in stories %}
+		      <span>{{ story }}</span>
+		      {% endfor %}
+		    </div>
+		  </h2>
+		  <p class="text-left">Via dit online-project willen we zicht krijgen op hoe men vandaag Middelnederlandse dichtwerken voordraagt. Daarom vragen we u, hedendaagse stembanden van deze teksten, de ritmische voorkeuren toe te passen.</p>
+		  <div class="app-download">
+		    <a class="btn-download" href="{{ url_for('task_description') }}" role="button"><i class="fa fa-hand-o-right"></i>Aan de slag!</a>
+		  </div>
 		</div>
+		<!-- Header content end -->
+	      </div>
+	      
+	      <div class="col-lg-5">
+		<!-- Header image start -->
+		<div class="header-img">
+		  <img src="../static/images/voordracht_kleiner.png" alt="" />
+		</div>
+		<!-- Header image end -->
+	      </div>
+	    </div>
+	  </div>
 	</section>
 	<!-- Banner Section Ends -->
 	
-		<!-- Footer Section starts -->
+	<!-- Footer Section starts -->
 	<footer class="footer-layout-3">
-		<div class="container">
-			<div class="row">
-	
-					<!-- Footer Copyright start -->
-					<div class="copyright">
-					  <p class="text-left col-md-12 col-lg-12 col-xl-12">Dit experiment maakt deel uit van het docotraatsonderzoek van Wouter Haverals en wordt gefinancierd door het Fonds voor Wetenschappelijk Onderzoek. Voor meer informatie over het project, kan u een bericht sturen naar <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be</a></p>
-					  <div class="col-lg-2 col-md-3 col-xl-2 offset-lg-0 col-sm-4 col-4 offset-xl-0"> <img src="../static/images/uafwo.png" alt="" /></div>
-					</div>
-					<!-- Footer Copyright end -->
-
-			</div>
-		</div>
+	  <div class="container">
+	    <div class="row">
+	      
+	      <!-- Footer Copyright start -->
+	      <div class="copyright">
+		<p class="text-left col-md-12 col-lg-12 col-xl-12">Dit experiment maakt deel uit van het docotraatsonderzoek van Wouter Haverals en wordt gefinancierd door het Fonds voor Wetenschappelijk Onderzoek. Voor meer informatie over het project, kan u een bericht sturen naar <a href="mailto:wouter.haverals@uantwerpen.be">Wouter.Haverals@UAntwerpen.be</a></p>
+		<div class="col-lg-2 col-md-3 col-xl-2 offset-lg-0 col-sm-4 col-4 offset-xl-0"> <img src="../static/images/uafwo.png" alt="" /></div>
+	      </div>
+	      <!-- Footer Copyright end -->
+	      
+	    </div>
+	  </div>
 	</footer>
 </body>
 </html>
