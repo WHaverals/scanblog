@@ -104,3 +104,4 @@ ENV/
 
 app.db
 templates2/
+.DS_Store
