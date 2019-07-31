@@ -83,17 +83,6 @@
             	<span style="color: red;">[{{ error }}]</span>
             	{% endfor %}
         		</p>
-				<p>
-            	{{ form.language.label }}<br>
-            	{{ form.language(size=2) }}
-		{% for error in form.language.errors %}
-		<span style="color: red;">[{{ error }}]</span>
-		{% endfor %}
-        		</p>
-				<p>
-            	{{ form.middledutch.label }}<br>
-            	{{ form.middledutch(size=2) }}
-        		</p>
         		<p style="text-align: center">{{ form.submit() }}</p>
     		</form>
 {% endblock %}
