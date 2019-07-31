@@ -54,6 +54,7 @@ class Story(db.Model):
 
     #we only take 5 elements of the list, otherwise their seems to a sort
     #of overflow in fadein....
+    @staticmethod
     def all_descriptions():
         res = db.session.execute('select description from story')
         descr = res.fetchall()
@@ -68,13 +69,15 @@ class Fragment(db.Model):
                          nullable=False, index=True)
     frag_nbr = db.Column(db.SmallInteger, nullable=False)
 
+    @staticmethod 
     def get_all_ids():
         """get a list of all fragment id's"""
         res = db.engine.execute("select id from fragment")
         ids = res.fetchall()
         idsl = [id[0] for id in ids]
         return idsl
-
+    
+    @staticmethod 
     def get_story_description(frag_id):
         """whats the escription of the story of this fragment"""
         res = db.engine.execute('select description from fragment join \
@@ -152,6 +155,7 @@ class Syllable(db.Model):
                 lines_list.append(line_list)
         return lines_list
 
+    @staticmethod
     def get_frag_id(syl_id):
         res = db.engine.execute("select frag_id from syllable where id = ?", (syl_id))
         return res.fetchone()[0]
@@ -186,6 +190,7 @@ class Scanned(db.Model):
                         nullable=False, index=True)
     timestamp = db.Column(db.DateTime, default=datetime.utcnow)
 
+    @staticmethod
     def get_frag_maxfreq():
         """ get all fragments that reached their maximum scan frequency """
         res = db.engine.execute("select frag_id from fragmentdone group by frag_id \
@@ -193,7 +198,8 @@ class Scanned(db.Model):
         frag_max_freq = res.fetchall()
         frag_max_freq_l = [frag[0] for frag in frag_max_freq]
         return frag_max_freq_l
-        
+
+    @staticmethod
     def get_frag_done(user_id):
         """ get the fragments done by a specific user """
         res = db.engine.execute("select frag_id from fragmentdone where user_id = ?", (user_id))
