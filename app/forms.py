@@ -19,10 +19,6 @@ class RegistrationForm(FlaskForm):
     password = PasswordField('Wachtwoord', validators=[DataRequired()])
     password2 = PasswordField(
         'Herhaal wachtwoord', validators=[DataRequired(), EqualTo('password')])
-    language = RadioField('Moedertaal', choices = [(1, 'Vlaams'), 
-      (2, 'Nederlands')], coerce=int)
-    middledutch = RadioField('Hoe schat u uw kennis in van het Middelnederlands?', choices = [(1, 'Geen'), 
-      (2, 'Gemiddeld'), (3, 'Goed')], coerce=int)
     submit = SubmitField('Registreer')
 
     def validate_username(self, username):
