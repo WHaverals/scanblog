@@ -1,0 +1,7 @@
+Vlaamse Rose
+[['hier'], ['om', 'me'], ['vin', 'de', 'wi'], ['van'], ['sa', 'lo', 'mo', 'ne']]
+[['dat'], ['hi'], ['sei', 'de'], ['te'], ['si', 'nen'], ['so', 'ne']]
+[['een'], ['nut', 'te'], ['wort'], ['in'], ['sijn'], ['la', 'tin']]
+[['o'], ['so', 'ne'], ['seit'], ['hi'], ['so', 'ne'], ['mijn']]
+[['wacht'], ['die'], ['por', 'te'], ['van'], ['di', 'nen'], ['mon', 'de']]
+[['die'], ['bo', 'de'], ['es'], ['van'], ['die', 're'], ['her', 'ten'], ['gron', 'de']]

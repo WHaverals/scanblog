@@ -1,4 +1,4 @@
-Van den vos Reyanerde
+Van den vos Reynaerde
 [['wil', 'lem'], ['die'], ['ve', 'le'], ['bou', 'ke'], ['maec', 'te']]
 [['daer'], ['hi'], ['dic', 'ken'], ['om', 'me'], ['waec', 'te']]
 [['hem'], ['ver', 'noy', 'de'], ['so'], ['haer', 'de']]

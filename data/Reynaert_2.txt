@@ -1,4 +1,4 @@
-Van den vos Reyanerde
+Van den vos Reynaerde
 [['doe'], ['in'], ['sco', 'ninx'], ['hof'], ['was'], ['ver', 'no', 'men']]
 [['dat'], ['rey', 'naert'], ['wa', 're'], ['te'], ['ho', 've'], ['co', 'men']]
 [['met'], ['grim', 'beer', 'de'], ['den'], ['das']]

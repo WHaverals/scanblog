@@ -6,4 +6,4 @@ Walewein
 [['si'], ['ant', 'wor', 'den'], ['al', 'te', 'ma', 'le']]
 [['vaert'], ['god'], ['on', 'se'], ['al', 're'], ['he', 're']]
 [['ver', 'de'], ['jou'], ['van'], ['lach', 'tre'], ['en', 'de'], ['van'], ['ze', 're']]
-[['en', 'de'], ['la', 'te'], ['jou'], ['dinc'], ['ten'], ['be', 's', 'ten'], ['co', 'men']]
+[['en', 'de'], ['la', 'te'], ['jou'], ['dinc'], ['ten'], ['bes', 'ten'], ['co', 'men']]

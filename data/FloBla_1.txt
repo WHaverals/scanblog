@@ -1,8 +1,8 @@
 Floris ende Blancefloer
-[['nu'], ['es'], ['blan', 'ce', 'f', 'loer'], ['in'], ['vrem', 'den'], ['lan', 'de']]
+[['nu'], ['es'], ['blan', 'ce', 'floer'], ['in'], ['vrem', 'den'], ['lan', 'de']]
 [['hoe'], ['se', 're'], ['wringt'], ['si'], ['haer'], ['han', 'de']]
 [['met'], ['gro', 'ter'], ['cla', 'ge'], ['met'], ['gro', 'ten'], ['we', 'ne']]
 [['in'], ['al'], ['der'], ['we', 'relt'], ['quam'], ['nie'], ['ge', 'ne']]
 [['clu', 'se', 'ners', 'se'], ['no'], ['so'], ['go', 'de', 'lic'], ['wijf']]
 [['die'], ['so'], ['let', 'tel'], ['acht'], ['om'], ['haer'], ['lijf']]
-[['al', 'se'], ['blan', 'ce', 'f', 'loer'], ['doet'], ['om'], ['dat'], ['ha', 're']]
+[['al', 'se'], ['blan', 'ce', 'floer'], ['doet'], ['om'], ['dat'], ['ha', 're']]

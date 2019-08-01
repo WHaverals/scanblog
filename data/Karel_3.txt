@@ -1,0 +1,7 @@
+Karel ende Elegast
+[['doen'], ['e', 'le', 'gast'], ['die'], ['rid', 'der'], ['goet']]
+[['quam'], ['in'], ['des'], ['co', 'nincs'], ['sa', 'le']]
+[['nv'], ['moech', 'di'], ['ho', 'ren'], ['si', 'ne'], ['ta', 'le']]
+[['hi'], ['sei', 'de'], ['god'], ['hoe', 'de'], ['dit'], ['ghe', 'sin', 'de']]
+[['den'], ['co', 'ninc'], ['en', 'de'], ['dat'], ['ic'], ['hier'], ['vin', 'de']]
+[['mer'], ['eg', 'ge', 'ric'], ['en'], ['groe', 'tic'], ['niet']]

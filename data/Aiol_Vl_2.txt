@@ -1,5 +1,5 @@
 Vlaamse Aiol
 [['ghin', 'der'], ['was'], ['groet'], ['ge', 'scal']]
-[['ten'], ['pau', 'we', 'li', 'u', 'nen'], ['o', 'ver'], ['al']]
+[['ten'], ['pau', 'wel', 'iu', 'nen'], ['o', 'ver'], ['al']]
 [['en', 'de'], ['ten'], ['ten', 'ten'], ['ha', 'ren', 'ta', 're']]
 [['hen'], ['vraem', 'de'], ['niet'], ['van'], ['e', 'nen'], ['ha', 're']]

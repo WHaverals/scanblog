@@ -1,4 +1,4 @@
-Van den vos Reyanerde
+Van den vos Reynaerde
 [['o'], ['wy'], ['wat'], ['heb', 'bic'], ['al'], ['ver', 'lo', 'ren']]
 [['sprac'], ['can', 'tic', 'leer'], ['die'], ['daer'], ['stont']]
 [['die'], ['co', 'ninc'], ['sprac'], ['hout'], ['hu', 'wen'], ['mont']]

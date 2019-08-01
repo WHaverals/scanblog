@@ -1,0 +1,5 @@
+Vlaamse Rose
+[['daer'], ['vp'], ['hor', 'dic'], ['groet'], ['ghe', 'clanc']]
+[['van', 'der'], ['vo', 'ghe', 'li', 'nen'], ['zanc']]
+[['die'], ['daer'], ['son', 'ghen'], ['in', 'den'], ['ver', 'gie', 're']]
+[['elc'], ['en', 'de'], ['elc'], ['in'], ['si', 'ne'], ['ma', 'nie', 're']]
