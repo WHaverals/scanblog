@@ -108,7 +108,7 @@ def scansion():
         scans = { 'max' : max_scans_user, 'act' : act_scans_user , 'percent' : 100/max_scans_user * act_scans_user}
         return render_template('scansion.html', frag_id=frag_id, title=title, lines=lines, scans=scans)
     else:
-        return render_template('scansion.html')
+        return render_template('final.html')
 
 
 # Route for finalizing and submitting annotation of verse lines
