@@ -320,3 +320,12 @@ select count(*), syllable_id, syllable from syllable left join annotation on syl
         with open(filename, 'rb') as f:
             data = pickle.load(f)
         return data
+
+    @staticmethod
+    def all_users_scans_to_files():
+        s = "select user_id, email  from fragmentdone"
+        res = db.session.execute(s, {})
+        users = res.fetchall()
+        for user in users:
+            Report.user_scans_to_file(user['user_id'], user['email'] + 'pickle')
+        
