@@ -327,5 +327,104 @@ select count(*), syllable_id, syllable from syllable left join annotation on syl
         res = db.session.execute(s, {})
         users = res.fetchall()
         for user in users:
-            Report.user_scans_to_file(user['user_id'], user['email'] + 'pickle')
+            Report.user_scans_to_file(user['user_id'], user['email'] + '.pickle')
         
+
+
+class Report2():
+    """ puts the annotations in a structured, which reflects the structure of the 'verses'
+    the final method will get all the annotations of all the users, jsonify them into a file
+    """
+    @staticmethod
+    def get_syl_frag(frag_id):
+        """get all syllables of a fragment in the correct order """
+        s = "select * from syllable where frag_id = :id order by \
+        line_nbr,word_nbr,syll_nbr"
+        res = db.session.execute(s, {'id':frag_id})
+        max_lines = "select max(line_nbr) from syllable where frag_id = :id"
+        qw = db.session.execute(max_lines, {'id':frag_id})
+        max_nbr_lines = qw.fetchone()[0]
+        #print("max_nbr_lines %s" % (max_nbr_lines))
+        frag = [[] for i in range(max_nbr_lines)]
+        #we set all scans to 0 to begin with
+        #best to put it in an array, to keep good order    
+        word_idx = 0
+        prev_word_idx = word_idx
+        word = []
+        prev_line_idx = 0
+        for syl in res:
+            line_idx = syl['line_nbr'] - 1
+            word_idx = syl['word_nbr'] - 1
+            syll_idx = syl['syll_nbr'] - 1
+            if line_idx != prev_line_idx:
+                frag[prev_line_idx].append(word)
+                word = []
+                word_idx = 0
+                prev_word_idx = word_idx
+                prev_line_idx = 0
+            #print("line_idx %s word_idx %s syll_idx %s" % (line_idx, word_idx, syll_idx))
+            if word_idx != prev_word_idx:
+                frag[line_idx].append(word)
+                word = []
+                word.append(0)
+            else:
+                #we default the scan to zero
+                word.append(0)
+            #print("word " , word)
+            prev_word_idx = word_idx
+            prev_line_idx = line_idx
+        #append the last word
+        frag[line_idx].append(word)
+        return frag
+
+    @staticmethod
+    def get_scans_frag(frag_id, user_id):
+        qwry = """
+select * from syllable left join annotation on syllable.id = annotation.syllable_id where annotation.fragment_done and syllable.frag_id = :frag_id and annotation.user_id = :user_id group by annotation.syllable_id;
+"""
+        res = db.session.execute(qwry, {'frag_id':frag_id, 'user_id' : user_id})
+        scans = res.fetchall()
+        frag = Report2.get_syl_frag(frag_id)
+        #pprint.pprint(frag)
+        #we update the syls that are stressed with True and the count
+        for scan in scans:
+            line_idx = scan['line_nbr']-1
+            word_idx = scan['word_nbr']-1
+            syll_idx = scan['syll_nbr']-1
+            #print("line_idx %s word_idx %s syll_idx %s" % (line_idx, word_idx, syll_idx))
+            frag[line_idx][word_idx][syll_idx] = 1
+        return frag
+
+    @staticmethod
+    def get_scans_user(user_id):
+        """get all scans of a specified user (id). It will be stored in a dictionary, with the title and fragment number combined as key"""
+        s = "select user_id, frag_id from fragmentdone where user_id = :user_id"
+        res = db.session.execute(s, {'user_id':user_id})
+        scans = res.fetchall()
+        scans_st = {}
+        for scan in scans:
+            #first get the story id and title
+            s = "select story_id, fragment.id, title, frag_nbr from fragment join story on story.id = fragment.story_id where fragment.id = :id"
+            res = db.session.execute(s, {'id' : scan['frag_id']})
+            story = res.fetchone()
+            user_scan = Report2.get_scans_frag(scan['frag_id'], user_id)
+            #print(user_scan)
+            scans_st[story['title'] + '_' + str(story['frag_nbr'])] = user_scan
+        return scans_st
+
+    @staticmethod
+    def all_users_scans():
+        s = "select distinct(username), u.id from fragmentdone as fd join user as u on fd.user_id = u.id order by u.id;"
+        res = db.session.execute(s, {})
+        users = res.fetchall()
+        users_st = {}
+        for user in users:
+            users_st[user['username']] = Report2.get_scans_user(user['id'])
+        return users_st
+
+    @staticmethod
+    def all_users_scans_to_file(fname):
+        all_dict = Report2.all_users_scans()
+        with open(fname, "w") as fp:
+            json.dump(all_dict, fp)
+

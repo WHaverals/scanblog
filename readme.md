@@ -411,3 +411,82 @@ user scans for id 1 have been written to test2.pickle
             1031: {'cnt': 0, 'stress': False, 'syl': 'co'},
             1032: {'cnt': 1, 'stress': True, 'syl': 'ninc'},
 ```
+reporting2
+==========
+Modified the reporting a bit, so it will reflect the verses in lists of lists,
+which is better, because a list maintains order, and dictionaries do not (until Phyton 3.7)
+
+ * get\_syl\_frag(frag_id)
+ Retrieves all the syllables in a fragment. Each verse is a list of words, where the words contain one or more syllables. Best is to look at an example. We use the *pprint** function to output the result.
+ ```
+ >>> pprint.pprint(Report2.get_syl_frag(2))
+[[[0, 0], [0], [0], [0], [0], [0, 0]],
+ [[0], [0], [0], [0, 0], [0], [0, 0]],
+ [[0, 0], [0, 0], [0, 0], [0], [0], [0], [0, 0]],
+ [[0, 0], [0, 0], [0, 0], [0], [0, 0, 0]],
+ [[0], [0, 0], [0], [0], [0], [0, 0, 0]],
+ [[0], [0], [0, 0], [0], [0, 0, 0], [0, 0, 0]]]
+```
+The values in the lists indicate if a syllable has been stressed (1) or not (0). They are all initialised to zero's.
+ * get\_scans\_frag(frag_id, use\r_id)
+ Retrieves all scans for a user on a specific fragment. In the database, only the stressed scans are retained. So this function will set the correct syllables to a one value in the previous list of lists.
+ 
+ ```
+ >>> pprint.pprint(Report2.get_scans_frag(2,1))
+[[[0, 1], [1], [0], [1], [0], [1, 0]],
+ [[1], [0], [0], [0, 1], [0], [1, 0]],
+ [[1, 0], [1, 0], [1, 0], [1], [0], [0], [1, 0]],
+ [[0, 0], [1, 0], [1, 0], [0], [1, 0, 0]],
+ [[0], [1, 0], [1], [0], [1], [0, 1, 0]],
+ [[1], [0], [1, 0], [0], [0, 1, 0], [0, 1, 0]]]
+```
+ * get\_scans\_user(user_id)
+ Retrieves all the scans of a specific user. This will place all the lists in a dictionary, with a key named to the fragment. In the next example, we only show 2 fragments for the specified user, the real list is much longer.
+ 
+ ```
+ >>> pprint.pprint(Report2.get_scans_user(1)) 
+{u'BY1_1': [[[0, 0], [1, 0, 1, 0], [1], [0, 1, 0]],
+            [[1], [0], [1, 0], [1], [0], [1, 0]],
+            [[1], [0], [1], [0, 0], [1], [0], [1, 0]],
+            [[0], [0, 1, 0], [1, 0], [1, 0]],
+            [[1, 0], [0], [1, 0], [0], [0, 1, 0]],
+            [[1, 0], [1, 0, 0], [1], [0, 1, 0]],
+            [[1, 0], [0], [1], [0], [1], [0, 1, 0]],
+            [[0], [1, 0], [1, 0], [1, 0], [1], [0], [1, 0]],
+            [[0], [1, 0], [1], [0], [1]],
+            [[0], [1, 0], [1], [0, 1, 0], [1]]],
+ u'Beatrijs_1': [[[0], [1, 0], [0, 1, 0], [0], [1, 0], [1, 0, 0]],
+                 [[0, 1, 0], [1, 0], [1, 0], [1, 0]],
+                 [[1], [0], [1, 0], [1], [0], [1, 0]],
+                 [[1, 0], [0], [1, 0], [1], [0, 1, 0]],
+                 [[1], [0], [1, 0], [1, 0], [1, 0]],
+                 [[1, 0], [1], [0], [1, 0], [1]]],
+ u'BrRose_1': [[[1, 0], [0], [1, 0], [1, 0], [1, 0]],
+               [[1, 0], [1, 0], [1], [0], [1, 0, 1, 0]],
+               [[0], [1], [0, 0], [0, 1, 0], [1, 0], [1, 0]],
+               [[1], [0, 1, 0, 0], [1, 0], [1]],
+               [[1, 0], [0, 1, 0], [0], [1, 0, 1]]],
+ u'Busk_2': [[[0], [1, 0], [1, 0], [0], [1], [0], [0, 1]],
+             [[0], [1], [0], [1, 0], [1, 0], [1]],
+             [[0, 0], [1, 0], [1, 0], [0], [1], [1, 0]],
+             [[0, 1, 0], [1], [0], [1, 0], [1, 0]]],
+```
+
+ * all\_users\_scans()
+ Retrieves all the scans of all users registered for the website. In the next example, we will only show a part of the output. The username will be the key in a dictionary, which contains the structure mentioned above.
+ 
+ ```
+  u'rkmwbhp': {u'ADoet_1': [[[1, 0], [1, 0, 0], [1], [0], [1, 0]],
+                           [[1], [0], [1, 0, 0], [0], [1, 0], [1, 0]],
+                           [[0], [1], [1], [1, 0, 0], [0], [1, 0]],
+                           [[0], [1], [0], [1], [0], [1, 0, 1, 0]]],
+              u'BY5_1': [[[0, 0], [0], [1, 0], [1], [1]],
+                         [[1], [0], [0], [1, 0], [0], [0], [1]],
+                         [[0, 0], [1, 0], [0], [0], [1, 0], [1, 0]],
+                         [[1], [0], [1, 0], [1, 0], [1, 0]],
+                         [[0], [1, 0, 0], [0], [1, 0, 0]]],
+```
+
+ * all\_users\_scans\_to\_file(filename)
+ The complete dictionary will be dumped in a json structure in a file, with the specified filename.
+ 
