@@ -397,8 +397,10 @@ select * from syllable left join annotation on syllable.id = annotation.syllable
 
     @staticmethod
     def get_scans_user(user_id):
-        """get all scans of a specified user (id). It will be stored in a dictionary, with the title and fragment number combined as key"""
-        s = "select user_id, frag_id from fragmentdone where user_id = :user_id"
+        """get all scans of a specified user (id). It will be stored in a dictionary, with the title and fragment number combined as key -> we select obly the fragments that have been scanned the max number of times"""
+        s = """
+select user_id, frag_id from fragmentdone where user_id = :user_id and frag_id in (select frag_id from fragmentdone group by frag_id having count(*)=5)
+        """
         res = db.session.execute(s, {'user_id':user_id})
         scans = res.fetchall()
         scans_st = {}
